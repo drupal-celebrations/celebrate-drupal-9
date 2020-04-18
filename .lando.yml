@@ -1,0 +1,5 @@
+# Configure this according to the actual project name.
+name: drupal-celebrations
+recipe: drupal9
+config:
+  webroot: web

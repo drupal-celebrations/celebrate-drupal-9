@@ -1,0 +1,13 @@
+name: 'Drupal Celebrations'
+type: theme
+base theme: stable
+description: 'A theme for the Drupal Celebrations project.'
+core: 8.x
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+
+libraries:
+  - drupal-celebrations/drupal-celebrations

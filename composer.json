@@ -16,13 +16,14 @@
     ],
     "require": {
         "composer/installers": "^1.2",
-        "drupal/console": "^1.9",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drupal/redis": "^1.2",
-        "drush/drush": "^10.1",
-        "platformsh/config-reader": "^2.3"
+        "cweagans/composer-patches": "^1.6",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/redis": "^1.4",
+        "drush/drush": "^10.2",
+        "platformsh/config-reader": "^2.3",
+        "vlucas/phpdotenv": "^4.1"
     },
     "require-dev": {
     },
@@ -32,7 +33,30 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": [
+            "load.environment.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
     },
     "extra": {
         "drupal-scaffold": {
@@ -68,6 +92,10 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
         }
-    }
+    },
+    "composer-exit-on-patch-failure": true
 }

@@ -1,10 +1,13 @@
 <?php
+
 /**
  * @file
  * Platform.sh settings.
  */
 
-$platformsh = new \Platformsh\ConfigReader\Config();
+use Platformsh\ConfigReader\Config;
+
+$platformsh = new Config();
 
 if (!$platformsh->inRuntime()) {
   return;
@@ -19,7 +22,7 @@ $databases['default']['default'] = [
   'password' => $creds['password'],
   'host' => $creds['host'],
   'port' => $creds['port'],
-  'pdo' => [PDO::MYSQL_ATTR_COMPRESS => !empty($creds['query']['compression'])]
+  'pdo' => [PDO::MYSQL_ATTR_COMPRESS => !empty($creds['query']['compression'])],
 ];
 
 // Enable Redis caching.
@@ -41,8 +44,9 @@ if ($platformsh->hasRelationship('redis') && !drupal_installation_attempted() &&
   // Allow the services to work before the Redis module itself is enabled.
   $settings['container_yamls'][] = 'modules/contrib/redis/redis.services.yml';
 
-  // Manually add the classloader path, this is required for the container cache bin definition below
-  // and allows to use it without the redis module being enabled.
+  // Manually add the classloader path, this is required for the container cache
+  // bin definition below and allows to use it without the redis module being
+  // enabled.
   $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
 
   // Use redis for container cache.
@@ -92,11 +96,12 @@ if (!isset($settings['php_storage']['twig'])) {
   $settings['php_storage']['twig']['directory'] = $settings['file_private_path'];
 }
 
-// The 'trusted_hosts_pattern' setting allows an admin to restrict the Host header values
-// that are considered trusted.  If an attacker sends a request with a custom-crafted Host
-// header then it can be an injection vector, depending on how the Host header is used.
-// However, Platform.sh already replaces the Host header with the route that was used to reach
-// Platform.sh, so it is guaranteed to be safe.  The following line explicitly allows all
+// The 'trusted_hosts_pattern' setting allows an admin to restrict the Host
+// header values that are considered trusted.  If an attacker sends a request
+// with a custom-crafted Host header then it can be an injection vector,
+// depending on how the Host header is used. However, Platform.sh already
+// replaces the Host header with the route that was used to reach Platform.sh,
+// so it is guaranteed to be safe.  The following line explicitly allows all
 // Host headers, as the only possible Host header is already guaranteed safe.
 $settings['trusted_host_patterns'] = ['.*'];
 
@@ -104,16 +109,17 @@ $settings['trusted_host_patterns'] = ['.*'];
 // and 'd8config:' into $config.
 foreach ($platformsh->variables() as $name => $value) {
   $parts = explode(':', $name);
-  list($prefix, $key) = array_pad($parts, 3, null);
+  list($prefix, $key) = array_pad($parts, 3, NULL);
   switch ($prefix) {
     // Variables that begin with `d8settings` or `drupal` get mapped
     // to the $settings array verbatim, even if the value is an array.
     // For example, a variable named d8settings:example-setting' with
-    // value 'foo' becomes $settings['example-setting'] = 'foo';
+    // value 'foo' becomes $settings['example-setting'] = 'foo'; in code.
     case 'd8settings':
     case 'drupal':
       $settings[$key] = $value;
       break;
+
     // Variables that begin with `d8config` get mapped to the $config
     // array.  Deeply nested variable names, with colon delimiters,
     // get mapped to deeply nested array elements. Array values
@@ -121,9 +127,11 @@ foreach ($platformsh->variables() as $name => $value) {
     // both a config object name and property are skipped.
     // Example: Variable `d8config:conf_file:prop` with value `foo` becomes
     // $config['conf_file']['prop'] = 'foo';
-    // Example: Variable `d8config:conf_file:prop:subprop` with value `foo` becomes
+    // Example: Variable `d8config:conf_file:prop:subprop` with value `foo`
+    // becomes
     // $config['conf_file']['prop']['subprop'] = 'foo';
-    // Example: Variable `d8config:conf_file:prop:subprop` with value ['foo' => 'bar'] becomes
+    // Example: Variable `d8config:conf_file:prop:subprop` with value
+    // ['foo' => 'bar'] becomes
     // $config['conf_file']['prop']['subprop']['foo'] = 'bar';
     // Example: Variable `d8config:prop` is ignored.
     case 'd8config':
@@ -138,7 +146,6 @@ foreach ($platformsh->variables() as $name => $value) {
       break;
   }
 }
-
 
 // Set the project-specific entropy value, used for generating one-time
 // keys and such.
