@@ -1,38 +1,43 @@
-# Drupal 8 for Platform.sh
+# Celebrate Drupal 9
 
-<p align="center">
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/drupal8/.platform.template.yaml&utm_content=drupal8&utm_source=github&utm_medium=button&utm_campaign=deploy_on_platform">
-    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" width="180px" />
-</a>
-</p>
+This project was setup to showcase Celebrations about the Drupal 9 launch.
 
-This template builds Drupal 8 using the "Drupal Recommended" Composer project.  It also includes configuration to use Redis for caching, although that must be enabled post-install in `.platform.app.yaml`.
+## Getting Started
 
-Drupal is a flexible and extensible PHP-based CMS framework.
+Clone this project, then run `composer install`.
+
+You'll need [direnv](https://direnv.net/) and [Drush](https://www.drush.org/) installed.
+
+Ensure you allow the `.envrc` file to run with `direnv` by typing `direnv allow`.
+
+This will copy the file `.env.example` to `.env`.
+
+You can then bootstrap and install Drupal based on the existing configuration with the following [Drush](https://www.drush.org/) command:
+
+```
+drush si -y minimal --sites-subdir default --existing-config --account-name admin --account-pass admin
+```
+
+Finally, run a local version of the website using `drush serve` and you should be access it at `http://127.0.0.1:8888`, where you can login with the generic username and password:
+```
+user: admin
+pass: admin
+```
+
+Or use `drush uli` to create a one-time login link.
+
 
 ## Services
 
-* PHP 7.2
-* MariaDB 10.2
+* PHP 7.3
+* MariaDB 10.4
 * Redis 5
 
-## Post-install
+## Hosted by Platform.sh
 
-1. Run through the Drupal installer as normal.  You will not be asked for database credentials as those are already provided.
+This project is kindly sponsored and hosted by [platform.sh](https://platform.sh).
 
-2. Once Drupal is fully installed, edit your `.platform.app.yaml` file and uncomment the line under the `relationships` block that reads `redis: 'rediscache:redis'`.  Commit and push the changes.  That will enable Drupal's Redis cache integration.  (The Redis cache integration cannot be active during the installer.)
-
-## Customizations
-
-The following changes have been made relative to Drupal 8 "Recommended" project as it is downloaded from Drupal.org or Packagist.  If using this project as a reference for your own existing project, replicate the changes below to your project.
-
-* The `.platform.app.yaml`, `.platform/services.yaml`, and `.platform/routes.yaml` files have been added.  These provide Platform.sh-specific configuration and are present in all projects on Platform.sh.  You may customize them as you see fit.
-* An additional Composer library, [`platformsh/config-reader`](https://github.com/platformsh/config-reader-php), has been added.  It provides convenience wrappers for accessing the Platform.sh environment variables.
-* Drush and Drupal Console have been pre-included in `composer.json`.  You are free to remove one or both if you do not wish to use them.  (Note that the default cron and deploy hooks make use of Drush commands, however.)  The Drupal Redis module also comes pre-installed but not enabled by default.
-* The `settings.platformsh.php` file contains Platform.sh-specific code to map environment variables into Drupal configuration. You can add to it as needed. See the documentation for more examples of common snippets to include here.  It uses the Config Reader library.
-* The `settings.php` file has been heavily customized to only define those values needed for both Platform.sh and local development.  It calls out to `settings.platformsh.php` if available.  You can add additional values as documented in `default.settings.php` as desired.  It is also setup such that when you install Drupal on Platform.sh the installer will not ask for database credentials as they will already be defined.
-
-## References
+### Further Reading
 
 * [Drupal](https://www.drupal.org/)
 * [Drupal on Platform.sh](https://docs.platform.sh/frameworks/drupal8.html)
