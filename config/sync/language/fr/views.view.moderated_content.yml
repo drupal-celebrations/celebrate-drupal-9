@@ -1,0 +1,61 @@
+label: 'Contenu modéré'
+description: 'Trouver et modérer du contenu.'
+display:
+  default:
+    display_title: Maître
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      fields:
+        title:
+          label: Titre
+          separator: ', '
+        type:
+          label: 'Type de contenu'
+          separator: ', '
+        name:
+          label: Auteur
+          separator: ', '
+        moderation_state:
+          label: 'État de modération'
+          separator: ', '
+        changed:
+          label: 'Mis à jour'
+          separator: ', '
+        operations:
+          label: Actions
+      filters:
+        title:
+          expose:
+            label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
+        moderation_state:
+          expose:
+            label: 'État de modération'
+        langcode:
+          expose:
+            label: Langue
+      title: 'Contenu modéré'
+      empty:
+        area_text_custom:
+          content: 'Aucun contenu modéré disponible. Seules les versions de contenu en attente, telles que ''Brouillon'', sont listées ici.'
+  moderated_content:
+    display_title: 'Contenu modéré'
