@@ -1,0 +1,18 @@
+uuid: 998fae2c-a420-4ff1-93ea-445905c6dda9
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+description: 'Used for adding remote videos'
+source: 'oembed:video'
+queue_thumbnail_downloads: true
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - YouTube
+  source_field: field_media_oembed_video
+field_map:
+  default_name: name
+  url: field_media_oembed_video
