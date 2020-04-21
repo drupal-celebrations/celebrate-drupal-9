@@ -9,35 +9,23 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
-          tags:
-            previous: ‹‹
-            next: ››
       fields:
         nothing:
           admin_label: Icône
-        wid:
-          label: WID
         severity:
           label: Importance
         type:
           label: Type
         timestamp:
           label: Date
-        message:
-          label: Message
-          alter:
-            alt: '{{ message }}'
         name:
           label: Utilisateur
-          separator: ', '
         link:
           label: Actions
       filters:
@@ -52,5 +40,3 @@ display:
         area:
           admin_label: 'Aucune entrée du journal n''est disponible.'
           content: 'Aucune entrée du journal n''est disponible.'
-  page:
-    display_title: Page

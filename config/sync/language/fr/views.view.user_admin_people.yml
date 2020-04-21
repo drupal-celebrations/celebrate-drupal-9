@@ -9,8 +9,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           tags:
@@ -40,8 +38,6 @@ display:
           label: 'Dernier accès'
         operations:
           label: Actions
-        mail:
-          separator: ', '
       filters:
         combine:
           expose:
@@ -66,7 +62,6 @@ display:
           content: 'Personne n''est disponible.'
       use_more_text: plus
   page_1:
-    display_title: Page
     display_options:
       menu:
         title: Lister

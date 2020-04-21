@@ -1,13 +1,13 @@
-uuid: 827d292b-15e4-4442-a4d0-bbdfca75fee0
+uuid: b5777199-cac2-4fe3-afef-0272c4c464f6
 langcode: en
 status: true
 dependencies:
   theme:
-    - stark
+    - drupal_celebrations
 _core:
   default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
-id: stark_page_title
-theme: stark
+id: drupal_celebrations_page_title
+theme: drupal_celebrations
 region: content
 weight: -30
 provider: null

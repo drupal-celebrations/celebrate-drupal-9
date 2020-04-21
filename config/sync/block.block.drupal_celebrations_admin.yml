@@ -1,4 +1,4 @@
-uuid: 9bd6ed5c-aa22-4c3b-9aa0-d4baf181b9eb
+uuid: e57659b5-6525-454e-ad8d-8ca1639ecf3c
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - stark
+    - drupal_celebrations
 _core:
   default_config_hash: OFEDxrButmQ8Vac1kiVr1gtw6vYKuSJPr9cJQZVKCKg
-id: stark_admin
-theme: stark
-region: sidebar_first
+id: drupal_celebrations_admin
+theme: drupal_celebrations
+region: header
 weight: 1
 provider: null
 plugin: 'system_menu_block:admin'

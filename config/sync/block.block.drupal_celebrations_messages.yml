@@ -1,16 +1,16 @@
-uuid: f20c3de8-5412-4d89-a92a-c26bd00fce77
+uuid: 734db5a6-2c91-4edd-ab22-33b4bfd67fee
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - stark
+    - drupal_celebrations
 _core:
   default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
-id: stark_messages
-theme: stark
-region: highlighted
+id: drupal_celebrations_messages
+theme: drupal_celebrations
+region: header
 weight: 0
 provider: null
 plugin: system_messages_block

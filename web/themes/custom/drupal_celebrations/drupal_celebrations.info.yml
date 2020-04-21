@@ -1,0 +1,15 @@
+name: "Drupal Celebrations"
+type: theme
+base theme: stable9
+description: "A theme for the Drupal Celebrations project."
+package: Core
+version: VERSION
+core_version_requirement: "^9"
+
+regions:
+  header: "Header"
+  content: "Content"
+  footer: "Footer"
+
+libraries:
+  - drupal_celebrations/drupal_celebrations

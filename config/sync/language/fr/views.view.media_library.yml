@@ -8,20 +8,12 @@ display:
           submit_button: 'Appliquer les filtres'
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
-          tags:
-            previous: ‹‹
-            next: ››
-      fields:
-        media_bulk_form:
-          action_title: Action
       filters:
         status:
           expose:
@@ -59,13 +51,8 @@ display:
         area_text_custom:
           content: 'Aucun média disponible.'
   page:
-    display_title: Page
     display_options:
       fields:
-        media_bulk_form:
-          action_title: Action
-        name:
-          separator: ', '
         edit_media:
           alter:
             text: 'Modifier {{ name }}'
@@ -77,7 +64,6 @@ display:
             alt: 'Supprimer {{ name }}'
           text: Supprimer
   widget:
-    display_title: Widget
     display_options:
       filters:
         name:

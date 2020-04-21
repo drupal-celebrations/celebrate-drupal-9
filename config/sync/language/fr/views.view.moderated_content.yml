@@ -9,8 +9,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           tags:
@@ -25,19 +23,14 @@ display:
       fields:
         title:
           label: Titre
-          separator: ', '
         type:
           label: 'Type de contenu'
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
         moderation_state:
           label: 'État de modération'
-          separator: ', '
         changed:
           label: 'Mis à jour'
-          separator: ', '
         operations:
           label: Actions
       filters:

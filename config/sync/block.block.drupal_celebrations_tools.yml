@@ -1,4 +1,4 @@
-uuid: fe2ef55f-bc67-444f-88a5-457b0be58270
+uuid: 8e4c0c57-d113-43f4-b89e-d04c9b6e127a
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - stark
+    - drupal_celebrations
 _core:
   default_config_hash: uUF2GYN2x5fcmOu26M-gwqUA-yVWMDD_MRmnYfmPzlM
-id: stark_tools
-theme: stark
-region: sidebar_first
+id: drupal_celebrations_tools
+theme: drupal_celebrations
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

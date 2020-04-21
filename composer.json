@@ -20,6 +20,7 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/metatag": "1.x-dev",
         "drupal/redis": "^1.4",
         "drush/drush": "^10.2",
         "platformsh/config-reader": "^2.3",

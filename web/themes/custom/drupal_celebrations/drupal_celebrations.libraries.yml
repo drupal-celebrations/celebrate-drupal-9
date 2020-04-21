@@ -1,0 +1,7 @@
+drupal_celebrations:
+  version: 1.0
+  js:
+    dist/app.js: { minified: true }
+  css:
+    base:
+      dist/app.css: { minified: true }

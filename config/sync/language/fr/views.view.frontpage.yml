@@ -13,8 +13,6 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -29,5 +27,3 @@ display:
     display_title: Maître
   feed_1:
     display_title: Flux
-  page_1:
-    display_title: Page

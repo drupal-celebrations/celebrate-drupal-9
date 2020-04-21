@@ -1,13 +1,13 @@
-uuid: 7f23a4f8-7194-4bb1-ad5f-d9c52c270152
+uuid: 40f295c1-541a-4f02-be6c-42de5fe40d7e
 langcode: en
 status: true
 dependencies:
   theme:
-    - stark
+    - drupal_celebrations
 _core:
   default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
-id: stark_local_actions
-theme: stark
+id: drupal_celebrations_local_actions
+theme: drupal_celebrations
 region: content
 weight: -10
 provider: null
