@@ -22,6 +22,11 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   langcode: true
