@@ -10,4 +10,16 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access shortcuts'
+  - 'cancel account'
+  - 'change own username'
+  - 'create image media'
+  - 'create media'
+  - 'create video content'
+  - 'delete media'
+  - 'delete own video content'
+  - 'edit own image media'
+  - 'update media'
   - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'

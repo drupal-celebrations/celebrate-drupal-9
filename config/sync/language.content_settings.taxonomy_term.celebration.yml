@@ -1,0 +1,16 @@
+uuid: 4a2f8836-ee7c-499c-a99c-8e11f67401ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.celebration
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.celebration
+target_entity_type_id: taxonomy_term
+target_bundle: celebration
+default_langcode: site_default
+language_alterable: true

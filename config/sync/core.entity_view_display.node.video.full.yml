@@ -1,0 +1,28 @@
+uuid: cf01a6fb-8f56-4710-a31b-3741be4c21db
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.video.field_celebration
+    - node.type.video
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.video.full
+targetEntityType: node
+bundle: video
+mode: full
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_celebration: true
+  langcode: true

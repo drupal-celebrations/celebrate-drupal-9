@@ -1,7 +1,7 @@
 uuid: cdce331d-723a-41b8-9f8a-fba6430c2e02
-name: 'Drush Site-Install'
-mail: admin@example.com
-slogan: ''
+name: 'Drupal Celebrations'
+mail: dan+drupal-celebrations@danlemon.com
+slogan: 'Celebrate together as a community'
 page:
   403: ''
   404: ''
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

@@ -1,0 +1,33 @@
+uuid: 0b7d9e24-406e-488a-af03-772a87021dc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_celebration
+    - node.type.video
+    - taxonomy.vocabulary.celebration
+  content:
+    - 'taxonomy_term:celebration:4ed4f90e-9200-4ded-8789-acf99b59b465'
+id: node.video.field_celebration
+field_name: field_celebration
+entity_type: node
+bundle: video
+label: Celebration
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 4ed4f90e-9200-4ded-8789-acf99b59b465
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      celebration: celebration
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

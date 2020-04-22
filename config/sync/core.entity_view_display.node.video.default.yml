@@ -1,0 +1,22 @@
+uuid: b321691e-f88d-4261-b7b1-0c6788764c60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.video.field_celebration
+    - node.type.video
+  module:
+    - user
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_celebration: true
+  langcode: true

@@ -1263,12 +1263,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "97d4f01d07a86f800243491bfc4765f83f1eb5d7"
+                "reference": "28b16e6cc59f4b2ef7eebfbb0ba80d31a5024e59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/97d4f01d07a86f800243491bfc4765f83f1eb5d7",
-                "reference": "97d4f01d07a86f800243491bfc4765f83f1eb5d7",
+                "url": "https://api.github.com/repos/drupal/core/zipball/28b16e6cc59f4b2ef7eebfbb0ba80d31a5024e59",
+                "reference": "28b16e6cc59f4b2ef7eebfbb0ba80d31a5024e59",
                 "shasum": ""
             },
             "require": {
@@ -1499,7 +1499,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-04-20T14:40:27+00:00"
+            "time": "2020-04-22T13:17:25+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -1670,7 +1670,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "be3ad7d7293e4be2eabd5e8b49801130d6e7a513"
+                "reference": "f6bdff2d8ff8fee454b3a702f8d1f0b7cce72642"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -1688,8 +1688,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.12+20-dev",
-                    "datestamp": "1587402926",
+                    "version": "8.x-1.12+22-dev",
+                    "datestamp": "1587475357",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1722,7 +1722,7 @@
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
             },
-            "time": "2020-04-20T17:47:37+00:00"
+            "time": "2020-04-21T17:07:15+00:00"
         },
         {
             "name": "drupal/redis",

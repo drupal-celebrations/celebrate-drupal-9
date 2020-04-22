@@ -1,0 +1,10 @@
+uuid: a72dc756-4126-4545-aba9-97d59e39dd3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.anonymous
+label: Anonymous
+targetEntityType: node
+cache: true

@@ -1,0 +1,30 @@
+uuid: b66d3702-da7a-4536-ae26-0ad31e682a14
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.anonymous
+    - field.field.node.video.field_celebration
+    - node.type.video
+id: node.video.anonymous
+targetEntityType: node
+bundle: video
+mode: anonymous
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_celebration: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
