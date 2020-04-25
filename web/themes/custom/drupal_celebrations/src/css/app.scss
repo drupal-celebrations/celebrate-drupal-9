@@ -1,0 +1,12 @@
+@import "./tailwind.css";
+
+
+
+// TODO: import all scss
+h1 {
+  @apply .text-purple-100;
+}
+
+h2 {
+  background-color: orange;
+}

@@ -1,11 +1,17 @@
 const mix = require('laravel-mix');
-
-require('mix-tailwindcss');
+const tailwindcss = require('tailwindcss');
+const postCssVariables = require('postcss-css-variables');
 
 mix.disableNotifications()
-  .js('src/app.js', 'dist')
-  .sass('src/app.scss', 'dist')
-  .tailwind()
+  .js('src/js/app.js', 'dist')
+  .sass('src/css/app.scss', 'dist')
+  .options({
+    processCssUrls: false,
+    postCss: [
+      postCssVariables(),
+      tailwindcss('./tailwind.config.js'),
+    ],
+  })
   .sourceMaps()
   .webpackConfig({
     devtool: "source-map",
@@ -13,4 +19,6 @@ mix.disableNotifications()
       jquery: "jQuery"
     }
   })
-
+  .browserSync({
+    proxy: 'localhost:8888'
+  });

@@ -1,11 +1,13 @@
-const mix = require("laravel-mix/src/index")
-const ComponentFactory = require("laravel-mix/src/components/ComponentFactory")
+const mix = require("laravel-mix/src/index");
 
-new ComponentFactory().installAll()
-require(Mix.paths.mix())
-Mix.dispatch("init", Mix)
+const ComponentFactory = require("laravel-mix/src/components/ComponentFactory");
 
-const WebpackConfig = require("laravel-mix/src/builder/WebpackConfig")
+new ComponentFactory().installAll();
 
-module.exports = new WebpackConfig().build()
+require(Mix.paths.mix());
 
+Mix.dispatch("init", Mix);
+
+const WebpackConfig = require("laravel-mix/src/builder/WebpackConfig");
+
+module.exports = new WebpackConfig().build();
