@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_form_mode.node.full
     - field.field.node.image.field_celebration
+    - field.field.node.image.field_image
+    - field.field.node.image.field_image_category
     - node.type.image
   module:
     - content_moderation
@@ -80,5 +82,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_image: true
+  field_image_category: true
   promote: true
   sticky: true

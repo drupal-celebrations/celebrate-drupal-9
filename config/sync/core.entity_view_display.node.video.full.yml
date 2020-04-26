@@ -4,7 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_rights
+    - field.field.node.video.field_video
+    - field.field.node.video.field_video_category
     - node.type.video
   module:
     - layout_builder
@@ -18,11 +22,20 @@ targetEntityType: node
 bundle: video
 mode: full
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_cc_license: true
   field_celebration: true
+  field_rights: true
+  field_video: true
+  field_video_category: true
   langcode: true

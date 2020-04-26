@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_rights
+    - field.field.node.video.field_video
+    - field.field.node.video.field_video_category
     - node.type.video
   module:
     - user
@@ -12,11 +16,35 @@ targetEntityType: node
 bundle: video
 mode: default
 content:
-  links:
+  content_moderation_control:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_video:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_video_category:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_cc_license: true
   field_celebration: true
+  field_rights: true
   langcode: true

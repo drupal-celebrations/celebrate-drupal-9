@@ -4,7 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.full
+    - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_rights
+    - field.field.node.video.field_video
+    - field.field.node.video.field_video_category
     - node.type.video
     - workflows.workflow.content_workflow
   module:
@@ -81,5 +85,9 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_cc_license: true
+  field_rights: true
+  field_video: true
+  field_video_category: true
   promote: true
   sticky: true

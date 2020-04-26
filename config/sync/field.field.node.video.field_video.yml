@@ -1,0 +1,29 @@
+uuid: 0a99418c-27cb-4b2e-b4ac-bba00fb12a55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - media.type.video
+    - node.type.video
+id: node.video.field_video
+field_name: field_video
+entity_type: node
+bundle: video
+label: Video
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 355e79b8-c041-4045-85fa-b20ce65422f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cc_license
+    - node.type.video
+id: node.video.field_cc_license
+field_name: field_cc_license
+entity_type: node
+bundle: video
+label: 'CC License'
+description: 'I have set my video to Creative Commons License.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

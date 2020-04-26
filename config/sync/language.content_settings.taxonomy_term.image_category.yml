@@ -1,0 +1,16 @@
+uuid: f83c177f-0274-48da-8a87-53d3ef51b7a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.image_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.image_category
+target_entity_type_id: taxonomy_term
+target_bundle: image_category
+default_langcode: site_default
+language_alterable: true

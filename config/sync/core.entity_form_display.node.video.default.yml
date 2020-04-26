@@ -3,11 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_rights
+    - field.field.node.video.field_video
+    - field.field.node.video.field_video_category
     - node.type.video
     - workflows.workflow.content_workflow
   module:
     - content_moderation
+    - media_library
     - path
 id: node.video.default
 targetEntityType: node
@@ -20,6 +25,33 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_cc_license:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_rights:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_video:
+    type: media_library_widget
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_video_category:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   langcode:
     type: language_select
     weight: 1
