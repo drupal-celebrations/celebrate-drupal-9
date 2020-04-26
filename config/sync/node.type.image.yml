@@ -1,4 +1,4 @@
-uuid: ad3a474c-56be-4d09-8f29-99d4b0bc1c06
+uuid: e2b3728b-b1de-49b9-a337-4be25a2117dd
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Video
-type: video
-description: 'Create a video to be displayed on the video overview page.'
+name: Image
+type: image
+description: 'Create an image to be used in the gallery overview pages.'
 help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

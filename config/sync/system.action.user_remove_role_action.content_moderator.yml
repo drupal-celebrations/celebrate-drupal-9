@@ -1,0 +1,14 @@
+uuid: 5180ffda-0f07-4273-b1cf-7c4b81a17c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_moderator
+  module:
+    - user
+id: user_remove_role_action.content_moderator
+label: 'Remove the Content Moderator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_moderator

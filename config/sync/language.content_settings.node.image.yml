@@ -1,16 +1,16 @@
-uuid: b3de14d3-12d7-48e6-9669-e33389a33565
+uuid: 0266a13f-53d1-4b25-8229-2a5dd700cd6e
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.video
+    - node.type.image
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: node.video
+id: node.image
 target_entity_type_id: node
-target_bundle: video
+target_bundle: image
 default_langcode: site_default
 language_alterable: true

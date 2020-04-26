@@ -1,24 +1,35 @@
-uuid: 75b5ce7c-543a-490b-9770-6bf160b6d14b
+uuid: 142c37a6-3c90-45cb-9f38-47c2037d2805
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.node.full
     - field.field.node.video.field_celebration
     - node.type.video
     - workflows.workflow.content_workflow
   module:
     - content_moderation
     - path
-id: node.video.default
+id: node.video.full
 targetEntityType: node
 bundle: video
-mode: default
+mode: full
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_celebration:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -29,19 +40,19 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 6
+    weight: 8
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
+    weight: 6
     region: content
     settings:
       display_label: true
@@ -55,12 +66,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
-  field_celebration: true
   promote: true
   sticky: true
-  uid: true

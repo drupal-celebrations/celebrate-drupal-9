@@ -3,10 +3,7 @@
 
 
 // TODO: import all scss
-h1 {
-  @apply .text-purple-100;
-}
-
-h2 {
-  background-color: orange;
+body {
+  @apply .bg-dark-blue-200;
+  @apply .text-purple-600;
 }

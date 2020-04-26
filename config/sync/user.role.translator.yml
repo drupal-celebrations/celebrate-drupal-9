@@ -1,0 +1,23 @@
+uuid: 61061368-9409-4d2f-803d-b2ec243f9c36
+langcode: en
+status: true
+dependencies: {  }
+id: translator
+label: Translator
+weight: -7
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'create content translations'
+  - 'delete content translations'
+  - 'translate any entity'
+  - 'translate celebration taxonomy_term'
+  - 'translate image media'
+  - 'translate page node'
+  - 'translate user'
+  - 'translate video media'
+  - 'update content translations'
+  - 'view any unpublished content'
+  - 'view latest version'

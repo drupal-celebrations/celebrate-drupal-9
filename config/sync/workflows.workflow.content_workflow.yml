@@ -1,0 +1,55 @@
+uuid: 5c49421e-91bf-48dd-ba43-b08eeaf97115
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+    - node.type.video
+  module:
+    - content_moderation
+id: content_workflow
+label: 'Content Workflow'
+type: content_moderation
+type_settings:
+  states:
+    content_moderation:
+      published: false
+      default_revision: false
+      label: 'Content Moderation'
+      weight: -1
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    content_moderation:
+      label: 'Content Moderation'
+      from:
+        - draft
+      to: content_moderation
+      weight: -1
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -2
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 0
+      from:
+        - content_moderation
+        - published
+  entity_types:
+    node:
+      - page
+      - video
+  default_moderation_state: draft

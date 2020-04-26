@@ -1,17 +1,16 @@
-uuid: 75b5ce7c-543a-490b-9770-6bf160b6d14b
+uuid: 375eacfb-465f-4690-a241-1fed65114b8a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.video.field_celebration
-    - node.type.video
-    - workflows.workflow.content_workflow
+    - field.field.node.image.field_celebration
+    - node.type.image
   module:
     - content_moderation
     - path
-id: node.video.default
+id: node.image.default
 targetEntityType: node
-bundle: video
+bundle: image
 mode: default
 content:
   created:
@@ -29,22 +28,22 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 6
+    weight: 5
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
-    region: content
     settings:
       display_label: true
+    weight: 6
+    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -55,7 +54,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

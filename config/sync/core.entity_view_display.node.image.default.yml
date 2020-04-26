@@ -1,0 +1,22 @@
+uuid: cfb78cf0-c8ff-4e38-b327-ae0ac96a7965
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.image.field_celebration
+    - node.type.image
+  module:
+    - user
+id: node.image.default
+targetEntityType: node
+bundle: image
+mode: default
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_celebration: true
+  langcode: true

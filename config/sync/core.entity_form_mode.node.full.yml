@@ -1,10 +1,10 @@
-uuid: a72dc756-4126-4545-aba9-97d59e39dd3d
+uuid: 0691aba8-1a44-4b0f-b7f4-11941f731356
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.anonymous
-label: Anonymous
+id: node.full
+label: Full
 targetEntityType: node
 cache: true
