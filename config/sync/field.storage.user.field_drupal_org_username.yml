@@ -1,0 +1,21 @@
+uuid: 97f6c8d7-6513-4cba-876c-3ebb65a87a16
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_drupal_org_username
+field_name: field_drupal_org_username
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

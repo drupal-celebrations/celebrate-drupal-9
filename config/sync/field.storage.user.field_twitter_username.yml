@@ -1,0 +1,21 @@
+uuid: e3aac79e-ac4b-4d94-b6ea-eb10395e501c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_twitter_username
+field_name: field_twitter_username
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
