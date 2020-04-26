@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.image
     - node.type.page
     - node.type.video
   module:
@@ -50,6 +51,7 @@ type_settings:
         - published
   entity_types:
     node:
+      - image
       - page
       - video
   default_moderation_state: draft
