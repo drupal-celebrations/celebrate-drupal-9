@@ -15,6 +15,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -51,6 +52,7 @@ module:
   workflows: 0
   content_translation: 10
   views: 10
+  paragraphs: 11
   minimal: 1000
 theme:
   claro: 0
