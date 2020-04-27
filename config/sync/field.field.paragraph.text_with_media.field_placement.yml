@@ -1,0 +1,23 @@
+uuid: 97de82ec-dda8-4ae3-bfc9-5a23835a584d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_placement
+    - paragraphs.paragraphs_type.text_with_media
+  module:
+    - options
+id: paragraph.text_with_media.field_placement
+field_name: field_placement
+entity_type: paragraph
+bundle: text_with_media
+label: 'Text Placement'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

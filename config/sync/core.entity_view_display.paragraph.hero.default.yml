@@ -1,0 +1,37 @@
+uuid: e2feffbd-4759-4c89-9dfc-f1e02652306b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_button_link
+    - field.field.paragraph.hero.field_hero_image
+    - paragraphs.paragraphs_type.hero
+  module:
+    - link
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_button_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_hero_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

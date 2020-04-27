@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.full
+    - field.field.node.page.field_content
+    - field.field.node.page.field_hero
     - node.type.page
     - workflows.workflow.content_workflow
   module:
@@ -60,6 +62,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_content: true
+  field_hero: true
   promote: true
   sticky: true
   uid: true

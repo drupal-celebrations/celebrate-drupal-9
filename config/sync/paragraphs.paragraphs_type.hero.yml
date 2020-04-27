@@ -1,0 +1,10 @@
+uuid: 8dbf921a-73d0-4630-b3e1-6aac902dfd79
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+icon_uuid: null
+icon_default: null
+description: 'Hero element supporting background image and button link.'
+behavior_plugins: {  }

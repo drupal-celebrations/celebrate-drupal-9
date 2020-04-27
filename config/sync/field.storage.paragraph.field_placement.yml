@@ -1,0 +1,36 @@
+uuid: 5c73b140-a8c4-4363-9069-bba38fdac8e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_placement
+field_name: field_placement
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top
+      label: 'Text on top, Media below'
+    -
+      value: left
+      label: 'Text on the left, Media on the right'
+    -
+      value: right
+      label: 'Text on the right, Media on the left'
+    -
+      value: bottom
+      label: 'Text below, Media on top'
+    -
+      value: above
+      label: 'Text above, Media behind'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
