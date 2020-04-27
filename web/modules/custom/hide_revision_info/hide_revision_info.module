@@ -1,0 +1,19 @@
+<?php
+
+use \Drupal\user\Entity\User;
+
+/**
+ * Implements hook_form_alter().
+ */
+function hide_revision_info_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, 'node_', 0) !== 0) {
+    return;
+  }
+
+  /** @var $currentUser User */
+  $currentUser = User::load(\Drupal::currentUser()->id());
+
+  if ($currentUser && !$currentUser->hasRole('administrator')) {
+    $form['revision_information']['#access'] = FALSE;
+  }
+}

@@ -19,6 +19,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hide_revision_info: 0
   image: 0
   inline_form_errors: 0
   language: 0

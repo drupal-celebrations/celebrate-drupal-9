@@ -1,9 +1,5 @@
 @import "./tailwind.css";
 
-
-
-// TODO: import all scss
-body {
-  @apply .bg-dark-blue-200;
-  @apply .text-purple-600;
+* {
+  border: 1px dashed grey;
 }
