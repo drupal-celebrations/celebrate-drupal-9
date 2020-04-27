@@ -8,6 +8,8 @@ display:
           submit_button: 'Appliquer les filtres'
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -53,6 +55,8 @@ display:
   page:
     display_options:
       fields:
+        name:
+          separator: ', '
         edit_media:
           alter:
             text: 'Modifier {{ name }}'

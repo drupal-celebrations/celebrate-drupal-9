@@ -9,6 +9,8 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         options:
           tags:
@@ -21,8 +23,10 @@ display:
       fields:
         info:
           label: 'Description du bloc'
+          separator: ', '
         type:
           label: 'Type de bloc'
+          separator: ', '
         changed:
           label: 'Mis à jour'
         operations:

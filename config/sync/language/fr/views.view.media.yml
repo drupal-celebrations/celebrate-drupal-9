@@ -8,6 +8,8 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -22,19 +24,25 @@ display:
       fields:
         thumbnail__target_id:
           label: Vignette
+          separator: ', '
         name:
           label: 'Nom du média'
+          separator: ', '
         bundle:
           label: Type
+          separator: ', '
         uid:
           label: Auteur
+          separator: ', '
         status:
           label: État
           settings:
             format_custom_true: Publié
             format_custom_false: 'Non publié'
+          separator: ', '
         changed:
           label: 'Mis à jour'
+          separator: ', '
         operations:
           label: Actions
       filters:

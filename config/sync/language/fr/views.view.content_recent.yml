@@ -9,6 +9,11 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        changed:
+          separator: ', '
       title: 'Contenu récent'
       empty:
         area_text_custom:
