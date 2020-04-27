@@ -2,10 +2,13 @@ uuid: e082dce2-5a51-4618-b0eb-706aafaea762
 langcode: en
 status: true
 dependencies:
+  config:
+    - workflows.workflow.content_workflow
   enforced:
     module:
       - content_moderation
   module:
+    - content_moderation
     - node
     - user
 _core:
@@ -638,8 +641,8 @@ display:
           admin_label: ''
           operator: in
           value:
-            editorial-draft: editorial-draft
-            editorial-archived: editorial-archived
+            content_workflow-draft: content_workflow-draft
+            content_workflow-content_moderation: content_workflow-content_moderation
           group: 1
           exposed: true
           expose:
@@ -648,6 +651,8 @@ display:
             description: ''
             use_operator: false
             operator: moderation_state_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: moderation_state
             required: false
             remember: false
@@ -655,10 +660,10 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              content_moderator: '0'
+              translator: '0'
               administrator: '0'
             reduce: true
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -725,7 +730,7 @@ display:
           admin_label: ''
           operator: 'not in'
           value:
-            editorial-published: editorial-published
+            content_workflow-published: content_workflow-published
           group: 1
           exposed: false
           expose:
@@ -734,6 +739,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -741,8 +748,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -811,7 +816,8 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:workflow_list'
   moderated_content:
     display_plugin: page
     id: moderated_content
@@ -830,4 +836,5 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:workflow_list'

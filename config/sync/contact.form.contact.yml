@@ -1,0 +1,12 @@
+uuid: 619f2049-daba-4052-9acf-9589e6ab601a
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: 'Contact the team'
+recipients:
+  - dan+drupal-celebrations-contact@danlemon.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

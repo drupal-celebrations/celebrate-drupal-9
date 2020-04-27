@@ -13,11 +13,6 @@ label: 'Content Workflow'
 type: content_moderation
 type_settings:
   states:
-    content_moderation:
-      published: false
-      default_revision: false
-      label: 'Content Moderation'
-      weight: -1
     draft:
       label: Draft
       published: false
@@ -29,12 +24,6 @@ type_settings:
       default_revision: true
       weight: 0
   transitions:
-    content_moderation:
-      label: 'Content Moderation'
-      from:
-        - draft
-      to: content_moderation
-      weight: -1
     create_new_draft:
       label: 'Create New Draft'
       to: draft
@@ -47,7 +36,7 @@ type_settings:
       to: published
       weight: 0
       from:
-        - content_moderation
+        - draft
         - published
   entity_types:
     node:

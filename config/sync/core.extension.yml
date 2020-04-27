@@ -1,5 +1,6 @@
 module:
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -7,6 +8,7 @@ module:
   color: 0
   config: 0
   config_translation: 0
+  contact: 0
   content_moderation: 0
   contextual: 0
   datetime: 0
