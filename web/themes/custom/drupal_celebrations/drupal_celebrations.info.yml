@@ -7,9 +7,11 @@ version: VERSION
 core_version_requirement: "^9"
 
 regions:
-  header: "Header"
-  content: "Content"
-  footer: "Footer"
+  header: Header
+  content: Content
+  footer: Footer
+  page_top: "Page top" # Needed by Drupal Core
+  page_bottom: "Page bottom" # Needed by Drupal Core
 
 libraries:
   - drupal_celebrations/drupal_celebrations
