@@ -10,8 +10,8 @@ _core:
   default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
 id: drupal_celebrations_messages
 theme: drupal_celebrations
-region: header
-weight: 0
+region: content
+weight: -1
 provider: null
 plugin: system_messages_block
 settings:

@@ -9,7 +9,7 @@ _core:
 id: drupal_celebrations_local_tasks
 theme: drupal_celebrations
 region: content
-weight: -20
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

@@ -1,0 +1,20 @@
+uuid: b93cb2cd-2a8e-4230-8e3a-f5c588164d06
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal_celebrations
+id: mainpagecontent
+theme: drupal_celebrations
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
