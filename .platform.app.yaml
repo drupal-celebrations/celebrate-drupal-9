@@ -63,6 +63,7 @@ hooks:
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
+        yarn
         yarn run production
         cd web
         drush -y cache-rebuild
