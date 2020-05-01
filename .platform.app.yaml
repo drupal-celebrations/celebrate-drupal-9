@@ -68,7 +68,7 @@ hooks:
         nvm install node
         curl -o- -L https://yarnpkg.com/install.sh | dash
         yarn install
-        yarn run build
+        yarn workspaces run build
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
         set -e
