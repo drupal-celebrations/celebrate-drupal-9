@@ -1341,12 +1341,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a883c49cc110471c7c6f42696fe37b7e80ef7410"
+                "reference": "4e5cb05d673ba593ff73c62e02c9c26466058326"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a883c49cc110471c7c6f42696fe37b7e80ef7410",
-                "reference": "a883c49cc110471c7c6f42696fe37b7e80ef7410",
+                "url": "https://api.github.com/repos/drupal/core/zipball/4e5cb05d673ba593ff73c62e02c9c26466058326",
+                "reference": "4e5cb05d673ba593ff73c62e02c9c26466058326",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +1577,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-04-27T13:13:40+00:00"
+            "time": "2020-05-01T09:59:36+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -1870,7 +1870,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8d7e129c58efb940569108516bb5ba7c79400fe5"
+                "reference": "a90103b834b87d6d41bab9a9e30c42a3f86f82b3"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -1898,8 +1898,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.11+7-dev",
-                    "datestamp": "1585776961",
+                    "version": "8.x-1.11+8-dev",
+                    "datestamp": "1585778255",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -1941,7 +1941,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
             },
-            "time": "2020-04-01T21:57:14+00:00"
+            "time": "2020-04-30T21:25:20+00:00"
         },
         {
             "name": "drupal/redis",
@@ -4214,16 +4214,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "fe297193bf2e6866ed900ed2d5869362768df6a7"
+                "reference": "a3ebf3bfd8a98a147c010a568add5a8aa4edea0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/fe297193bf2e6866ed900ed2d5869362768df6a7",
-                "reference": "fe297193bf2e6866ed900ed2d5869362768df6a7",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a3ebf3bfd8a98a147c010a568add5a8aa4edea0f",
+                "reference": "a3ebf3bfd8a98a147c010a568add5a8aa4edea0f",
                 "shasum": ""
             },
             "require": {
@@ -4260,11 +4260,25 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-27T16:54:36+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-12T14:39:55+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.7",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
