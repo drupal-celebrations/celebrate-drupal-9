@@ -72,9 +72,6 @@ hooks:
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
         set -e
-        unset NPM_CONFIG_PREFIX
-        export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
         nvm use node
         php ./drush/platformsh_generate_drush_yml.php
         cd web
