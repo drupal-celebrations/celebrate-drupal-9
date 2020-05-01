@@ -5639,6 +5639,11 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+platformsh-config@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/platformsh-config/-/platformsh-config-2.3.1.tgz#3a9746af7b5105b60a28c7ecc9b881b852cc6638"
+  integrity sha512-b3WOJQ1A7fonAB46PF9aAOKj/0lsHvFSYcvnnPi4gowcs4DiKDjxETLHLs3kq87AyVEZW9WtcdoON/q3vvLMJA==
+
 please-upgrade-node@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.2.0.tgz#aeddd3f994c933e4ad98b99d9a556efa0e2fe942"

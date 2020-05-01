@@ -3,5 +3,8 @@
   "workspaces": [
     "web/modules/custom/*",
     "web/themes/custom/*"
-  ]
+  ],
+  "dependencies": {
+    "platformsh-config": "^2.3.1"
+  }
 }

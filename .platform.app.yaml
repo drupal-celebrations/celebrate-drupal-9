@@ -59,12 +59,23 @@ build:
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
+    build: |
+        unset NPM_CONFIG_PREFIX
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | dash
+        export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        nvm install node
+        curl -o- -L https://yarnpkg.com/install.sh | dash
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
         set -e
-        php ./drush/platformsh_generate_drush_yml.php
+        unset NPM_CONFIG_PREFIX
+        export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        nvm use node
         yarn
         yarn run production
+        php ./drush/platformsh_generate_drush_yml.php
         cd web
         drush -y cache-rebuild
         drush -y updatedb
