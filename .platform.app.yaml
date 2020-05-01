@@ -24,6 +24,11 @@ runtime:
     extensions:
         - redis
 
+# Add additional dependencies
+dependencies:
+    nodejs:
+        yarn: "*"
+
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
@@ -58,6 +63,7 @@ hooks:
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
+        yarn run production
         cd web
         drush -y cache-rebuild
         drush -y updatedb
