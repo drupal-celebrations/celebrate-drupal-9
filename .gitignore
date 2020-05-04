@@ -5,8 +5,18 @@ Thumbs.db
 
 # Dependency tools
 node_modules/
-yarn-debug.log
-yarn-error.log
+
+# Ignore yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+# Yarn Plug n' Play: https://yarnpkg.com/features/pnp
+# Check zero-installs: https://yarnpkg.com/features/zero-installs
+# cache and pnp could be added to git
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*
 
 # IDEs
 .idea

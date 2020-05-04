@@ -1,5 +1,9 @@
 {
+  "name": "drupal-celebrations-project",
   "private": true,
+  "scripts": {
+    "build": "yarn workspaces run build"
+  },
   "workspaces": [
     "web/modules/custom/*",
     "web/themes/custom/*"
