@@ -49,7 +49,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {% if title is not empty %}
+      {% if title|render|striptags|trim is not empty %}
         {{ content.field_hero_image }}
         {{ title }}
         {{ content | without('field_hero_image') }}

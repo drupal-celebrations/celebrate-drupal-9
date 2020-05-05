@@ -42,55 +42,42 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
 
-  {% if page.header|render|striptags|trim is not empty %}
-    <header class="layout-header bg-blue-500 p-12" role="banner">
-      {% if page.header|render|striptags|trim is not empty %}
-        {{ page.header }}
-      {% endif %}
-    </header>
-  {% endif %}
-
-  {% if page.breadcrumbs|render|striptags|trim is not empty %}
-  <div class="layout-breadcrumbs">
-    <div class="container mx-auto">
-      {{ page.breadcrumbs }}
-    </div>
-  </div>
-  {% endif %}
-
-  {% if not node %}
-    {% if page.page_title|render|striptags|trim is not empty %}
-      <div class="layout-page-title">
-        {% if is_front %}
-          <div class="is-front container mx-auto">
-            {{ page.page_title }}
-          </div>
-          {% else %}
-          <div class="container mx-auto">
-            {{ page.page_title }}
-          </div>
-        {% endif %}
-      </div>
+{% if page.header|render|striptags|trim is not empty %}
+  <header class="layout-header bg-blue-500 p-12" role="banner">
+    {% if page.header|render|striptags|trim is not empty %}
+      {{ page.header }}
     {% endif %}
+  </header>
+{% endif %}
+
+{% if page.breadcrumbs|render|striptags|trim is not empty %}
+<div class="layout-breadcrumbs container mx-auto">
+  {{ page.breadcrumbs }}
+</div>
+{% endif %}
+
+{% if not node %}
+  {% if page.page_title|render|striptags|trim is not empty %}
+  {% set page_title_classes = [
+    'layout-page-title',
+    'container',
+    'mx-auto',
+    is_front ? 'is-front' : '',
+  ] %}
+    <div class="{{ page_title_classes | join(' ') }}">
+      {{ page.page_title }}
+    </div>
   {% endif %}
+{% endif %}
 
-  <main role="main" class="main container mx-auto">
+<main role="main" class="main container mx-auto">
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  {{ page.content }}
+</main>
 
-    <div class="layout-content">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-  </main>
-
-  {% if page.footer|render|striptags|trim is not empty %}
-  <div class="layout-footer bg-gray-900 text-white p-12">
-    <footer class="footer container mx-auto" role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  </div>
-  {% endif %}
-
-</div>{# /.layout-container #}
+{% if page.footer|render|striptags|trim is not empty %}
+<footer class="footer bg-gray-900 text-white p-12" role="contentinfo">
+  {{ page.footer }}
+</footer>
+{% endif %}
