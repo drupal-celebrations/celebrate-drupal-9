@@ -52,28 +52,6 @@
     </header>
   {% endif %}
 
-  {% if page.highlighted %}
-    <div class="layout-highlighted">
-      <div class="container mx-auto">
-        {{ page.highlighted }}
-      </div>
-    </div>
-  {% endif %}
-
-  {% if page.tabs %}
-  <div class="layout-tabs">
-    <div class="container mx-auto">
-      {{ page.tabs }}
-    </div>
-  </div>
-  {% endif %}
-
-  {% if page.banner_top|render|striptags|trim is not empty %}
-    <div class="layout-banner-top">
-      {{ page.banner_top }}
-    </div>
-  {% endif %}
-
   {% if page.breadcrumbs|render|striptags|trim is not empty %}
   <div class="layout-breadcrumbs">
     <div class="container mx-auto">
@@ -105,19 +83,7 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar|render|striptags|trim is not empty %}
-      <aside class="layout-sidebar" role="complementary">
-        {{ page.sidebar }}
-      </aside>
-    {% endif %}
-
   </main>
-
-  {% if page.content_bottom|render|striptags|trim is not empty %}
-    <div class="layout-content-bottom">
-      {{ page.content_bottom }}
-    </div>
-  {% endif %}
 
   {% if page.footer|render|striptags|trim is not empty %}
   <div class="layout-footer bg-gray-900 text-white p-12">
@@ -125,14 +91,6 @@
       {{ page.footer }}
     </footer>
   </div>
-  {% endif %}
-
-  {% if page.bottom|render|striptags|trim is not empty %}
-    <div class="layout-bottom">
-      <div class="container mx-auto">
-        {{ page.bottom }}
-      </div>
-    </div>
   {% endif %}
 
 </div>{# /.layout-container #}

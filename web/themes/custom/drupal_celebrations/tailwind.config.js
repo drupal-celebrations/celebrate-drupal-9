@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   theme: {
     fontFamily: {
@@ -70,8 +72,21 @@ module.exports = {
     height: ['responsive'],
   },
   plugins: [
-    // TODO: Add custom plugins to implement dynamic utilities or components.
-    // https://tailwindcss.com/docs/extracting-components#writing-a-component-plugin
-    // https://tailwindcss.com/docs/adding-new-utilities#using-a-plugin
+    plugin(function ({
+      addBase,
+      config
+    }) {
+      addBase({
+        h1: {
+          fontSize: config('theme.fontSize.2xl')
+        },
+        h2: {
+          fontSize: config('theme.fontSize.xl')
+        },
+        h3: {
+          fontSize: config('theme.fontSize.lg')
+        },
+      })
+    }),
   ],
 };
