@@ -1,5 +1,10 @@
 module.exports = {
   theme: {
+    fontFamily: {
+      sans: ['metropolis', 'sans-serif'],
+      serif: ['Lora', 'georgia', 'serif'],
+      mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+    },
     extend: {
       minWidth: {
         '9': '9.35rem',
