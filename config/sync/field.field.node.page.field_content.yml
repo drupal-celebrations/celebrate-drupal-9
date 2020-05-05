@@ -25,7 +25,13 @@ settings:
     target_bundles:
       hero: hero
     target_bundles_drag_drop:
+      embed_view:
+        weight: -5
+        enabled: false
       hero:
         enabled: true
-        weight: 2
+        weight: -7
+      text_with_media:
+        weight: -6
+        enabled: false
 field_type: entity_reference_revisions

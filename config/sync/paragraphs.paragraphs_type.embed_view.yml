@@ -1,0 +1,10 @@
+uuid: 0175d341-5572-4407-93ea-e1dd14d7c180
+langcode: en
+status: true
+dependencies: {  }
+id: embed_view
+label: 'Embed View'
+icon_uuid: null
+icon_default: null
+description: 'Embed a "View" such as recent videos or images.'
+behavior_plugins: {  }

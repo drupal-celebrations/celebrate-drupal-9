@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ad32b465aac2d40e292e40796cf28cc",
+    "content-hash": "cabfc62fadedbd0fb942475e11d8ae9e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1341,12 +1341,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f20470fc67bf9e48f5d129ad3fa862520b591537"
+                "reference": "8487b9109fbde3fede162534698ca9c6c414502e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f20470fc67bf9e48f5d129ad3fa862520b591537",
-                "reference": "f20470fc67bf9e48f5d129ad3fa862520b591537",
+                "url": "https://api.github.com/repos/drupal/core/zipball/8487b9109fbde3fede162534698ca9c6c414502e",
+                "reference": "8487b9109fbde3fede162534698ca9c6c414502e",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +1577,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-05-04T18:02:41+00:00"
+            "time": "2020-05-05T00:22:17+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -2070,6 +2070,70 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
             }
+        },
+        {
+            "name": "drupal/viewsreference",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/viewsreference.git",
+                "reference": "d931814ac9c48460d6f1202c11fa2723a729162f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "conflict": {
+                "drupal/viewsreferennce": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha6+2-dev",
+                    "datestamp": "1585088217",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "#3133637 entity.manager is deprecated": "https://www.drupal.org/files/issues/2020-05-05/3133637-use-entity_type-service.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "New Zeal",
+                    "homepage": "https://www.drupal.org/user/93571"
+                },
+                {
+                    "name": "jasonawant",
+                    "homepage": "https://www.drupal.org/user/589890"
+                },
+                {
+                    "name": "joekers",
+                    "homepage": "https://www.drupal.org/user/2229066"
+                },
+                {
+                    "name": "seanB",
+                    "homepage": "https://www.drupal.org/user/545912"
+                }
+            ],
+            "description": "Views reference",
+            "homepage": "http://drupal.org/project/viewsreference",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/viewsreference",
+                "issues": "http://drupal.org/project/issues/viewsreference"
+            },
+            "time": "2020-03-24T22:15:49+00:00"
         },
         {
             "name": "drush/drush",
@@ -6139,7 +6203,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/metatag": 20,
-        "drupal/paragraphs": 20
+        "drupal/paragraphs": 20,
+        "drupal/viewsreference": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

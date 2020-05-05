@@ -24,6 +24,7 @@
         "drupal/metatag": "1.x-dev",
         "drupal/paragraphs": "1.x-dev",
         "drupal/redis": "^1.4",
+        "drupal/viewsreference": "2.x-dev",
         "drush/drush": "^10.2",
         "platformsh/config-reader": "^2.3",
         "vlucas/phpdotenv": "^4.1"
@@ -98,6 +99,9 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/viewsreference": {
+                "#3133637 entity.manager is deprecated": "https://www.drupal.org/files/issues/2020-05-05/3133637-use-entity_type-service.patch"
+            }
         }
     },
     "composer-exit-on-patch-failure": true

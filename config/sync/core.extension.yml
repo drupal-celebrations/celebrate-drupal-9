@@ -49,6 +49,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  viewsreference: 0
   workflows: 0
   content_translation: 10
   views: 10

@@ -4,14 +4,14 @@ sql_signature: false
 ui:
   show:
     additional_queries: false
-    advanced_column: false
-    master_display: false
+    advanced_column: true
+    master_display: true
     performance_statistics: false
     preview_information: true
     sql_query:
       enabled: false
       where: above
-    display_embed: false
+    display_embed: true
   always_live_preview: true
   exposed_filter_any_label: old_any
 field_rewrite_elements:
