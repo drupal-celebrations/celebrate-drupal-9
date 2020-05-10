@@ -9,7 +9,7 @@ dependencies:
 id: poweredbydrupal
 theme: drupal_celebrations
 region: footer
-weight: 0
+weight: -3
 provider: null
 plugin: system_powered_by_block
 settings:

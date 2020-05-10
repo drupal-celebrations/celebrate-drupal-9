@@ -1,0 +1,20 @@
+uuid: 4dde1929-8675-488e-8dce-2216fd562bc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - hosting_platform_sh
+  theme:
+    - drupal_celebrations
+id: hostingbyplatform.sh
+theme: drupal_celebrations
+region: footer
+weight: -2
+provider: null
+plugin: hosting_platform_sh_block
+settings:
+  id: hosting_platform_sh_block
+  label: 'Hosting by platform.sh'
+  provider: hosting_platform_sh
+  label_display: '0'
+visibility: {  }

@@ -21,6 +21,7 @@ module:
   file: 0
   filter: 0
   hide_revision_info: 0
+  hosting_platform_sh: 0
   image: 0
   inline_form_errors: 0
   language: 0
