@@ -1,0 +1,16 @@
+uuid: 4fd7c476-ccef-44f0-8b20-ca83f9e75e41
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.basic_block
+target_entity_type_id: block_content
+target_bundle: basic_block
+default_langcode: site_default
+language_alterable: true

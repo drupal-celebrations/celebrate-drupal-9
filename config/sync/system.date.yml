@@ -5,7 +5,7 @@ timezone:
   default: UTC
   user:
     configurable: true
-    warn: false
+    warn: true
     default: 0
 _core:
   default_config_hash: V9UurX2GPT05NWKG9f2GWQqFG2TRG8vczidwjpy7Woo
