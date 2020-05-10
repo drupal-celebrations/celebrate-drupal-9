@@ -45,6 +45,8 @@ permissions:
   - 'update any media'
   - 'use content_workflow transition content_moderation'
   - 'use content_workflow transition publish'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'

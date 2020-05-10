@@ -19,5 +19,7 @@ permissions:
   - 'translate user'
   - 'translate video media'
   - 'update content translations'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
   - 'view any unpublished content'
   - 'view latest version'
