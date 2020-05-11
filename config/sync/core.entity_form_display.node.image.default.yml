@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.image.field_image
     - field.field.node.image.field_image_category
     - node.type.image
+    - workflows.workflow.content_workflow
   module:
     - content_moderation
     - media_library
@@ -40,7 +41,7 @@ content:
     weight: 1
     region: content
     settings:
-      include_locked: true
+      include_locked: false
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
