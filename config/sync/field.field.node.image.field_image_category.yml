@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_image_category
     - node.type.image
     - taxonomy.vocabulary.image_category
+  content:
+    - 'taxonomy_term:image_category:999fdeb7-9644-4e5a-90c7-ef5e39568ca4'
 id: node.image.field_image_category
 field_name: field_image_category
 entity_type: node
@@ -14,7 +16,9 @@ label: 'Image Category'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 999fdeb7-9644-4e5a-90c7-ef5e39568ca4
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

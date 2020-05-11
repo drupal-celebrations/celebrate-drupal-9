@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_video_category
     - node.type.video
     - taxonomy.vocabulary.video_category
+  content:
+    - 'taxonomy_term:video_category:9bf99ba1-a007-451b-996f-27fd68497534'
 id: node.video.field_video_category
 field_name: field_video_category
 entity_type: node
@@ -14,7 +16,9 @@ label: 'Video Category'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 9bf99ba1-a007-451b-996f-27fd68497534
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

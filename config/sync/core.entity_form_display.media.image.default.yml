@@ -21,13 +21,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media_image:
+    type: image_image
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -58,9 +58,9 @@ content:
     third_party_settings: {  }
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5

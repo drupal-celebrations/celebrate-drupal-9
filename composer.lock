@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cabfc62fadedbd0fb942475e11d8ae9e",
+    "content-hash": "067504cc3103cfce4c928438f019b74e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1743,6 +1743,96 @@
             "time": "2020-05-05T10:01:59+00:00"
         },
         {
+            "name": "drupal/entity_browser",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_browser.git",
+                "reference": "8.x-2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "29456b961f0f90ff064601ab8a382446a8143774"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/embed": "~1.0",
+                "drupal/entity_embed": "1.x-dev",
+                "drupal/entity_reference_revisions": "1.x-dev",
+                "drupal/entityqueue": "1.x-dev",
+                "drupal/inline_entity_form": "1.x-dev",
+                "drupal/paragraphs": "1.x-dev",
+                "drupal/token": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.5",
+                    "datestamp": "1588015347",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Janez Urevc",
+                    "homepage": "https://github.com/slashrsm",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Primoz Hmeljak",
+                    "homepage": "https://github.com/primsi",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1943336/committers",
+                    "role": "contributor"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "marcingy",
+                    "homepage": "https://www.drupal.org/user/77320"
+                },
+                {
+                    "name": "oknate",
+                    "homepage": "https://www.drupal.org/user/471638"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Entity browsing and selecting component.",
+            "homepage": "http://drupal.org/project/entity_browser",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_browser",
+                "issues": "https://www.drupal.org/project/issues/entity_browser",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "1.8.0",
             "source": {
@@ -1863,6 +1953,57 @@
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
             },
             "time": "2020-04-21T17:07:15+00:00"
+        },
+        {
+            "name": "drupal/oembed_providers",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/oembed_providers.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "b6ac2f4624969eef33b1953a78fca9d6fdb62079"
+            },
+            "require": {
+                "drupal/core": "^8.8.0 || ^9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1589212555",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Burge",
+                    "homepage": "https://www.drupal.org/u/chris-burge",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Allows site builders and developers to manage oEmbed providers.",
+            "homepage": "https://drupal.org/project/oembed_providers",
+            "keywords": [
+                "Drupal",
+                "Media",
+                "oEmbed"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/oembed_providers",
+                "issues": "https://www.drupal.org/project/issues/oembed_providers"
+            }
         },
         {
             "name": "drupal/paragraphs",
