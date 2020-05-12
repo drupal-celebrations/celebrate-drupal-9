@@ -22,7 +22,7 @@ class CurrentUserAll extends ArgumentDefaultPluginBase implements CacheableDepen
   public function getArgument() {
     $currentUser = \Drupal::currentUser();
 
-    if ($currentUser->id() === 1) {
+    if ($currentUser->id() === '1') {
       return 'all';
     }
 
