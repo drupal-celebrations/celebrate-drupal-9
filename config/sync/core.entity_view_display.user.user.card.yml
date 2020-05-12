@@ -1,0 +1,39 @@
+uuid: 26076411-7a99-48b1-82c3-7a33586e1bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.card
+    - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_twitter_username
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: user.user.card
+targetEntityType: user
+bundle: user
+mode: card
+content:
+  field_drupal_org_username:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_twitter_username:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  member_for: true
