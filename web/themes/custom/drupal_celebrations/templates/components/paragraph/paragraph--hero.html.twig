@@ -43,7 +43,15 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'flex',
+    'flex-col',
+    'pt-16',
+    'pb-32',
+    'flex',
+    'content-center',
+    'items-center',
+    'justify-center',
   ]
 %}
 {% block paragraph %}
@@ -51,8 +59,10 @@
     {% block content %}
       {% if title|render|striptags|trim is not empty %}
         {{ content.field_hero_image }}
-        {{ title }}
-        {{ content | without('field_hero_image') }}
+        <div class="flex-1">
+          {{ title }}
+          {{ content | without('field_hero_image') }}
+        </div>
       {% else %}
         {{ content }}
       {% endif %}
