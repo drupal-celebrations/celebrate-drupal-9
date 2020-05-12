@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin");
+const typography = require('tailwindcss-typography');
 
 module.exports = {
   theme: {
@@ -20,7 +21,7 @@ module.exports = {
           sm: "xl",
           md: "2xl",
           lg: "2xl",
-          xl: "4xl",
+          xl: "4xl"
         }
       },
       minWidth: {
@@ -45,7 +46,7 @@ module.exports = {
         "screen/2": "50vh",
         "screen/3": "calc(100vh / 3)",
         "screen/4": "calc(100vh / 4)",
-        "screen/5": "calc(100vh / 5)",
+        "screen/5": "calc(100vh / 5)"
       }),
       spacing: {
         "7": "1.75rem",
@@ -66,6 +67,13 @@ module.exports = {
       },
       letterSpacing: {
         "wide-light": "0.01em"
+      },
+      textShadow: {
+        default: "0 2px 0 #000",
+        md: "0 2px 2px #000",
+        h1: "0 0 3px #FF0000, 0 0 5px #0000FF",
+        xl: "0 0 3px rgba(0, 0, 0, .8), 0 0 5px rgba(0, 0, 0, .9)",
+        none: "none"
       }
     }
   },
@@ -91,9 +99,11 @@ module.exports = {
     backgroundColor: ["hover", "focus", "active", "responsive"],
     textColor: ["hover", "focus", "active"],
     width: ["responsive"],
-    height: ["responsive"]
+    height: ["responsive"],
+    typography: ["responsive", "hover"]
   },
   plugins: [
+    typography,
     plugin(function({ addBase, theme }) {
       Object.entries(theme("headings", {})).forEach(([h, sizes]) => {
         Object.entries(sizes).forEach(([bp, fs]) => {
