@@ -46,12 +46,13 @@
     not paragraph.isPublished() ? 'paragraph--unpublished',
     'flex',
     'flex-col',
-    'pt-16',
-    'pb-32',
+    'py-32',
     'flex',
     'content-center',
     'items-center',
     'justify-center',
+    'relative',
+    'h-screen/1',
   ]
 %}
 {% block paragraph %}
@@ -59,7 +60,7 @@
     {% block content %}
       {% if title|render|striptags|trim is not empty %}
         {{ content.field_hero_image }}
-        <div class="flex-1">
+        <div class="flex-1 relative">
           {{ title }}
           {{ content | without('field_hero_image') }}
         </div>
