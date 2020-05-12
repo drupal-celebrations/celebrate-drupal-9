@@ -1,0 +1,24 @@
+uuid: 323344e0-7932-4856-bfe6-1c2c8e07a439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.video_category.field_accent_colour
+    - taxonomy.vocabulary.video_category
+  module:
+    - text
+id: taxonomy_term.video_category.default
+targetEntityType: taxonomy_term
+bundle: video_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_accent_colour: true
+  langcode: true

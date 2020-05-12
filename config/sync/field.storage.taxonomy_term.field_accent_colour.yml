@@ -1,0 +1,20 @@
+uuid: 93477aad-ccda-477c-933e-40533ba97984
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - taxonomy
+id: taxonomy_term.field_accent_colour
+field_name: field_accent_colour
+entity_type: taxonomy_term
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

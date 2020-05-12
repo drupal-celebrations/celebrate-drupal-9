@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "067504cc3103cfce4c928438f019b74e",
+    "content-hash": "5b6d3871292ea7bed74908fe684d8668",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1336,17 +1336,79 @@
             }
         },
         {
+            "name": "drupal/color_field",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/color_field.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "12eb5d74f361a2ebf8bf61f750c145cbf137919b"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/token": "~1.3",
+                "nickwilde1990/php-composter-phpcs-drupal": "^2.0"
+            },
+            "suggest": {
+                "bower-asset/jquery-simple-color": "^v1.2.2: Provides JavaScript library necessary for the Color Grid widget",
+                "bower-asset/spectrum": "^1.8: Provides JavaScript library necessary for Spectrum widget."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1579552087",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "targoo",
+                    "homepage": "https://www.drupal.org/user/431910",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nick Wilde",
+                    "homepage": "https://www.drupal.org/user/nickwilde",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a color field type to store the color value and opacity",
+            "homepage": "https://www.drupal.org/project/color_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/color_field",
+                "issues": "https://www.drupal.org/project/issues/color_field?version=8.x"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "9.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "e4f61d6a8c299111c2669579b7ddbce38786ecc5"
+                "reference": "02bc07115a0f5b0de0f56aa49039d649c41466c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/e4f61d6a8c299111c2669579b7ddbce38786ecc5",
-                "reference": "e4f61d6a8c299111c2669579b7ddbce38786ecc5",
+                "url": "https://api.github.com/repos/drupal/core/zipball/02bc07115a0f5b0de0f56aa49039d649c41466c6",
+                "reference": "02bc07115a0f5b0de0f56aa49039d649c41466c6",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +1639,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-05-11T08:10:55+00:00"
+            "time": "2020-05-11T22:25:10+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -1666,17 +1728,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "c0bd189dbe46680936a157b1aaaf4c4870e67158"
+                "reference": "47e3ca122391525333f46655ff6ba8a3f0e14817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/c0bd189dbe46680936a157b1aaaf4c4870e67158",
-                "reference": "c0bd189dbe46680936a157b1aaaf4c4870e67158",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/47e3ca122391525333f46655ff6ba8a3f0e14817",
+                "reference": "47e3ca122391525333f46655ff6ba8a3f0e14817",
                 "shasum": ""
             },
             "require": {
                 "asm89/stack-cors": "1.3.0",
-                "composer/installers": "v1.9.0",
                 "composer/semver": "1.5.1",
                 "doctrine/annotations": "1.10.2",
                 "doctrine/lexer": "1.2.0",
@@ -1740,7 +1801,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-05-05T10:01:59+00:00"
+            "time": "2020-05-11T16:57:07+00:00"
         },
         {
             "name": "drupal/entity_browser",

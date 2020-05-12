@@ -1,0 +1,24 @@
+uuid: 8ce55a6c-5273-47b6-91a8-196adc55a969
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.image_category.field_accent_colour
+    - taxonomy.vocabulary.image_category
+  module:
+    - text
+id: taxonomy_term.image_category.default
+targetEntityType: taxonomy_term
+bundle: image_category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_accent_colour: true
+  langcode: true

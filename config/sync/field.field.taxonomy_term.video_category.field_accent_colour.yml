@@ -1,0 +1,22 @@
+uuid: 2611db53-2b07-43f6-84fd-da0f0dc2302e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_accent_colour
+    - taxonomy.vocabulary.video_category
+  module:
+    - color_field
+id: taxonomy_term.video_category.field_accent_colour
+field_name: field_accent_colour
+entity_type: taxonomy_term
+bundle: video_category
+label: 'Accent colour'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
