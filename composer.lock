@@ -1403,12 +1403,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "02bc07115a0f5b0de0f56aa49039d649c41466c6"
+                "reference": "64267fb153ee38c6fd97d474308bb0d39026a38f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/02bc07115a0f5b0de0f56aa49039d649c41466c6",
-                "reference": "02bc07115a0f5b0de0f56aa49039d649c41466c6",
+                "url": "https://api.github.com/repos/drupal/core/zipball/64267fb153ee38c6fd97d474308bb0d39026a38f",
+                "reference": "64267fb153ee38c6fd97d474308bb0d39026a38f",
                 "shasum": ""
             },
             "require": {
@@ -1639,7 +1639,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-05-11T22:25:10+00:00"
+            "time": "2020-05-12T22:53:01+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",

@@ -46,7 +46,16 @@ module.exports = {
         "screen/2": "50vh",
         "screen/3": "calc(100vh / 3)",
         "screen/4": "calc(100vh / 4)",
-        "screen/5": "calc(100vh / 5)"
+        "screen/5": "calc(100vh / 5)",
+        "rectangular/0.5": "192px",
+        "rectangular/1": "384px",
+        "rectangular/2": "768px",
+        "rectangular/3": "1152px",
+        "12": "12rem",
+        "18": "18rem",
+        "21": "21rem",
+        "28": "28rem",
+        "36": "36rem",
       }),
       spacing: {
         "7": "1.75rem",
