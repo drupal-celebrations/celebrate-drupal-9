@@ -1,0 +1,25 @@
+uuid: 17ca31ff-5a03-4d8f-9dbe-8ed141dc63cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.rectangular_0_5x
+    - image.style.rectangular_1x
+    - image.style.rectangular_2x
+    - image.style.rectangular_3x
+id: rectangular
+label: Rectangular
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: "(min-width: 1920px) 3840px,\r\n(min-width: 1536px) 3072px,\r\n(min-width: 1440px) 2880px,\r\n(min-width: 1366px) 2732px,\r\n(min-width: 768px) 1536px,\r\n(min-width: 576px) 1152px,\r\n100vw"
+      sizes_image_styles:
+        - rectangular_0_5x
+        - rectangular_1x
+        - rectangular_2x
+        - rectangular_3x
+breakpoint_group: responsive_image
+fallback_image_style: rectangular_1x

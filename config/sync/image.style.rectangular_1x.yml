@@ -1,0 +1,15 @@
+uuid: 54d0d604-ce55-43d3-b6d7-1168216e66a0
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_1x
+label: 'Rectangular 1X (1366x384)'
+effects:
+  30f536ea-092d-4ac0-ae48-6606f00d482f:
+    uuid: 30f536ea-092d-4ac0-ae48-6606f00d482f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1366
+      height: 384
+      anchor: center-center

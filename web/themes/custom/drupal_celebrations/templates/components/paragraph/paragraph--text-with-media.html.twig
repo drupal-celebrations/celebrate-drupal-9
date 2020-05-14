@@ -39,13 +39,7 @@
  */
 #}
 {%
-  set titleClasses = content.field_hero_image|render is not empty ? [
-    'h-12',
-    'sm:h-18',
-    'md:h-21',
-    'lg:h-28',
-    'xl:h-36',
-  ] : []
+  set placement = paragraph.field_placement.0.value
 %}
 {%
   set classes = [
@@ -53,24 +47,22 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'flex',
-    'flex-col',
-    'flex',
-    'content-center',
-    'items-center',
-    'justify-center',
-    'relative',
+    'mx-auto',
+    'container',
+    'placement--' ~ placement,
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes).addClass(titleClasses) }}>
+  <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {% if title|render|striptags|trim is not empty %}
-        {{ content.field_hero_image }}
-        <div class="flex-1 relative">
-          {{ title }}
-          {{ content | without('field_hero_image') }}
-        </div>
+      {% if placement is not empty and content.field_media|render is not empty %}
+        {% if placement in ['top', 'left'] %}
+          {{ content|without('field_media') }}
+        {% endif %}
+        {{ content.field_media }}
+        {% if placement in ['right', 'bottom', 'above'] %}
+          {{ content|without('field_media') }}
+        {% endif %}
       {% else %}
         {{ content }}
       {% endif %}

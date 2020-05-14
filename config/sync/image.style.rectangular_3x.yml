@@ -1,0 +1,15 @@
+uuid: 8be6e01d-b9c2-4a4a-ba9f-9b2a2b954938
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_3x
+label: 'Rectangular 3X (4098×1152)'
+effects:
+  08b1734b-1489-487f-a36a-c88d57db901c:
+    uuid: 08b1734b-1489-487f-a36a-c88d57db901c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 4098
+      height: 1152
+      anchor: center-center

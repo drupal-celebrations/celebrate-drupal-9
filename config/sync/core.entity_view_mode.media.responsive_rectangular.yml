@@ -1,0 +1,10 @@
+uuid: 049e5dc9-37b3-4c9b-aebf-898f0c1aa8d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.responsive_rectangular
+label: 'Responsive rectangular'
+targetEntityType: media
+cache: true

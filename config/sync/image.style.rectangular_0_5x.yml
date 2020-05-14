@@ -1,0 +1,15 @@
+uuid: 160a7aa2-dd1a-4099-9077-beeb796688d3
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_0_5x
+label: 'Rectangular 0.5X (683x192)'
+effects:
+  abf0193b-0d3e-4487-b21f-eae8dadda864:
+    uuid: abf0193b-0d3e-4487-b21f-eae8dadda864
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 683
+      height: 192
+      anchor: center-center

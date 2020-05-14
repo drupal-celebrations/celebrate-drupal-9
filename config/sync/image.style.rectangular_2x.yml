@@ -1,0 +1,15 @@
+uuid: d4e97677-f2ee-408b-87aa-3325eb2c6bc7
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_2x
+label: 'Rectangular 2X (2732×768)'
+effects:
+  75c01762-27d6-42ef-8a93-3d00873b6442:
+    uuid: 75c01762-27d6-42ef-8a93-3d00873b6442
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2732
+      height: 768
+      anchor: center-center
