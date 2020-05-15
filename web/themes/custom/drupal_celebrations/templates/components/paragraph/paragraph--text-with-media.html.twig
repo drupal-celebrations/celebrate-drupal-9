@@ -51,10 +51,9 @@
     'container',
     'placement--' ~ placement,
     'relative',
-    'mt-12',
-    'lg:mt-24',
     'lg:grid',
-    'lg:grid-cols-2',
+    placement in ['left', 'right'] ? 'lg:grid-cols-2',
+    placement in ['top', 'bottom'] ? 'lg:grid-flow-row',
     'lg:gap-8',
     'lg:items-center',
   ]
