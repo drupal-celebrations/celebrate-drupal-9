@@ -50,6 +50,13 @@
     'mx-auto',
     'container',
     'placement--' ~ placement,
+    'relative',
+    'mt-12',
+    'lg:mt-24',
+    'lg:grid',
+    'lg:grid-cols-2',
+    'lg:gap-8',
+    'lg:items-center',
   ]
 %}
 {% block paragraph %}
@@ -57,11 +64,17 @@
     {% block content %}
       {% if placement is not empty and content.field_media|render is not empty %}
         {% if placement in ['top', 'left'] %}
+        <div class="relative">
           {{ content|without('field_media') }}
+        </div>
         {% endif %}
-        {{ content.field_media }}
+        <div class="relative">
+          {{ content.field_media }}
+        </div>
         {% if placement in ['right', 'bottom', 'above'] %}
+        <div class="relative">
           {{ content|without('field_media') }}
+        </div>
         {% endif %}
       {% else %}
         {{ content }}
