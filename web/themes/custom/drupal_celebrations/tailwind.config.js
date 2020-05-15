@@ -18,11 +18,23 @@ module.exports = {
     extend: {
       headings: {
         h1: {
-          sm: "xl",
-          md: "2xl",
-          lg: "2xl",
+          sm: "4xl",
+          md: "5xl",
+          lg: "5xl",
+          xl: "6xl"
+        },
+        h2: {
+          sm: "2xl",
+          md: "3xl",
+          lg: "3xl",
           xl: "4xl"
-        }
+        },
+        h3: {
+          sm: "lg",
+          md: "xl",
+          lg: "xl",
+          xl: "2xl"
+        },
       },
       minWidth: {
         "9": "9.35rem",
