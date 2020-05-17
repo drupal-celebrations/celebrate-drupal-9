@@ -13,9 +13,9 @@
 #}
 {% if primary %}
   <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-  <ul class="tabs primary menu flex">{{ primary }}</ul>
+  <ul class="tabs primary menu flex flex-col md:flex-row">{{ primary }}</ul>
 {% endif %}
 {% if secondary %}
   <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-  <ul class="tabs secondary menu flex">{{ secondary }}</ul>
+  <ul class="tabs secondary menu flex flex-col md:flex-row">{{ secondary }}</ul>
 {% endif %}
