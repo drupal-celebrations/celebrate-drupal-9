@@ -42,6 +42,14 @@
   set placement = paragraph.field_placement.0.value
 %}
 {%
+  set aboveClasses = placement == 'above' ? [
+    'row-start-1',
+    'row-end-2',
+    'col-start-1',
+    'col-end-2',
+  ]
+%}
+{%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
@@ -55,7 +63,6 @@
     'lg:grid',
     placement in ['left', 'right'] ? 'lg:grid-cols-2',
     placement in ['top', 'bottom'] ? 'lg:grid-flow-row',
-    'lg:gap-8',
     'lg:items-center',
   ]
 %}
@@ -68,11 +75,11 @@
           {{ content|without('field_media') }}
         </div>
         {% endif %}
-        <div class="relative max-w-xl mx-auto">
+        <div class="relative max-w-xl mx-auto {{ aboveClasses | join(" ") }}">
           {{ content.field_media }}
         </div>
         {% if placement in ['right', 'bottom', 'above'] %}
-        <div class="relative max-w-xl mx-auto">
+        <div class="relative max-w-xl mx-auto {{ aboveClasses | join(" ") }}">
           {{ content|without('field_media') }}
         </div>
         {% endif %}
