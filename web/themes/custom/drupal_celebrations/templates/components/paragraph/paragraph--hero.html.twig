@@ -39,13 +39,10 @@
  */
 #}
 {%
-  set titleClasses = content.field_hero_image|render is not empty ? [
-    'h-12',
-    'sm:h-18',
-    'md:h-21',
-    'lg:h-28',
-    'xl:h-36',
-  ] : []
+  set heroTitleClasses = [
+    paragraph.field_hero_image|keys is not empty ? 'absolute',
+    'container'
+  ]
 %}
 {%
   set classes = [
@@ -56,7 +53,6 @@
     'flex',
     'flex-col',
     'flex',
-    'content-center',
     'items-center',
     'justify-center',
     'relative',
@@ -64,11 +60,11 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes).addClass(titleClasses) }}>
+  <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {% if title|render|striptags|trim is not empty %}
         {{ content.field_hero_image }}
-        <div class="flex-1 relative">
+        <div class="{{ heroTitleClasses | join(" ") }}">
           {{ title }}
           {{ content | without('field_hero_image') }}
         </div>
