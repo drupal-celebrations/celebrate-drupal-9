@@ -31,7 +31,12 @@ function drupal_celebrations_theme_suggestions_block_alter(array &$suggestions, 
 function drupal_celebrations_preprocess_node(&$variables) {
   /** @var $node Node */
   $node = $variables['node'];
+  $view_mode = $variables['view_mode'];
   if ($node->hasField('field_hero') && !$node->get('field_hero')->isEmpty()) {
+    unset($variables['label']);
+  }
+
+  if ($node->getType() === 'video' && $view_mode === 'teaser' && $node->hasField('field_video') && !$node->get('field_video')->isEmpty()) {
     unset($variables['label']);
   }
 }
@@ -45,6 +50,22 @@ function drupal_celebrations_preprocess_paragraph__hero(&$variables) {
   $variables['title'] = [
     '#type' => 'page_title',
     '#title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
+  ];
+  $variables['#cache']['contexts'][] = 'url';
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function drupal_celebrations_preprocess_media__video(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $variables['title'] = [
+    '#type' => 'inline_template',
+    '#template' => '<h2 class="text-xl font-bold">{{ title }}</h2>',
+    '#context' => [
+      'title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
+    ],
   ];
   $variables['#cache']['contexts'][] = 'url';
 }

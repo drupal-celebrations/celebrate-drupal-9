@@ -1,9 +1,0 @@
-redirect_override_routes:
-  0: user.reset.login
-  2: entity.user.edit_form
-exclude_request_path:
-  id: request_path
-  pages: "/node/*/translations\r\n/node/add/*\r\n/node/*/edit"
-  negate: false
-_core:
-  default_config_hash: 6zW_rU8a954fIICyUPwbzqTIo1LijBemdAEjafOYQ2s
