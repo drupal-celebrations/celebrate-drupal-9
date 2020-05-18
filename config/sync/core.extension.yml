@@ -15,6 +15,7 @@ module:
   current_user_else_all: 0
   datetime: 0
   dblog: 0
+  disable_language: 0
   dynamic_page_cache: 0
   editor: 0
   entity_browser: 0
