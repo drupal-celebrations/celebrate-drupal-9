@@ -10,7 +10,6 @@
  * @see template_preprocess_select()
  */
 #}
-<<<<<<< HEAD
 {% set classes = [
   'shadow',
   'border',
@@ -26,10 +25,6 @@
 
 {% apply spaceless %}
   <select{{ attributes.addClass(classes) }}>
-=======
-{% apply spaceless %}
-  <select{{ attributes }}>
->>>>>>> fb91d2184416... Select template
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">
