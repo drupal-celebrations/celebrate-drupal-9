@@ -2335,7 +2335,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "6611f51b6526a556045f8db0c72cc5ad8e8258d2"
+                "reference": "148e29b4eeff59afc3ee52036dd260f544f006a8"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -2363,8 +2363,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.11+9-dev",
-                    "datestamp": "1588281948",
+                    "version": "8.x-1.11+31-dev",
+                    "datestamp": "1590060943",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2373,7 +2373,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2406,7 +2406,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
             },
-            "time": "2020-05-04T21:06:32+00:00"
+            "time": "2020-05-21T11:35:06+00:00"
         },
         {
             "name": "drupal/redis",
