@@ -9,8 +9,8 @@ p {
   @apply mb-4;
 }
 
-.prefix-wrapper {
-  display: flex;
+a:hover {
+  @apply underline;
 }
 
 .prefix-item {
