@@ -60,10 +60,10 @@
     'container',
     'placement--' ~ placement,
     'relative',
-    'lg:grid',
+    placement in ['above'] ? 'grid' : 'lg:grid',
+    placement in ['above'] ? 'items-center' : 'lg:items-center',
     placement in ['left', 'right'] ? 'lg:grid-cols-2',
     placement in ['top', 'bottom'] ? 'lg:grid-flow-row',
-    'lg:items-center',
   ]
 %}
 {% block paragraph %}

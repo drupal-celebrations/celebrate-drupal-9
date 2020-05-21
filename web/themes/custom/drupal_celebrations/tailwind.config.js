@@ -18,18 +18,21 @@ module.exports = {
     extend: {
       headings: {
         h1: {
+          xs: "4xl",
           sm: "4xl",
           md: "5xl",
           lg: "5xl",
           xl: "6xl"
         },
         h2: {
+          xs: "2xl",
           sm: "2xl",
           md: "3xl",
           lg: "3xl",
           xl: "4xl"
         },
         h3: {
+          xs: "lg",
           sm: "lg",
           md: "xl",
           lg: "xl",
