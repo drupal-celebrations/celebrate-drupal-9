@@ -1,45 +1,54 @@
-uuid: 56f7ffec-7914-4099-a6eb-d83738c97f8b
+uuid: d2f94ef8-2bbe-44f8-b30c-b28a57666cad
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_twitter_username
   module:
     - address
     - user
-    - user_registration
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
-  field_country:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_country_default
+  account:
+    weight: 0
     region: content
-  field_drupal_org_username:
-    weight: 6
-    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_drupal_org_username
+  field_country:
+    type: address_country_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_drupal_org_username:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_twitter_username:
-    weight: 7
-    label: hidden
-    settings: {  }
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: user_registration_twitter_username
+    type: string_textfield
     region: content
-  member_for:
-    weight: 5
+  timezone:
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  contact: true
   langcode: true
+  language: true
+  translation: true

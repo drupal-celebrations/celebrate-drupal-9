@@ -1,4 +1,5 @@
 module:
+  address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   block: 0
@@ -53,6 +54,7 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  user_registration: 0
   views_ui: 0
   viewsreference: 0
   workflows: 0

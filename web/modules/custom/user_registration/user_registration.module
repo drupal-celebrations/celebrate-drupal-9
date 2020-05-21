@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function user_registration_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form["timezone"]["#type"] = "container";
+  $form["field_drupal_org_username"]["widget"][0]["value"]["#attributes"]["placeholder"] = "dries";
+  $form["field_twitter_username"]["widget"][0]["value"]["#attributes"]["placeholder"] = "drupal";
+}

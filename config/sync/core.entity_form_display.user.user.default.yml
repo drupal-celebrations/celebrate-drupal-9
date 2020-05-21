@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_twitter_username
   module:
+    - address
     - user
 id: user.user.default
 targetEntityType: user
@@ -13,12 +15,18 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_country:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: address_country_default
+    region: content
   field_drupal_org_username:
-    weight: 11
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -26,27 +34,20 @@ content:
     type: string_textfield
     region: content
   field_twitter_username:
-    weight: 12
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  language:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   timezone:
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  translation:
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  contact: true
   langcode: true
+  language: true
+  translation: true
