@@ -4,6 +4,8 @@ This project was setup to showcase Celebrations about the Drupal 9 launch.
 
 ## Getting Started
 
+### Local environment
+
 Clone this project, then run `composer install`.
 
 You'll need [direnv](https://direnv.net/) and [Drush](https://www.drush.org/) installed.
@@ -26,6 +28,15 @@ pass: admin
 
 Or use `drush uli` to create a one-time login link.
 
+### Lando
+
+- `lando start`
+- To run drush commands with `lando drush`, comment out `DRUSH_OPTIONS_URI="$SB_BASE_URL"` if you are also using a local environment setup.
+
+## Frontend
+
+- Based on Tailwind
+- `yarn && yarn run build`
 
 ## Services
 
