@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c2619826470942a0ade6804d90fe760",
+    "content-hash": "628c39cd8040ef735f259c9e79a4f01d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2217,6 +2217,17 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
             }
+        },
+        {
+            "name": "drupal/flag",
+            "version": "dev-drupal9",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:colorfield/flag.git",
+                "reference": "drupal9"
+            },
+            "type": "drupal-module",
+            "time": "2020-05-21T19:16:12+00:00"
         },
         {
             "name": "drupal/metatag",
@@ -6677,6 +6688,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/disable_language": 20,
+        "drupal/flag": 20,
         "drupal/metatag": 20,
         "drupal/paragraphs": 20,
         "drupal/viewsreference": 20

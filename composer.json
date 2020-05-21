@@ -12,6 +12,19 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type":"package",
+            "package": {
+                "name": "drupal/flag",
+                "version": "dev-drupal9",
+                "type": "drupal-module",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:colorfield/flag.git",
+                    "reference": "drupal9"
+                }
+            }
         }
     ],
     "require": {
@@ -25,6 +38,7 @@
         "drupal/core-recommended": "^9",
         "drupal/disable_language": "1.x-dev",
         "drupal/entity_browser": "^2.5",
+        "drupal/flag": "dev-drupal9",
         "drupal/metatag": "1.x-dev",
         "drupal/oembed_providers": "^1.0",
         "drupal/paragraphs": "1.x-dev",
