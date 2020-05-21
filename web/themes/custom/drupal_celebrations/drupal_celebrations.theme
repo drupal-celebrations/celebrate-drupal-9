@@ -69,3 +69,15 @@ function drupal_celebrations_preprocess_media__video(&$variables) {
   ];
   $variables['#cache']['contexts'][] = 'url';
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupal_celebrations_preprocess_html(&$variables) {
+  // Use debug theming only if development mode of twig is enabled.
+  $container = \Drupal::getContainer();
+  $twig_config = $container->hasParameter('twig.config') ? $container->getParameter('twig.config'): [];
+  if (isset($twig_config['debug']) && $twig_config['debug']) {
+    $variables['attributes']['class'][] = 'debug';
+  }
+}
