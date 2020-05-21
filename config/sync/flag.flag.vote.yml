@@ -1,0 +1,31 @@
+uuid: 18cb8e7b-5dbd-4728-84a7-64825efd66af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vote
+label: Vote
+bundles:
+  - image
+  - video
+entity_type: node
+global: false
+weight: 0
+flag_short: Vote
+flag_long: ''
+flag_message: ''
+unflag_short: Unvote
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

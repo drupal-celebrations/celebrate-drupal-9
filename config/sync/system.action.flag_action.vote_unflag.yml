@@ -1,0 +1,15 @@
+uuid: 83cd9f2b-032e-4e9d-8fb4-b47458188f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.vote
+  module:
+    - flag
+id: flag_action.vote_unflag
+label: Unvote
+type: node
+plugin: 'flag_action:vote_unflag'
+configuration:
+  flag_id: vote
+  flag_action: unflag

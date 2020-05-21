@@ -1,0 +1,15 @@
+uuid: e4a47c62-c2c2-40ff-9ae6-db9ae6d95c58
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.vote
+  module:
+    - flag
+id: flag_action.vote_flag
+label: Vote
+type: node
+plugin: 'flag_action:vote_flag'
+configuration:
+  flag_id: vote
+  flag_action: flag
