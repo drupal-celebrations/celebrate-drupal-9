@@ -11,7 +11,7 @@ field_name: field_drupal_org_username
 entity_type: user
 bundle: user
 label: 'Drupal.org username'
-description: ''
+description: 'Your Drupal.org username. Enter just username, so eg. if your profile is <i>https://drupal.org/u/dries</i>, then please enter just <i>dries</i>.'
 required: false
 translatable: false
 default_value: {  }

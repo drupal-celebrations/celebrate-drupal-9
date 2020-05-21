@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.card
+    - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_twitter_username
   module:
     - layout_builder
     - user
+    - user_registration
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -21,19 +23,18 @@ content:
   field_drupal_org_username:
     weight: 0
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: user_registration_drupal_org_username
     region: content
   field_twitter_username:
     weight: 1
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: user_registration_twitter_username
     region: content
 hidden:
+  field_country: true
   langcode: true
   member_for: true

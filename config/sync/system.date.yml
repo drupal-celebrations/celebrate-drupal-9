@@ -6,6 +6,6 @@ timezone:
   user:
     configurable: true
     warn: true
-    default: 0
+    default: 2
 _core:
   default_config_hash: V9UurX2GPT05NWKG9f2GWQqFG2TRG8vczidwjpy7Woo

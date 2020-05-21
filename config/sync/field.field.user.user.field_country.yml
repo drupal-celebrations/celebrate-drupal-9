@@ -1,0 +1,22 @@
+uuid: fa9e031a-b44c-4d0c-a6a6-1b1907eaf874
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_country
+  module:
+    - address
+    - user
+id: user.user.field_country
+field_name: field_country
+entity_type: user
+bundle: user
+label: Country
+description: 'Select country where you usually live. Your friends from community will be able to filter celebrations by country.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

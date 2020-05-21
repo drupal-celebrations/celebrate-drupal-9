@@ -8,3 +8,13 @@
 p {
   @apply mb-4;
 }
+
+.prefix-wrapper {
+  display: flex;
+}
+
+.prefix-item {
+  background-color: buttonface;
+  color: #666;
+  font: inherit;
+}

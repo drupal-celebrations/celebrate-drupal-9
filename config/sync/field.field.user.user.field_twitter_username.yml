@@ -11,7 +11,7 @@ field_name: field_twitter_username
 entity_type: user
 bundle: user
 label: 'Twitter username'
-description: ''
+description: 'Your Twitter username. Enter just username, so eg. if your profile is <i>https://twitter.com/drupal</i>, then please enter just <i>drupal</i>.'
 required: false
 translatable: false
 default_value: {  }
