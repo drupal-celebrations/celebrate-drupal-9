@@ -21,6 +21,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "2.2.2",
     "husky": "^4.2.5",

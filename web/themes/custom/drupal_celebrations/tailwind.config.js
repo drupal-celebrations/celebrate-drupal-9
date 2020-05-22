@@ -1,5 +1,6 @@
 const plugin = require("tailwindcss/plugin");
 const typography = require('tailwindcss-typography');
+const forms = require('@tailwindcss/custom-forms');
 
 module.exports = {
   theme: {
@@ -125,6 +126,7 @@ module.exports = {
   },
   plugins: [
     typography,
+    forms,
     plugin(function({ addBase, theme }) {
       Object.entries(theme("headings", {})).forEach(([h, sizes]) => {
         Object.entries(sizes).forEach(([bp, fs]) => {
