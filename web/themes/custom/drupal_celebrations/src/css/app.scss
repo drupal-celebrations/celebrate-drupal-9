@@ -5,6 +5,10 @@
   border: 1px dashed grey;
 }
 
+.container>* {
+  @apply mx-4;
+}
+
 .site-logo {
   @apply w-12 mr-4;
 }
