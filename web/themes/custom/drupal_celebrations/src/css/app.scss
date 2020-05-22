@@ -5,6 +5,14 @@
   border: 1px dashed grey;
 }
 
+ul {
+  @apply list-disc list-inside;
+}
+
+ol {
+  @apply list-decimal list-inside;
+}
+
 p {
   @apply mb-4;
 }
@@ -14,7 +22,6 @@ a:hover {
 }
 
 .prefix-item {
-  background-color: buttonface;
-  color: #666;
+  @apply bg-gray-200 text-gray-600;
   font: inherit;
 }
