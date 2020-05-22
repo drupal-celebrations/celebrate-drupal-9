@@ -5,6 +5,10 @@
   border: 1px dashed grey;
 }
 
+.site-logo {
+  @apply w-12 mb-4;
+}
+
 .paragraph ul {
   @apply list-disc list-inside;
 }
