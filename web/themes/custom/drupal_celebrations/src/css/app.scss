@@ -5,11 +5,11 @@
   border: 1px dashed grey;
 }
 
-ul {
+.paragraph ul {
   @apply list-disc list-inside;
 }
 
-ol {
+.paragraph ol {
   @apply list-decimal list-inside;
 }
 
