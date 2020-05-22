@@ -671,16 +671,16 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "2.0.3",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "7bbc66f9485736e64df6fc946bee1b1deb722667"
+                "reference": "be87265bdcf7bb46412de243b13d436725319bab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/7bbc66f9485736e64df6fc946bee1b1deb722667",
-                "reference": "7bbc66f9485736e64df6fc946bee1b1deb722667",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/be87265bdcf7bb46412de243b13d436725319bab",
+                "reference": "be87265bdcf7bb46412de243b13d436725319bab",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +758,7 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2020-02-19T01:58:49+00:00"
+            "time": "2020-05-22T20:16:46+00:00"
         },
         {
             "name": "consolidation/self-update",
@@ -2335,7 +2335,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "148e29b4eeff59afc3ee52036dd260f544f006a8"
+                "reference": "4f44470603eff9d11d0900ac45a64b50f2479405"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -2406,7 +2406,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
             },
-            "time": "2020-05-21T11:35:06+00:00"
+            "time": "2020-05-22T09:33:09+00:00"
         },
         {
             "name": "drupal/redis",
