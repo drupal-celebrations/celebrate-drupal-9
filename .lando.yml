@@ -1,5 +1,42 @@
-# Configure this according to the actual project name.
 name: drupal-celebrations
 recipe: drupal8
+
 config:
   webroot: web
+  xdebug: false
+  overrides:
+    environment:
+      SB_ENVIRONMENT: development
+    volumes:
+      - ${HOME}/.lando/composer_cache:/var/www/.composer
+
+services:
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+
+  node:
+    type: node
+    globals:
+      yarn: "latest"
+    app_mount: disabled
+    run:
+      - "yarn && yarn develop"
+    overrides:
+      volumes:
+        - ./web/themes/custom/drupal_celebrations:/app
+
+tooling:
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root
+  yarn:
+    service: node
