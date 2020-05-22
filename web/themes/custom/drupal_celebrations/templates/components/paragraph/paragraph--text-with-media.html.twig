@@ -71,7 +71,7 @@
     {% block content %}
       {% if placement is not empty and content.field_media|render is not empty %}
         {% if placement in ['top', 'left'] %}
-        <div class="relative max-w-xl mx-auto">
+        <div class="relative w-full mx-auto">
           {{ content|without('field_media') }}
         </div>
         {% endif %}
