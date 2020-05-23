@@ -63,7 +63,7 @@ hooks:
         set -e
         unset NPM_CONFIG_PREFIX
         export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
-        [[ ! -f "~/.bash_profile" ]] && touch ~/.bash_profile
+        [ ! -f "~/.bash_profile" ] && touch ~/.bash_profile
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | dash
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
         nvm install node
