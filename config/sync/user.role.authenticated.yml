@@ -24,5 +24,5 @@ permissions:
   - 'edit own image media'
   - 'update media'
   - 'use content_workflow transition create_new_draft'
-  - 'use text format basic_html'
+  - 'use text format restricted_html'
   - 'view media'

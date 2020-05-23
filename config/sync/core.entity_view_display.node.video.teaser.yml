@@ -6,21 +6,34 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_description
     - field.field.node.video.field_rights
     - field.field.node.video.field_video
     - field.field.node.video.field_video_category
     - node.type.video
   module:
+    - text
     - user
 id: node.video.teaser
 targetEntityType: node
 bundle: video
 mode: teaser
 content:
-  content_moderation_control:
-    weight: 1
+  field_celebration:
+    type: entity_reference_label
+    weight: 2
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_description:
+    type: text_trimmed
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
     third_party_settings: {  }
   field_video:
     type: entity_reference_entity_view
@@ -31,10 +44,17 @@ content:
       view_mode: card
       link: false
     third_party_settings: {  }
+  field_video_category:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_cc_license: true
-  field_celebration: true
   field_rights: true
-  field_video_category: true
   langcode: true
   links: true

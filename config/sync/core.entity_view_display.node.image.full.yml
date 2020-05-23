@@ -1,9 +1,9 @@
-uuid: f0406502-64d2-4954-a8fc-89631ba594e2
+uuid: 6f5b6bdc-af23-4cc9-acf2-e7d4fd9dd905
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.full
     - field.field.node.image.field_cc_license
     - field.field.node.image.field_celebration
     - field.field.node.image.field_description
@@ -12,13 +12,23 @@ dependencies:
     - field.field.node.image.field_rights
     - node.type.image
   module:
+    - layout_builder
     - text
     - user
-id: node.image.teaser
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.image.full
 targetEntityType: node
 bundle: image
-mode: teaser
+mode: full
 content:
+  content_moderation_control:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_celebration:
     type: entity_reference_label
     weight: 2
@@ -28,37 +38,35 @@ content:
       link: true
     third_party_settings: {  }
   field_description:
-    type: text_trimmed
     weight: 3
-    region: content
     label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
   field_image:
     type: entity_reference_entity_view
     weight: 0
-    region: content
     label: hidden
     settings:
-      view_mode: card
+      view_mode: full
       link: false
     third_party_settings: {  }
-  field_image_category:
-    type: entity_reference_label
-    weight: 1
     region: content
+  field_image_category:
+    weight: 1
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
     weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  content_moderation_control: true
   field_cc_license: true
   field_rights: true
   langcode: true

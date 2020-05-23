@@ -1,0 +1,23 @@
+uuid: 3815db7f-9b19-4662-8939-20c21e7cf57b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights
+    - node.type.image
+id: node.image.field_rights
+field_name: field_rights
+entity_type: node
+bundle: image
+label: 'I have the rights to the image I am submitting'
+description: 'I have the rights to the image I am submitting. It does not contain 3rd party copyrighted material. I consent to it being used in whole or in part to create and publish, online and elsewhere, promotional materials about Drupal and its'' community. '
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

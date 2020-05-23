@@ -1,0 +1,21 @@
+uuid: 8188650e-f4e2-4f0e-835a-9daf4bdd5b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.image
+  module:
+    - text
+id: node.image.field_description
+field_name: field_description
+entity_type: node
+bundle: image
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
