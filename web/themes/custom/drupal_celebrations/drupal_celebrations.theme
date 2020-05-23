@@ -31,16 +31,7 @@ function drupal_celebrations_theme_suggestions_block_alter(array &$suggestions, 
 function drupal_celebrations_preprocess_node(&$variables) {
   /** @var $node Node */
   $node = $variables['node'];
-  $view_mode = $variables['view_mode'];
   if ($node->hasField('field_hero') && !$node->get('field_hero')->isEmpty()) {
-    unset($variables['label']);
-  }
-
-  if ($node->getType() === 'video' && $view_mode === 'teaser' && $node->hasField('field_video') && !$node->get('field_video')->isEmpty()) {
-    unset($variables['label']);
-  }
-
-  if ($node->getType() === 'image' && $view_mode === 'teaser' && $node->hasField('field_image') && !$node->get('field_image')->isEmpty()) {
     unset($variables['label']);
   }
 }
@@ -125,5 +116,37 @@ function drupal_celebrations_theme_suggestions_form_element_alter(array &$sugges
     // of it.
     $name = explode("[" , $variables["element"]["#name"], 2);
     $suggestions[] = $variables["theme_hook_original"] . "__" . $name[0];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupal_celebrations_preprocess_field(&$variables) {
+  $categoryFields = ['field_video_category', 'field_image_category'];
+  if (in_array($variables['field_name'], $categoryFields)) {
+    $categoryClasses = [
+      'inline-block',
+      'px-3',
+      'py-1',
+      'text-sm',
+      'font-semibold',
+      'mr-2',
+      // @todo by term, get color.
+      'bg-gray-200',
+      'text-gray-700',
+    ];
+    foreach ($variables['items'] as &$item) {
+      if (!array_key_exists('#attributes', $item['content'])) {
+        $item["content"]["#attributes"] = [];
+      }
+      if (!array_key_exists('class', $item['content']['#attributes'])) {
+        $item["content"]["#attributes"]['class'] = [];
+      }
+      $item['content']['#attributes']['class'] = array_merge(
+        $item['content']['#attributes']['class'],
+        $categoryClasses
+      );
+    }
   }
 }

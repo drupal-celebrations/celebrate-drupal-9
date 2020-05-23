@@ -18,19 +18,10 @@
     'media--type-' ~ media.bundle()|clean_class,
     not media.isPublished() ? 'media--unpublished',
     view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+    'w-full',
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix.contextual_links }}
-
-  {% if title|render|striptags|trim is not empty %}
-    {{ content.field_media_oembed_video }}
-    <div class="card">
-      {{ title }}
-      {{ content | without('field_media_oembed_video') }}
-    </div>
-  {% else %}
-    {{ content }}
-  {% endif %}
-
+  {{ content }}
 </article>

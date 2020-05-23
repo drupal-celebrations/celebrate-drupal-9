@@ -74,11 +74,17 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'max-w-sm',
+    'overflow-hidden',
+    'shadow-lg'
   ]
 %}
 
 <article{{ attributes.addClass(classes) }}>
 
+  {{ content.field_video }}
+
+  <div class="px-6 py-4">
   {% if label %}
     {{ title_prefix }}
     {% if page %}
@@ -95,16 +101,14 @@
     {{ title_suffix }}
   {% endif %}
 
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}<span class="by-author">by {{ author_name }}</span> {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+    <div class="text-gray-700 text-base">
+      {{ content | without('field_video') }}
+        {% if display_submitted %}
+          <footer class="node__meta">
+            {# display author from node or video #}
+          </footer>
+        {% endif %}
+    </div>
 
-    {{ content }}
-
+  </div>
 </article>
