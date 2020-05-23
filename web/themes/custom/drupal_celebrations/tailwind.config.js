@@ -16,6 +16,13 @@ module.exports = {
         "monospace"
       ]
     },
+    customForms: theme => ({
+      default: {
+        'input, textarea, multiselect, select': {
+          borderRadius: theme('borderRadius.none'),
+        },
+      },
+    }),
     extend: {
       headings: {
         h1: {
