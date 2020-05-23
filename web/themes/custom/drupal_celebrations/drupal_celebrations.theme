@@ -3,7 +3,6 @@
 use Drupal\Component\Utility\Html;
 use Drupal\user\Entity\User;
 use Drupal\taxonomy\TermInterface;
-use Drupal\color_map\ColorMap;
 
 /**
  * Implements hook_preprocess_block().
