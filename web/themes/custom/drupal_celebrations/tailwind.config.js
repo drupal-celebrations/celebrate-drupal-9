@@ -1,9 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+const { colors: { teal, orange, pink, ...colours } } = defaultTheme;
 const plugin = require("tailwindcss/plugin");
 const typography = require('tailwindcss-typography');
 const forms = require('@tailwindcss/custom-forms');
 
 module.exports = {
   theme: {
+    colors: colours,
     fontFamily: {
       sans: ["metropolis", "sans-serif"],
       serif: ["Lora", "georgia", "serif"],
@@ -149,7 +152,3 @@ module.exports = {
     })
   ]
 };
-
-// If you want the default values without the users changes then you can import `tailwindcss/defaultConfig`.
-// It is the raw default config. This means some things will be functions to reference other values.
-// If you want the resolved values you can use `tailwindcss/resolveConfig`.
