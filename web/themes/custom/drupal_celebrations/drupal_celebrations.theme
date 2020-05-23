@@ -50,40 +50,6 @@ function drupal_celebrations_preprocess_paragraph__hero(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_media().
- */
-function drupal_celebrations_preprocess_media__video(&$variables) {
-  // TODO: fixme get the node title (Video CT) and inject this to the media bundle Video
-  $request = \Drupal::request();
-  $route_match = \Drupal::routeMatch();
-  $variables['title'] = [
-    '#type' => 'inline_template',
-    '#template' => '<h2 class="text-xl font-bold">{{ title }}</h2>',
-    '#context' => [
-      'title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
-    ],
-  ];
-  $variables['#cache']['contexts'][] = 'url';
-}
-
-/**
- * Implements hook_preprocess_media().
- */
-function drupal_celebrations_preprocess_media__image(&$variables) {
-  // TODO: fixme get the node title (Image CT) and inject this to the media bundle Image
-  $request = \Drupal::request();
-  $route_match = \Drupal::routeMatch();
-  $variables['title'] = [
-    '#type' => 'inline_template',
-    '#template' => '<h2 class="text-xl font-bold">{{ title }}</h2>',
-    '#context' => [
-      'title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
-    ],
-  ];
-  $variables['#cache']['contexts'][] = 'url';
-}
-
-/**
  * Implements hook_preprocess_HOOK().
  */
 function drupal_celebrations_preprocess_html(&$variables) {
