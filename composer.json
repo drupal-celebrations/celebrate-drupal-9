@@ -91,9 +91,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/viewsreference": {
-                "#3133637 entity.manager is deprecated": "https://www.drupal.org/files/issues/2020-05-05/3133637-use-entity_type-service.patch"
-            }
         }
     },
     "composer-exit-on-patch-failure": true

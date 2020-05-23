@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c2619826470942a0ade6804d90fe760",
+    "content-hash": "b667962a5cdc73e163b8f56e21f5a594",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -671,16 +671,16 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "be87265bdcf7bb46412de243b13d436725319bab"
+                "reference": "20077d33706c575ec05cb18d87209141c75d1b55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/be87265bdcf7bb46412de243b13d436725319bab",
-                "reference": "be87265bdcf7bb46412de243b13d436725319bab",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/20077d33706c575ec05cb18d87209141c75d1b55",
+                "reference": "20077d33706c575ec05cb18d87209141c75d1b55",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +758,7 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2020-05-22T20:16:46+00:00"
+            "time": "2020-05-22T22:40:30+00:00"
         },
         {
             "name": "consolidation/self-update",
@@ -1596,16 +1596,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.0.0-beta3",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "084a8705f4169a95366eea1451012c81ca2cd500"
+                "reference": "b97eebe9799d323f3dc0a5c372b341de57bbc7d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/084a8705f4169a95366eea1451012c81ca2cd500",
-                "reference": "084a8705f4169a95366eea1451012c81ca2cd500",
+                "url": "https://api.github.com/repos/drupal/core/zipball/b97eebe9799d323f3dc0a5c372b341de57bbc7d4",
+                "reference": "b97eebe9799d323f3dc0a5c372b341de57bbc7d4",
                 "shasum": ""
             },
             "require": {
@@ -1836,11 +1836,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-05-15T23:57:43+00:00"
+            "time": "2020-05-22T22:32:46+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.0.0-beta3",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1887,7 +1887,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.0.0-beta3",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1925,16 +1925,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.0.0-beta3",
+            "version": "9.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "70d87ea98276093b045bf29fbcb3185128f23a45"
+                "reference": "9c37adc137e9247090578f7b4ad46acca17acdc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/70d87ea98276093b045bf29fbcb3185128f23a45",
-                "reference": "70d87ea98276093b045bf29fbcb3185128f23a45",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/9c37adc137e9247090578f7b4ad46acca17acdc0",
+                "reference": "9c37adc137e9247090578f7b4ad46acca17acdc0",
                 "shasum": ""
             },
             "require": {
@@ -1943,7 +1943,7 @@
                 "doctrine/annotations": "1.10.2",
                 "doctrine/lexer": "1.2.0",
                 "doctrine/reflection": "1.2.1",
-                "drupal/core": "9.0.0-beta3",
+                "drupal/core": "9.0.0-rc1",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.3",
                 "guzzlehttp/promises": "v1.3.1",
@@ -2002,7 +2002,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-05-15T23:57:43+00:00"
+            "time": "2020-05-22T22:32:46+00:00"
         },
         {
             "name": "drupal/disable_language",
@@ -2542,7 +2542,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/viewsreference.git",
-                "reference": "d931814ac9c48460d6f1202c11fa2723a729162f"
+                "reference": "84ca0fefd328eee3dd1ee7e795693d73b178b35e"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2563,9 +2563,7 @@
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
-                "patches_applied": {
-                    "#3133637 entity.manager is deprecated": "https://www.drupal.org/files/issues/2020-05-05/3133637-use-entity_type-service.patch"
-                }
+                "patches_applied": []
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -2598,7 +2596,7 @@
                 "source": "http://cgit.drupalcode.org/viewsreference",
                 "issues": "http://drupal.org/project/issues/viewsreference"
             },
-            "time": "2020-03-24T22:15:49+00:00"
+            "time": "2020-05-23T14:40:01+00:00"
         },
         {
             "name": "drush/drush",
@@ -6465,16 +6463,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v4.1.5",
+            "version": "v4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "539bb6927c101a5605d31d11a2d17185a2ce2bf1"
+                "reference": "0b32505d67c1abbfa829283c86bfc0642a661bf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/539bb6927c101a5605d31d11a2d17185a2ce2bf1",
-                "reference": "539bb6927c101a5605d31d11a2d17185a2ce2bf1",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/0b32505d67c1abbfa829283c86bfc0642a661bf6",
+                "reference": "0b32505d67c1abbfa829283c86bfc0642a661bf6",
                 "shasum": ""
             },
             "require": {
@@ -6535,7 +6533,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-02T14:08:57+00:00"
+            "time": "2020-05-23T09:43:32+00:00"
         },
         {
             "name": "webflo/drupal-finder",
