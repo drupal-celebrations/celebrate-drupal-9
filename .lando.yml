@@ -6,12 +6,15 @@ config:
   xdebug: false
   php: 7.3
   overrides:
-    environment:
-      SB_ENVIRONMENT: development
     volumes:
       - ${HOME}/.lando/composer_cache:/var/www/.composer
 
 services:
+  appserver:
+    overrides:
+      environment:
+        SB_ENVIRONMENT: development
+
   mailhog:
     type: mailhog
     hogfrom:
