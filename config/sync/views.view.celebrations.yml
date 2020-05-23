@@ -190,111 +190,6 @@ display:
         - user.permissions
       tags:
         - 'config:search_api.index.celebration'
-  images:
-    display_plugin: page
-    id: images
-    display_title: Images
-    position: 2
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      filters:
-        status:
-          id: status
-          table: search_api_index_celebration
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: search_api_boolean
-        type:
-          id: type
-          table: search_api_index_celebration
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            image: image
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: search_api_options
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      path: images
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:search_api.index.celebration'
   images_block:
     display_plugin: block
     id: images_block
@@ -399,20 +294,14 @@ display:
         - user.permissions
       tags:
         - 'config:search_api.index.celebration'
-  videos:
+  images_page:
     display_plugin: page
-    id: videos
-    display_title: Videos
-    position: 1
+    id: images_page
+    display_title: Images
+    position: 2
     display_options:
       display_extenders: {  }
-      title: Videos
-      defaults:
-        title: false
-        filters: false
-        filter_groups: false
       display_description: ''
-      path: videos
       filters:
         status:
           id: status
@@ -461,7 +350,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            video: video
+            image: image
           group: 1
           exposed: false
           expose:
@@ -493,10 +382,14 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: search_api_options
+      defaults:
+        filters: false
+        filter_groups: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      path: images
     cache_metadata:
       max-age: -1
       contexts:
@@ -597,6 +490,113 @@ display:
       defaults:
         filters: false
         filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:search_api.index.celebration'
+  videos_page:
+    display_plugin: page
+    id: videos_page
+    display_title: Videos
+    position: 1
+    display_options:
+      display_extenders: {  }
+      title: Videos
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      path: videos
+      filters:
+        status:
+          id: status
+          table: search_api_index_celebration
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        type:
+          id: type
+          table: search_api_index_celebration
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            video: video
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
       filter_groups:
         operator: AND
         groups:
