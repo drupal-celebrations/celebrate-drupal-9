@@ -91,7 +91,7 @@ function drupal_celebrations_preprocess_html(&$variables) {
   $container = \Drupal::getContainer();
   $twig_config = $container->hasParameter('twig.config') ? $container->getParameter('twig.config'): [];
   if (isset($twig_config['debug']) && $twig_config['debug']) {
-    $variables['attributes']['class'][] = 'debug';
+    //$variables['attributes']['class'][] = 'debug';
   }
 }
 
@@ -132,6 +132,7 @@ function drupal_celebrations_preprocess_field(&$variables) {
       'text-sm',
       'font-semibold',
       'mr-2',
+      'mb-2',
       // @todo by term, get color.
       'bg-gray-200',
       'text-gray-700',

@@ -99,16 +99,18 @@
       </h2>
     {% endif %}
     {{ title_suffix }}
+    {% if content.field_category %}
+      {{ content.field_category }}
+    {% endif %}
   {% endif %}
-
     <div class="text-gray-700 text-base">
-      {{ content | without('field_video') }}
-        {% if display_submitted %}
-          <footer class="node__meta">
-            {# display author from node or video #}
-          </footer>
-        {% endif %}
+      {{ content | without('field_video', 'field_category') }}
+      {% if display_submitted %}
+        <footer class="node__meta">
+          {# display author from node or video #}
+        </footer>
+      {% endif %}
     </div>
-
   </div>
+
 </article>
