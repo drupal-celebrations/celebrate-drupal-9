@@ -20,6 +20,7 @@ module:
   editor: 0
   entity_browser: 0
   entity_reference_revisions: 0
+  facets: 0
   field: 0
   field_ui: 0
   file: 0
@@ -46,6 +47,8 @@ module:
   path_alias: 0
   redis: 0
   responsive_image: 0
+  search_api: 0
+  search_api_db: 0
   shortcut: 0
   system: 0
   taxonomy: 0
@@ -55,6 +58,7 @@ module:
   update: 0
   user: 0
   user_registration: 0
+  views_infinite_scroll: 0
   views_ui: 0
   viewsreference: 0
   workflows: 0
