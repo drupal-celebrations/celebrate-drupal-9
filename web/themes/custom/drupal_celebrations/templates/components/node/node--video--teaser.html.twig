@@ -105,9 +105,9 @@
   {% endif %}
     <div class="text-gray-700 text-base">
       {{ content | without('field_video', 'field_category') }}
-      {% if display_submitted %}
+      {% if display_submitted and author_card %}
         <footer class="node__meta">
-          {# display author from node or video #}
+          {{ author_card }}
         </footer>
       {% endif %}
     </div>

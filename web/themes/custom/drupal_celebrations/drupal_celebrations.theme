@@ -2,7 +2,7 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\node\Entity\Node;
-use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_preprocess_block().
@@ -33,6 +33,17 @@ function drupal_celebrations_preprocess_node(&$variables) {
   $node = $variables['node'];
   if ($node->hasField('field_hero') && !$node->get('field_hero')->isEmpty()) {
     unset($variables['label']);
+  }
+  // Append the author card view.
+  if ($node->bundle() === 'image' || $node->bundle() === 'video') {
+    $authorId = $node->getOwnerId();
+    // The user could have been deleted after node creation
+    // and assigned to anonymous.
+    if ($authorId !== 0) {
+      $author = User::load($authorId);
+      $viewBuilder = Drupal::entityTypeManager()->getViewBuilder($author->getEntityTypeId());
+      $variables['author_card'] = $viewBuilder->view($author, 'card');
+    }
   }
 }
 
