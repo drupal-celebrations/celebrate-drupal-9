@@ -1,0 +1,12 @@
+uuid: a80245b3-2848-48b1-ac41-0d316a584b58
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__celebrations__images_page
+name: 'search_api:views_page__celebrations__images_page'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

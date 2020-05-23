@@ -297,7 +297,7 @@ display:
   images_page:
     display_plugin: page
     id: images_page
-    display_title: Images
+    display_title: 'Images page'
     position: 2
     display_options:
       display_extenders: {  }
@@ -385,11 +385,14 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        cache: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       path: images
+      cache:
+        type: none
     cache_metadata:
       max-age: -1
       contexts:
@@ -506,7 +509,7 @@ display:
   videos_page:
     display_plugin: page
     id: videos_page
-    display_title: Videos
+    display_title: 'Videos page'
     position: 1
     display_options:
       display_extenders: {  }
@@ -515,6 +518,7 @@ display:
         title: false
         filters: false
         filter_groups: false
+        cache: false
       display_description: ''
       path: videos
       filters:
@@ -601,6 +605,8 @@ display:
         operator: AND
         groups:
           1: AND
+      cache:
+        type: none
     cache_metadata:
       max-age: -1
       contexts:

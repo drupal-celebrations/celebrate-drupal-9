@@ -1,0 +1,28 @@
+uuid: cffdba01-e074-448f-a34f-f05d874f039f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.video_category
+  module:
+    - facets
+    - system
+  theme:
+    - drupal_celebrations
+id: video_category
+theme: drupal_celebrations
+region: content
+weight: 0
+provider: null
+plugin: 'facet_block:video_category'
+settings:
+  id: 'facet_block:video_category'
+  label: Category
+  provider: facets
+  label_display: visible
+  block_id: video_category
+visibility:
+  request_path:
+    id: request_path
+    pages: /videos
+    negate: false
