@@ -21,6 +21,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
+    "@benface/tailwindcss-reset": "^2.0.1",
     "@tailwindcss/custom-forms": "^0.2.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "2.2.2",

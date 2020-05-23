@@ -753,6 +753,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@benface/tailwindcss-reset@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@benface/tailwindcss-reset/-/tailwindcss-reset-2.0.1.tgz#ec6104128fd1f77bc0b184142e2f60dbcc93cb0a"
+  integrity sha512-cHQYA+JDKsleQVEXq6zh9CCkxaA/puQG4M4sXdVoY2Ca6wZ20DZn/cgp5yKtQnLgEBOKrr2Kl429Ih6rpvDsFQ==
+
 "@fullhuman/postcss-purgecss@^2.1.2":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.2.0.tgz#2b3699287163ff515f25ccdae5b96a244eebb41a"
