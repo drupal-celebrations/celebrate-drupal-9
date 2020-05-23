@@ -1,0 +1,4 @@
+services:
+  color_map:
+    class: Drupal\color_map\ColorMap
+    arguments: []

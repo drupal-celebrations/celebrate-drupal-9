@@ -2,6 +2,8 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\user\Entity\User;
+use Drupal\taxonomy\TermInterface;
+use Drupal\color_map\ColorMap;
 
 /**
  * Implements hook_preprocess_block().
@@ -109,16 +111,34 @@ function drupal_celebrations_preprocess_field(&$variables) {
       'font-semibold',
       'mr-2',
       'mb-2',
-      // @todo by term, get color.
-      'bg-gray-200',
-      'text-gray-700',
     ];
+
+    /** @var \Drupal\color_map\ColorMap $colorMap */
+    $colorMap = Drupal::service('color_map');
     foreach ($variables['items'] as &$item) {
+      $color = '';
+      if (
+        array_key_exists('content', $item) &&
+        array_key_exists('#options', $item['content']) &&
+        array_key_exists('entity', $item['content']['#options']) &&
+        $item['content']['#options']['entity'] instanceof TermInterface
+      ) {
+        /** @var \Drupal\taxonomy\TermInterface $term */
+        $term = $item['content']['#options']['entity'];
+        if (
+          $term->hasField('field_accent_colour') &&
+          !$term->get('field_accent_colour')->isEmpty()
+        ) {
+          $color = $term->get('field_accent_colour')->getValue()[0]['color'];
+        }
+      }
+      $categoryClasses[] = 'bg-' . $colorMap->getTailwindClass($color);
+      $categoryClasses[] = 'text-' . $colorMap->getTailwindContrastClass($color);
       if (!array_key_exists('#attributes', $item['content'])) {
-        $item["content"]["#attributes"] = [];
+        $item['content']['#attributes'] = [];
       }
       if (!array_key_exists('class', $item['content']['#attributes'])) {
-        $item["content"]["#attributes"]['class'] = [];
+        $item['content']['#attributes']['class'] = [];
       }
       $item['content']['#attributes']['class'] = array_merge(
         $item['content']['#attributes']['class'],
