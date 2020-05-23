@@ -1,7 +1,6 @@
 <?php
 
 use Drupal\Component\Utility\Html;
-use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
 
 /**
@@ -29,7 +28,7 @@ function drupal_celebrations_theme_suggestions_block_alter(array &$suggestions, 
  * Implements hook_preprocess_node().
  */
 function drupal_celebrations_preprocess_node(&$variables) {
-  /** @var $node Node */
+  /** @var $node \Drupal\node\Entity\Node */
   $node = $variables['node'];
   if ($node->hasField('field_hero') && !$node->get('field_hero')->isEmpty()) {
     unset($variables['label']);
@@ -68,7 +67,7 @@ function drupal_celebrations_preprocess_html(&$variables) {
   $container = \Drupal::getContainer();
   $twig_config = $container->hasParameter('twig.config') ? $container->getParameter('twig.config'): [];
   if (isset($twig_config['debug']) && $twig_config['debug']) {
-    //$variables['attributes']['class'][] = 'debug';
+    $variables['attributes']['class'][] = 'debug';
   }
 }
 
