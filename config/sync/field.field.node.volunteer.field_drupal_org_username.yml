@@ -1,0 +1,19 @@
+uuid: 4ea5aaf3-e685-40f3-a3ae-5d54159f253b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drupal_org_username
+    - node.type.volunteer
+id: node.volunteer.field_drupal_org_username
+field_name: field_drupal_org_username
+entity_type: node
+bundle: volunteer
+label: 'Drupal.org username'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
