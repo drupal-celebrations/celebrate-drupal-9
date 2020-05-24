@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48251a29315fa7397c0988f65aab2c27",
+    "content-hash": "d288ff77c999d6d02356464a7d0ea74e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2590,8 +2590,7 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
-            },
-            "time": "2020-05-10T08:35:40+00:00"
+            }
         },
         {
             "name": "drupal/token",
