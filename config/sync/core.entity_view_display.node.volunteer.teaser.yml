@@ -12,6 +12,7 @@ dependencies:
   module:
     - text
     - user
+    - user_registration
 id: node.volunteer.teaser
 targetEntityType: node
 bundle: volunteer
@@ -25,12 +26,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_drupal_org_username:
-    type: string
+    type: user_registration_drupal_org_username
     weight: 2
     region: content
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   field_image:
     type: entity_reference_entity_view
@@ -42,12 +42,11 @@ content:
       link: false
     third_party_settings: {  }
   field_twitter_username:
-    type: string
+    type: user_registration_twitter_username
     weight: 3
     region: content
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   links:
     weight: 4
