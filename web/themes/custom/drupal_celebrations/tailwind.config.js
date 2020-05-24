@@ -1,7 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const { colors } = defaultTheme;
 const plugin = require("tailwindcss/plugin");
-const reset = require('@benface/tailwindcss-reset');
 const typography = require('tailwindcss-typography');
 const forms = require('@tailwindcss/custom-forms');
 
@@ -366,7 +365,6 @@ module.exports = {
     typography: ["responsive", "hover"]
   },
   plugins: [
-    reset,
     typography,
     forms,
     plugin(function({ addBase, theme }) {
