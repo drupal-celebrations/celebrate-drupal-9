@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.image.field_cc_license
     - field.field.node.image.field_celebration
     - field.field.node.image.field_description
     - field.field.node.image.field_image
@@ -59,7 +58,6 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_cc_license: true
   field_rights: true
   langcode: true
   search_api_excerpt: true

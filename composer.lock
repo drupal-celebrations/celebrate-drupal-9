@@ -2564,6 +2564,9 @@
                     "services": {
                         "drush.services.yml": "^9"
                     }
+                },
+                "patches_applied": {
+                    "#3121637 - Replace theme functions with templates": "https://www.drupal.org/files/issues/2020-04-24/3121637-8--replace_theme_functions_with_templates.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2590,7 +2593,8 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
-            }
+            },
+            "time": "2020-05-10T08:35:40+00:00"
         },
         {
             "name": "drupal/token",
