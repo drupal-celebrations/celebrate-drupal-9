@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@benface/tailwindcss-reset": "^2.0.1",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@tailwindcss/custom-forms": "^0.2.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "2.2.2",

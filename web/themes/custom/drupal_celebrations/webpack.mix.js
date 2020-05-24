@@ -1,6 +1,14 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 const postCssVariables = require('postcss-css-variables');
+const postCssPurgeCss = require('@fullhuman/postcss-purgecss');
+
+const purgecss = postCssPurgeCss({
+  content: [
+    './templates/**/*.twig',
+  ],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+});
 
 mix.disableNotifications()
   .js('src/js/app.js', 'dist')
@@ -10,6 +18,7 @@ mix.disableNotifications()
     postCss: [
       postCssVariables(),
       tailwindcss('./tailwind.config.js'),
+      // process.env.NODE_ENV === "production" && purgecss,
     ],
   })
   .sourceMaps()
