@@ -74,11 +74,17 @@
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'max-w-sm',
+    'overflow-hidden',
+    'shadow-lg'
   ]
 %}
 
 <article{{ attributes.addClass(classes) }}>
 
+  <a href="{{ url }}" rel="bookmark">{{ content.field_video }}</a>
+
+  <div class="px-6 py-4">
   {% if label %}
     {{ title_prefix }}
     {% if page %}
@@ -93,18 +99,18 @@
       </h2>
     {% endif %}
     {{ title_suffix }}
+    {% if content.field_category %}
+      {{ content.field_category }}
+    {% endif %}
   {% endif %}
-
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}<span class="by-author">by {{ author_name }}</span> {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-    {{ content }}
+    <div class="text-gray-700 text-base">
+      {{ content | without('field_video', 'field_category') }}
+      {% if display_submitted and author_card %}
+        <footer class="node__meta">
+          {{ author_card }}
+        </footer>
+      {% endif %}
+    </div>
+  </div>
 
 </article>

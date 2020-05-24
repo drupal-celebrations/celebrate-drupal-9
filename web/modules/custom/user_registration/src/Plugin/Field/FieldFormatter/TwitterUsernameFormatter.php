@@ -5,6 +5,7 @@ namespace Drupal\user_registration\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Link;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 
 /**
@@ -20,24 +21,22 @@ use Drupal\Core\Url;
  */
 class TwitterUsernameFormatter extends FormatterBase {
 
+  use StringTranslationTrait;
+  use UserFormatterTrait;
+
   /**
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $element = [];
-
     foreach ($items as $delta => $item) {
-      $url = 'https://twitter.com/' . $item->value;
-      $element[$delta] = Link::fromTextAndUrl(
-        "Twitter profile",
-        Url::fromUri($url, [
-          'attributes' => [
-            'target' => '_blank',
-          ],
-        ])
-      )->toRenderable();
+      $linkPath = 'https://twitter.com/' . $item->value;
+      $imageAlt = $this->t('Twitter profile of @name', [
+        '@name' => $item->value,
+      ]);
+      $imagePath = file_create_url(drupal_get_path('module', 'user_registration') . '/images/twitter-logo.svg');
+      $element[$delta] = $this->getIconLink($imagePath, $imageAlt, '25', $linkPath)->toRenderable();
     }
-
     return $element;
   }
 

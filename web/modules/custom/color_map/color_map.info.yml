@@ -1,0 +1,7 @@
+name: 'Color Map'
+type: module
+description: 'Maps a value from a color hex value to a Tailwind class.'
+core_version_requirement: ^8.8.0 || ^9.0
+package: 'Custom'
+dependencies:
+  - color_field

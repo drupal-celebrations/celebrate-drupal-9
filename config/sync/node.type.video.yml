@@ -15,4 +15,4 @@ description: 'Create a video to be displayed on the video overview page.'
 help: ''
 new_revision: true
 preview_mode: 0
-display_submitted: false
+display_submitted: true

@@ -17,7 +17,27 @@
  */
 #}
 <article{{ attributes.addClass('profile') }}>
+  <div class="flex flex-auto">
+    <div class="w-3/4">
+      {{ user.label }}
+      {% if content.field_country %}
+        {{ content.field_country }}
+      {% endif %}
+    </div>
+    <div class="w-1/4 flex items-center justify-end">
+      {% if content.field_drupal_org_username %}
+        <div class="ml-2 flex-none">
+          {{ content.field_drupal_org_username }}
+        </div>
+      {% endif %}
+      {% if content.field_twitter_username %}
+        <div class="ml-2 flex-none">
+        {{ content.field_twitter_username }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
   {% if content %}
-    {{- content -}}
+    {{- content | without('field_country', 'field_drupal_org_username', 'field_twitter_username') -}}
   {% endif %}
 </article>

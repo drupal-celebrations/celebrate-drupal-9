@@ -37,9 +37,6 @@
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
     dom_id ? 'js-view-dom-id-' ~ dom_id,
-    id in ['videos', 'images'] and display_id in ['page_1'] ? 'mx-auto container my-6',
-    id in ['videos', 'images'] ? 'grid grid-gap grid-flow-row gap-4',
-    id in ['videos', 'images'] ? 'md:grid-cols-2 lg:grid-cols-3',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>

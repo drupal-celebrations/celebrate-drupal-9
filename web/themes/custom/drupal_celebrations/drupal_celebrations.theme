@@ -1,8 +1,8 @@
 <?php
 
 use Drupal\Component\Utility\Html;
-use Drupal\node\Entity\Node;
-use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
+use Drupal\taxonomy\TermInterface;
 
 /**
  * Implements hook_preprocess_block().
@@ -29,19 +29,21 @@ function drupal_celebrations_theme_suggestions_block_alter(array &$suggestions, 
  * Implements hook_preprocess_node().
  */
 function drupal_celebrations_preprocess_node(&$variables) {
-  /** @var $node Node */
+  /** @var $node \Drupal\node\Entity\Node */
   $node = $variables['node'];
-  $view_mode = $variables['view_mode'];
   if ($node->hasField('field_hero') && !$node->get('field_hero')->isEmpty()) {
     unset($variables['label']);
   }
-
-  if ($node->getType() === 'video' && $view_mode === 'teaser' && $node->hasField('field_video') && !$node->get('field_video')->isEmpty()) {
-    unset($variables['label']);
-  }
-
-  if ($node->getType() === 'image' && $view_mode === 'teaser' && $node->hasField('field_image') && !$node->get('field_image')->isEmpty()) {
-    unset($variables['label']);
+  // Append the author card view.
+  if ($node->bundle() === 'image' || $node->bundle() === 'video') {
+    $authorId = $node->getOwnerId();
+    // The user could have been deleted after node creation
+    // and assigned to anonymous.
+    if ($authorId !== 0) {
+      $author = User::load($authorId);
+      $viewBuilder = Drupal::entityTypeManager()->getViewBuilder($author->getEntityTypeId());
+      $variables['author_card'] = $viewBuilder->view($author, 'card');
+    }
   }
 }
 
@@ -54,40 +56,6 @@ function drupal_celebrations_preprocess_paragraph__hero(&$variables) {
   $variables['title'] = [
     '#type' => 'page_title',
     '#title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
-  ];
-  $variables['#cache']['contexts'][] = 'url';
-}
-
-/**
- * Implements hook_preprocess_media().
- */
-function drupal_celebrations_preprocess_media__video(&$variables) {
-  // TODO: fixme get the node title (Video CT) and inject this to the media bundle Video
-  $request = \Drupal::request();
-  $route_match = \Drupal::routeMatch();
-  $variables['title'] = [
-    '#type' => 'inline_template',
-    '#template' => '<h2 class="text-xl font-bold">{{ title }}</h2>',
-    '#context' => [
-      'title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
-    ],
-  ];
-  $variables['#cache']['contexts'][] = 'url';
-}
-
-/**
- * Implements hook_preprocess_media().
- */
-function drupal_celebrations_preprocess_media__image(&$variables) {
-  // TODO: fixme get the node title (Image CT) and inject this to the media bundle Image
-  $request = \Drupal::request();
-  $route_match = \Drupal::routeMatch();
-  $variables['title'] = [
-    '#type' => 'inline_template',
-    '#template' => '<h2 class="text-xl font-bold">{{ title }}</h2>',
-    '#context' => [
-      'title' => \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject()),
-    ],
   ];
   $variables['#cache']['contexts'][] = 'url';
 }
@@ -125,5 +93,68 @@ function drupal_celebrations_theme_suggestions_form_element_alter(array &$sugges
     // of it.
     $name = explode("[" , $variables["element"]["#name"], 2);
     $suggestions[] = $variables["theme_hook_original"] . "__" . $name[0];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupal_celebrations_preprocess_field(&$variables) {
+  $categoryFields = ['field_video_category', 'field_image_category'];
+  if (in_array($variables['field_name'], $categoryFields)) {
+    $categoryClasses = [
+      'inline-block',
+      'px-3',
+      'py-1',
+      'text-sm',
+      'font-semibold',
+      'mr-2',
+      'mb-2',
+    ];
+
+    /** @var \Drupal\color_map\ColorMap $colorMap */
+    $colorMap = Drupal::service('color_map');
+    foreach ($variables['items'] as &$item) {
+      $color = '';
+      if (
+        array_key_exists('content', $item) &&
+        array_key_exists('#options', $item['content']) &&
+        array_key_exists('entity', $item['content']['#options']) &&
+        $item['content']['#options']['entity'] instanceof TermInterface
+      ) {
+        /** @var \Drupal\taxonomy\TermInterface $term */
+        $term = $item['content']['#options']['entity'];
+        if (
+          $term->hasField('field_accent_colour') &&
+          !$term->get('field_accent_colour')->isEmpty()
+        ) {
+          $color = $term->get('field_accent_colour')->getValue()[0]['color'];
+        }
+      }
+      $categoryClasses[] = 'bg-' . $colorMap->getTailwindClass($color);
+      $categoryClasses[] = 'text-' . $colorMap->getTailwindContrastClass($color);
+      if (!array_key_exists('#attributes', $item['content'])) {
+        $item['content']['#attributes'] = [];
+      }
+      if (!array_key_exists('class', $item['content']['#attributes'])) {
+        $item['content']['#attributes']['class'] = [];
+      }
+      $item['content']['#attributes']['class'] = array_merge(
+        $item['content']['#attributes']['class'],
+        $categoryClasses
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupal_celebrations_preprocess_views_view_unformatted(&$variables) {
+  if (array_key_exists('view', $variables)) {
+    /** @var \Drupal\views\ViewExecutable $view */
+    $view = $variables['view'];
+    $variables['view_id'] = $view->id();
+    $variables['view_display_id'] = $view->current_display;
   }
 }

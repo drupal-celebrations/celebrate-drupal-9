@@ -1,8 +1,9 @@
-uuid: cfb78cf0-c8ff-4e38-b327-ae0ac96a7965
+uuid: 6f5b6bdc-af23-4cc9-acf2-e7d4fd9dd905
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.image.field_cc_license
     - field.field.node.image.field_celebration
     - field.field.node.image.field_description
@@ -11,12 +12,17 @@ dependencies:
     - field.field.node.image.field_rights
     - node.type.image
   module:
+    - layout_builder
     - text
     - user
-id: node.image.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.image.full
 targetEntityType: node
 bundle: image
-mode: default
+mode: full
 content:
   content_moderation_control:
     weight: 5
@@ -43,7 +49,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: default
+      view_mode: full
       link: false
     third_party_settings: {  }
     region: content

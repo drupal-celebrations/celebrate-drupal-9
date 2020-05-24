@@ -15,9 +15,20 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-{% if title %}
-  <h3>{{ title }}</h3>
-{% endif %}
-{% for row in rows %}
-  {{- row.content -}}
-{% endfor %}
+
+{%
+  set classes = [
+    view_id in ['celebrations'] and view_display_id in ['videos_page', 'images_page'] ? 'mx-auto container my-6',
+    view_id in ['celebrations'] ? 'grid grid-gap grid-flow-row gap-4',
+    view_id in ['celebrations'] ? 'md:grid-cols-2 lg:grid-cols-3',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+  {% for row in rows %}
+    {{- row.content -}}
+  {% endfor %}
+</div>

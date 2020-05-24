@@ -3,15 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.image.field_cc_license
     - field.field.node.image.field_celebration
+    - field.field.node.image.field_description
     - field.field.node.image.field_image
     - field.field.node.image.field_image_category
+    - field.field.node.image.field_rights
     - node.type.image
     - workflows.workflow.content_workflow
   module:
     - content_moderation
     - media_library
     - path
+    - text
 id: node.image.default
 targetEntityType: node
 bundle: image
@@ -23,6 +27,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_cc_license:
+    weight: 30
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_description:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_image:
     type: media_library_widget
     weight: 27
@@ -35,6 +54,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_rights:
+    weight: 29
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   langcode:
     type: language_select

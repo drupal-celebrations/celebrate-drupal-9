@@ -6,12 +6,14 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_description
     - field.field.node.video.field_rights
     - field.field.node.video.field_video
     - field.field.node.video.field_video_category
     - node.type.video
   module:
     - layout_builder
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -23,19 +25,49 @@ bundle: video
 mode: full
 content:
   content_moderation_control:
-    weight: -20
+    weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_celebration:
+    type: entity_reference_label
+    weight: 2
     region: content
-  links:
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_description:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_video:
+    type: entity_reference_entity_view
     weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+  field_video_category:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_cc_license: true
-  field_celebration: true
   field_rights: true
-  field_video: true
-  field_video_category: true
   langcode: true
+  search_api_excerpt: true

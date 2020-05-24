@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_twitter_username
   module:
+    - address
     - layout_builder
     - user
     - user_registration
@@ -20,21 +21,28 @@ targetEntityType: user
 bundle: user
 mode: card
 content:
-  field_drupal_org_username:
+  field_country:
+    type: address_country_default
     weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_drupal_org_username:
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: user_registration_drupal_org_username
     region: content
   field_twitter_username:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: user_registration_twitter_username
     region: content
 hidden:
-  field_country: true
   langcode: true
   member_for: true
+  search_api_excerpt: true

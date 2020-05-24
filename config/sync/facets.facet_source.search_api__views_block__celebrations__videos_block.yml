@@ -1,0 +1,12 @@
+uuid: b29953c6-2999-4245-9618-6d15aa2aa46e
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__celebrations__videos_block
+name: 'search_api:views_block__celebrations__videos_block'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

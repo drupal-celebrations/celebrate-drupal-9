@@ -6,7 +6,7 @@ id: video
 label: Video
 description: 'Used for adding remote videos.'
 source: 'oembed:video'
-queue_thumbnail_downloads: true
+queue_thumbnail_downloads: false
 new_revision: false
 source_configuration:
   thumbnails_directory: 'public://oembed_thumbnails'

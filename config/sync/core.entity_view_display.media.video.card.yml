@@ -6,9 +6,10 @@ dependencies:
     - core.entity_view_mode.media.card
     - field.field.media.video.field_media_oembed_video
     - media.type.video
+    - responsive_image.styles.rectangular
   module:
     - layout_builder
-    - media
+    - responsive_image
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -18,26 +19,19 @@ targetEntityType: media
 bundle: video
 mode: card
 content:
-  field_media_oembed_video:
-    type: oembed
-    label: hidden
+  thumbnail:
+    type: responsive_image
     weight: 0
-    settings:
-      max_width: 0
-      max_height: 0
-    third_party_settings: {  }
-    region: content
-  uid:
-    type: entity_reference_entity_view
-    weight: 1
     region: content
     label: hidden
     settings:
-      view_mode: card
-      link: false
+      responsive_image_style: rectangular
+      image_link: ''
     third_party_settings: {  }
 hidden:
   created: true
+  field_media_oembed_video: true
   langcode: true
   name: true
-  thumbnail: true
+  search_api_excerpt: true
+  uid: true
