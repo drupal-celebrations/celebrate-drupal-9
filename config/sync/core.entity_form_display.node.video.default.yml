@@ -13,6 +13,7 @@ dependencies:
     - workflows.workflow.content_workflow
   module:
     - content_moderation
+    - maxlength
     - media_library
     - path
     - text
@@ -39,7 +40,12 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 1000
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+        maxlength_js_truncate_html: true
     type: text_textarea
     region: content
   field_rights:
