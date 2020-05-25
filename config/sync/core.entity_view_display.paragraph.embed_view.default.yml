@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.embed_view.field_accent_color
+    - field.field.paragraph.embed_view.field_color_type
     - field.field.paragraph.embed_view.field_views_reference
     - paragraphs.paragraphs_type.embed_view
   module:
@@ -21,4 +23,7 @@ content:
     third_party_settings: {  }
     type: viewsreference_formatter
     region: content
-hidden: {  }
+hidden:
+  field_accent_color: true
+  field_color_type: true
+  search_api_excerpt: true

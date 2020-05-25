@@ -1,0 +1,21 @@
+uuid: 3549f857-053b-4093-bd5f-aa01bf6a7423
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_type
+    - paragraphs.paragraphs_type.embed_view
+  module:
+    - options
+id: paragraph.embed_view.field_color_type
+field_name: field_color_type
+entity_type: paragraph
+bundle: embed_view
+label: 'Color type'
+description: 'Change the way the chosen colour acts, e.g. as background colour up to browser width, or as an overlay colour applied to media items.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

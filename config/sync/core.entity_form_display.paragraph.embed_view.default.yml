@@ -3,15 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.embed_view.field_accent_color
+    - field.field.paragraph.embed_view.field_color_type
     - field.field.paragraph.embed_view.field_views_reference
     - paragraphs.paragraphs_type.embed_view
   module:
+    - color_field
     - viewsreference
 id: paragraph.embed_view.default
 targetEntityType: paragraph
 bundle: embed_view
 mode: default
 content:
+  field_accent_color:
+    weight: 1
+    settings:
+      default_colors: '#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46,#42D692,#16A765,#7BD148,#B3DC6C,#FBE983,#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF,#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2,#CD74E6,#A47AE2'
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_color_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_views_reference:
     weight: 0
     settings: {  }

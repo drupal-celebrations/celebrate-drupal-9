@@ -1,0 +1,33 @@
+uuid: 65c73a50-edcf-43b9-bbe2-d21befd51374
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_color_type
+field_name: field_color_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: leak-bg
+      label: 'Color used for background and leaks out to browser width'
+    -
+      value: section-bg
+      label: 'Color used for background and contained to section width'
+    -
+      value: overlay
+      label: 'Color used as overlay for media'
+    -
+      value: overlay-hover
+      label: 'Color used as overlay on hover for media items'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: a6a5a9b6-4616-4f6b-8037-f5930ede1d30
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - paragraphs
+id: paragraph.field_accent_color
+field_name: field_accent_color
+entity_type: paragraph
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
