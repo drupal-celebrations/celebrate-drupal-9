@@ -6,11 +6,11 @@
 }
 
 .p-page-gutter {
-  @apply px-4 py-6;
+  @apply px-4;
 }
 @screen sm {
   .p-page-gutter {
-    @apply px-6 py-12;
+    @apply px-6;
   }
 }
 
