@@ -29,5 +29,13 @@ mix.disableNotifications()
     }
   })
   .browserSync({
-    proxy: 'localhost:8888'
+    proxy: 'localhost:8888',
+    files: [
+      'dist/css/app.css',
+      'dist/js/app.js',
+      'templates/**/*',
+      'src/**/*',
+      'images/**/*',
+      'fonts/**/*'
+    ]
   });
