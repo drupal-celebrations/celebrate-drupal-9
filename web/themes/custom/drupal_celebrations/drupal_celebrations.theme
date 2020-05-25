@@ -158,3 +158,18 @@ function drupal_celebrations_preprocess_views_view_unformatted(&$variables) {
     $variables['view_display_id'] = $view->current_display;
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function drupal_celebrations_form_alter(&$form, $form_state, $form_id) {
+  if (in_array($form_id, ['node_image_form', 'node_video_form'])) {
+    $currentUser = \Drupal::currentUser();
+    $userRoles = $currentUser->getRoles();
+
+    // Remove moderation state field for normal "authenticated" users.
+    if ($currentUser->id() !== '1' && count($userRoles) === 1 && reset($userRoles) === 'authenticated') {
+      $form['moderation_state']['#access'] = 0;
+    }
+  }
+}

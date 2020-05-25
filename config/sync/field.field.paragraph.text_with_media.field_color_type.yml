@@ -1,0 +1,21 @@
+uuid: db1dd13f-7612-40ea-a6bb-7944bf792016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_type
+    - paragraphs.paragraphs_type.text_with_media
+  module:
+    - options
+id: paragraph.text_with_media.field_color_type
+field_name: field_color_type
+entity_type: paragraph
+bundle: text_with_media
+label: 'Color type'
+description: 'Change the way the chosen colour acts, e.g. as background colour up to browser width, or as an overlay colour applied to media items.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
