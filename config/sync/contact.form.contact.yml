@@ -5,7 +5,7 @@ dependencies: {  }
 id: contact
 label: 'Contact the team'
 recipients:
-  - dan+drupal-celebrations-contact@danlemon.com
+  - contact@celebratedrupal.org
 reply: ''
 weight: 0
 message: ''

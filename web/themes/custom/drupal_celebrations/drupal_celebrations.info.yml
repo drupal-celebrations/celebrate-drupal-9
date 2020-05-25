@@ -2,7 +2,7 @@ name: "Drupal Celebrations"
 type: theme
 base theme: stable9
 description: "A theme for the Drupal Celebrations project."
-package: Core
+package: Custom
 version: VERSION
 core_version_requirement: "^9"
 dependencies:
