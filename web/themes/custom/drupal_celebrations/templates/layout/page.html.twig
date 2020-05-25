@@ -43,8 +43,14 @@
  */
 #}
 
+{%
+  set page_classes = [
+    'p-page-gutter',
+  ]
+%}
+
 {% if page.header|render|striptags|trim is not empty %}
-  <header class="layout-header bg-blue-500 p-12" role="banner">
+  <header class="layout-header bg-blue-500 {{ page_classes | safe_join(' ') }}" role="banner">
     {% if page.header|render|striptags|trim is not empty %}
       {{ page.header }}
     {% endif %}
@@ -52,7 +58,7 @@
 {% endif %}
 
 {% if page.breadcrumbs|render|striptags|trim is not empty %}
-<div class="layout-breadcrumbs container mx-auto">
+<div class="layout-breadcrumbs container mx-auto {{ page_classes | safe_join(' ') }}">
   {{ page.breadcrumbs }}
 </div>
 {% endif %}
@@ -65,7 +71,7 @@
     'mx-auto',
     is_front ? 'is-front' : '',
   ] %}
-    <div class="{{ page_title_classes | join(' ') }}">
+    <div class="{{ page_title_classes | safe_join(' ') }}">
       {{ page.page_title }}
     </div>
   {% endif %}
@@ -77,7 +83,7 @@
 </main>
 
 {% if page.footer|render|striptags|trim is not empty %}
-<footer class="footer bg-gray-900 text-white p-12" role="contentinfo">
+<footer class="footer bg-gray-900 text-white {{  page_classes | safe_join(' ') }}" role="contentinfo">
   {{ page.footer }}
 </footer>
 {% endif %}

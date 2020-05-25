@@ -42,7 +42,7 @@
   set placement = paragraph.field_placement.0.value
 %}
 {%
-  set aboveClasses = placement == 'above' ? [
+  set above_classes = placement == 'above' ? [
     'row-start-1',
     'row-end-2',
     'col-start-1',
@@ -58,6 +58,7 @@
     'mx-auto',
     'mb-8',
     'container',
+    'p-page-gutter',
     'placement--' ~ placement,
     'relative',
     placement in ['above'] ? 'grid' : 'lg:grid',
@@ -75,11 +76,11 @@
           {{ content|without('field_media') }}
         </div>
         {% endif %}
-        <div class="relative max-w-xl mx-auto {{ aboveClasses | join(" ") }}">
+        <div class="relative max-w-xl mx-auto {{ above_classes | join(" ") }}">
           {{ content.field_media }}
         </div>
         {% if placement in ['right', 'bottom', 'above'] %}
-        <div class="relative max-w-xl mx-auto {{ aboveClasses | join(" ") }}">
+        <div class="relative max-w-xl mx-auto {{ above_classes | join(" ") }}">
           {{ content|without('field_media') }}
         </div>
         {% endif %}

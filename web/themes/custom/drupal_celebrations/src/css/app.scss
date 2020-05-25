@@ -5,8 +5,13 @@
   border: 1px dashed grey;
 }
 
-.container>* {
-  @apply px-4;
+.p-page-gutter {
+  @apply px-4 py-6;
+}
+@screen sm {
+  .p-page-gutter {
+    @apply px-6 py-12;
+  }
 }
 
 .site-logo {

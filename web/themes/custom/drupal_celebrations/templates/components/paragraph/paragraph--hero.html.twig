@@ -39,9 +39,10 @@
  */
 #}
 {%
-  set heroTitleClasses = [
+  set hero_title_classes = [
     paragraph.field_hero_image|keys is not empty ? 'absolute',
-    'container'
+    'container',
+    'p-page-gutter',
   ]
 %}
 {%
@@ -64,7 +65,7 @@
     {% block content %}
       {% if title|render|striptags|trim is not empty %}
         {{ content.field_hero_image }}
-        <div class="{{ heroTitleClasses | join(" ") }}">
+        <div class="{{ hero_title_classes | join(" ") }}">
           {{ title }}
           {{ content | without('field_hero_image') }}
         </div>
