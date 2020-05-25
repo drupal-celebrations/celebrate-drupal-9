@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text_with_media.field_accent_color
+    - field.field.paragraph.text_with_media.field_color_type
     - field.field.paragraph.text_with_media.field_media
     - field.field.paragraph.text_with_media.field_placement
     - field.field.paragraph.text_with_media.field_section_title
@@ -40,5 +42,7 @@ content:
     type: text_default
     region: content
 hidden:
+  field_accent_color: true
+  field_color_type: true
   field_placement: true
   search_api_excerpt: true
