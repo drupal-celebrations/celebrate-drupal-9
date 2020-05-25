@@ -67,7 +67,7 @@ function drupal_celebrations_preprocess_html(&$variables) {
   // Use debug theming only if development mode of twig is enabled.
   $container = \Drupal::getContainer();
   $twig_config = $container->hasParameter('twig.config') ? $container->getParameter('twig.config'): [];
-  if (isset($twig_config['debug']) && $twig_config['debug']) {
+  if (\Drupal::request()->getHost() !== 'localhost' && isset($twig_config['debug']) && $twig_config['debug']) {
     $variables['attributes']['class'][] = 'debug';
   }
 }
