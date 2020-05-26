@@ -18,17 +18,9 @@ targetEntityType: node
 bundle: image
 mode: teaser
 content:
-  field_celebration:
-    type: entity_reference_label
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
   field_description:
     type: text_trimmed
-    weight: 3
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -51,13 +43,10 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  links:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_celebration: true
   field_rights: true
   langcode: true
+  links: true
   search_api_excerpt: true
