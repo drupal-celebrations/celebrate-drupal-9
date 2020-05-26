@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Event
 type: event
-description: ''
+description: 'Create an event to be used in the event overview pages.'
 help: ''
 new_revision: true
 preview_mode: 1
