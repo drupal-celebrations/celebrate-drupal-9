@@ -27,7 +27,9 @@ html {
 .block-system-powered-by-block,
 .block-hosting-platform-sh,
 .field--name-field-image-category,
-.field--name-field-video-category {
+.field--name-field-video-category,
+.form-item,
+input {
   @apply font-sans;
 }
 

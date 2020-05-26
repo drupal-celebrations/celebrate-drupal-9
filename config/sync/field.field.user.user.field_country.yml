@@ -12,7 +12,7 @@ field_name: field_country
 entity_type: user
 bundle: user
 label: Country
-description: 'Select country where you usually live. Your friends from community will be able to filter celebrations by country.'
+description: 'Select the country that best represents you. Your friends from the community will be able to filter celebrations by country.'
 required: false
 translatable: false
 default_value: {  }
