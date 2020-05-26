@@ -3,8 +3,8 @@ name: 'Celebrate Drupal'
 mail: contact@celebratedrupal.org
 slogan: 'Celebrate together as a community'
 page:
-  403: ''
-  404: ''
+  403: /node/12
+  404: /node/11
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
