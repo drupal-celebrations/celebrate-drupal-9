@@ -5,6 +5,11 @@ const typography = require('tailwindcss-typography');
 const forms = require('@tailwindcss/custom-forms');
 
 module.exports = {
+  // purge: [
+  //   './templates/**/*.html',
+  //   './templates/**/*.html.twig',
+  // ],
+  purge: false,
   theme: {
     colors: {
       ...colors,
@@ -393,25 +398,9 @@ module.exports = {
     padding: ['responsive', 'first', 'last'],
   },
   plugins: [
-    typography,
+    typography({
+      componentPrefix: '',
+    }),
     forms,
-    plugin(function({ addBase, theme }) {
-      Object.entries(theme("headings", {})).forEach(([h, sizes]) => {
-        addBase({
-          [h]: {
-            fontSize: theme(`fontSize.${sizes.sm}`)
-          },
-        });
-        Object.entries(sizes).forEach(([bp, fs]) => {
-          addBase({
-            [`@screen ${bp}`]: {
-              [h]: {
-                fontSize: theme(`fontSize.${fs}`, fs)
-              }
-            }
-          });
-        });
-      });
-    })
   ]
 };
