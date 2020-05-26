@@ -29,7 +29,9 @@ html {
 .field--name-field-image-category,
 .field--name-field-video-category,
 .form-item,
-input {
+input,
+.user-pass p,
+form summary {
   @apply font-sans;
 }
 

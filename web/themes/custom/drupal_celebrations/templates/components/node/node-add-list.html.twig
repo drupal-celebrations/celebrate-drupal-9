@@ -13,15 +13,23 @@
  * @see template_preprocess_node_add_list()
  */
 #}
+{%
+  set classes = [
+    'p-page-gutter',
+    'container',
+    'mx-auto',
+    'my-4',
+  ]
+%}
 {% if types is not empty %}
-  <dl class="node-type-list">
+  <dl class="node-type-list font-sans {{ classes | safe_join(' ') }}">
     {% for type in types %}
-      <dt>{{ type.add_link }}</dt>
-      <dd>{{ type.description }}</dd>
+      <dt class="font-black bg-gray-400 p-2 mb-2 inline-block">{{ type.add_link }}</dt>
+      <dd class="mb-6">{{ type.description }}</dd>
     {% endfor %}
   </dl>
 {% else %}
-  <p>
+  <p class="{{ classes | safe_join(' ') }}">
     {% set create_content = path('node.type_add') %}
     {% trans %}
       You have not created any content types yet. Go to the <a href="{{ create_content }}">content type creation page</a> to add a new content type.

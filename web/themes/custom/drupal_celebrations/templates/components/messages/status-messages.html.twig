@@ -24,9 +24,12 @@
 {% for type, messages in message_list %}
   {%
     set classes = [
+      'font-sans',
       'messages',
       'messages--' ~ type,
       'text-black',
+      'my-2',
+      'px-4',
       'py-2',
       type == 'status' ? 'bg-teal-100 border-teal-500' : null,
       type == 'warning' ? 'bg-orange-200 border-orange-500' : null,
