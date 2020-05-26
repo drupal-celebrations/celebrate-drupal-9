@@ -1,6 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const { colors } = defaultTheme;
-const plugin = require("tailwindcss/plugin");
 const forms = require('@tailwindcss/custom-forms');
 const typography = require('./tailwind-local-typography');
 
@@ -94,24 +93,23 @@ module.exports = {
           output: false,
           fontWeight: theme('fontWeight.bold'),
           lineHeight: theme('lineHeight.tight'),
+          fontFamily: theme('fontFamily.sans'),
         },
-        'h1': {
+        h1: {
           extends: 'heading',
-          fontSize: theme('fontSize.5xl'),
           fontWeight: theme('fontWeight.black'),
+          fontSize: theme('fontSize.5xl'),
           '@screen sm': {
             fontSize: theme('fontSize.6xl'),
           },
-          fontFamily: theme('fontFamily.serif'),
         },
         h2: {
           extends: 'heading',
-          fontSize: theme('fontSize.4xl'),
           fontWeight: theme('fontWeight.black'),
+          fontSize: theme('fontSize.4xl'),
           '@screen sm': {
             fontSize: theme('fontSize.5xl'),
           },
-          fontFamily: theme('fontFamily.sans'),
         },
         h3: {
           extends: 'heading',
@@ -119,15 +117,21 @@ module.exports = {
         },
         h4: {
           extends: 'heading',
+          textTransform: 'uppercase',
           fontSize: theme('fontSize.3xl'),
         },
         h5: {
           extends: 'heading',
+          textTransform: 'uppercase',
           fontSize: theme('fontSize.2xl'),
         },
         h6: {
           extends: 'heading',
+          textTransform: 'uppercase',
           fontSize: theme('fontSize.xl'),
+        },
+        p: {
+          fontFamily: theme('fontFamily.serif'),
         },
       }),
       minWidth: {

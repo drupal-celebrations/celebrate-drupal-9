@@ -1,6 +1,10 @@
 @import "./fonts.css";
 @import "./tailwind.css";
 
+html {
+  @apply font-serif;
+}
+
 .debug * {
   border: 1px dashed grey;
 }
@@ -16,6 +20,15 @@
 
 .site-logo {
   @apply w-12 mr-4;
+}
+
+.site-name,
+.menu,
+.block-system-powered-by-block,
+.block-hosting-platform-sh,
+.field--name-field-image-category,
+.field--name-field-video-category {
+  @apply font-sans;
 }
 
 .paragraph ul {
