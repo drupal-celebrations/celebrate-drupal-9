@@ -19,7 +19,7 @@
  *   - class: HTML classes.
  */
 #}
-<div data-drupal-messages class="container mx-auto">
+<div data-drupal-messages class="container mx-auto p-page-gutter">
 {% block messages %}
 {% for type, messages in message_list %}
   {%
@@ -37,7 +37,7 @@
     ]
   %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
-    <div class="messages__content container flex">
+    <div class="messages__content flex">
       {% if type == 'error' %}
         <div role="alert">
       {% endif %}

@@ -31,7 +31,8 @@
   {%
     set menu_classes = [
       'menu',
-      'flex',
+      'block',
+      'md:flex',
       'text-white',
     ]
   %}
@@ -48,8 +49,15 @@
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
+          'md:block',
           'px-4',
-          'mr-4',
+          'py-2',
+          'md:py-0',
+          'mx-1',
+          'md:mx-0',
+          'md:mr-4',
+          'hover:bg-blue-500',
+          'md:hover:bg-transparent',
         ]
       %}
       <li{{item.attributes.addClass(classes)}}>

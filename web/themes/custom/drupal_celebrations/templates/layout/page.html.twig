@@ -60,7 +60,7 @@
 {% endif %}
 
 {% if page.breadcrumbs|render|striptags|trim is not empty %}
-<div class="layout-breadcrumbs container mx-auto {{ page_classes | safe_join(' ') }}">
+<div class="layout-breadcrumbs container p-page-gutter mx-auto {{ page_classes | safe_join(' ') }}">
   {{ page.breadcrumbs }}
 </div>
 {% endif %}
@@ -71,6 +71,7 @@
     'layout-page-title',
     'container',
     'mx-auto',
+    'p-page-gutter',
     is_front ? 'is-front' : '',
   ] %}
     <div class="{{ page_title_classes | safe_join(' ') }}">
