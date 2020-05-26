@@ -1,0 +1,23 @@
+uuid: ce06093a-8958-4467-83d9-199023caa695
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_remote_meeting_url
+    - node.type.event
+  module:
+    - link
+id: node.event.field_remote_meeting_url
+field_name: field_remote_meeting_url
+entity_type: node
+bundle: event
+label: 'Remote meeting URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

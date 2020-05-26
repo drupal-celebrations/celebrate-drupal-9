@@ -1,0 +1,21 @@
+uuid: 2519824f-ae46-44b4-b100-b4ba8738a359
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.event
+  module:
+    - text
+id: node.event.field_description
+field_name: field_description
+entity_type: node
+bundle: event
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

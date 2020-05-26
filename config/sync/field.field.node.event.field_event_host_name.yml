@@ -1,0 +1,19 @@
+uuid: 8ffaf1a8-d725-4e68-882f-3c567479634b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_host_name
+    - node.type.event
+id: node.event.field_event_host_name
+field_name: field_event_host_name
+entity_type: node
+bundle: event
+label: 'Event host name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

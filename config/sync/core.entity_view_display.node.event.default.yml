@@ -1,0 +1,76 @@
+uuid: 2ced17e7-b14d-45c9-bff3-7744f3cd3daa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_celebration
+    - field.field.node.event.field_description
+    - field.field.node.event.field_event_host_name
+    - field.field.node.event.field_event_time
+    - field.field.node.event.field_image
+    - field.field.node.event.field_remote_meeting_url
+    - node.type.event
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_event_host_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_event_time:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_remote_meeting_url:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_celebration: true
+  langcode: true
+  search_api_excerpt: true
