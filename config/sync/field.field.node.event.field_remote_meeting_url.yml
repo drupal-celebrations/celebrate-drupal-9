@@ -12,8 +12,8 @@ field_name: field_remote_meeting_url
 entity_type: node
 bundle: event
 label: 'Remote meeting URL'
-description: ''
-required: true
+description: 'If you would like the public to join, feel free to insert the URL for the meeting here.'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
