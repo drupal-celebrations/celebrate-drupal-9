@@ -10,4 +10,5 @@ weight: -10
 is_admin: false
 permissions:
   - 'access content'
+  - 'access site-wide contact form'
   - 'view media'
