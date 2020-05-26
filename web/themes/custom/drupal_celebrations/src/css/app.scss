@@ -55,3 +55,27 @@ a:hover {
   @apply bg-gray-200 text-gray-600;
   font: inherit;
 }
+
+.media-library-wrapper {
+  @apply flex;
+}
+
+.media-library-menu {
+  flex-basis: 20%;
+  flex-shrink: 0;
+}
+
+.media-library-content {
+  flex-grow: 1;
+}
+
+.media-library-views-form {
+  @apply flex;
+  flex-wrap: wrap;
+}
+
+.media-library-views-form .media-library-item {
+  @apply justify-between;
+  max-width: 23%;
+  margin: 1%;
+}
