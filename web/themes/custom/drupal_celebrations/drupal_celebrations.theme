@@ -1,8 +1,10 @@
 <?php
 
 use Drupal\Component\Utility\Html;
-use Drupal\user\Entity\User;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\TermInterface;
+use Drupal\user\Entity\User;
+use Drupal\views\Form\ViewsForm;
 
 /**
  * Implements hook_preprocess_block().
@@ -97,6 +99,23 @@ function drupal_celebrations_theme_suggestions_form_element_alter(array &$sugges
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter() for form element templates.
+ */
+function drupal_celebrations_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = $variables["theme_hook_original"] . "__" . $variables['element']['#form_id'];
+  }
+
+  if (isset($variables["element"]["#name"])) {
+    // Drupal executes theme suggestion for every element from multivalue field,
+    // so name looks like field_name[0][value]. We need only field_name part
+    // of it.
+    $name = explode("[" , $variables["element"]["#name"], 2);
+    $suggestions[] = $variables["theme_hook_original"] . "__" . $name[0];
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function drupal_celebrations_preprocess_field(&$variables) {
@@ -162,7 +181,7 @@ function drupal_celebrations_preprocess_views_view_unformatted(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function drupal_celebrations_form_alter(&$form, $form_state, $form_id) {
+function drupal_celebrations_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (in_array($form_id, ['node_image_form', 'node_video_form'])) {
     $currentUser = \Drupal::currentUser();
     $userRoles = $currentUser->getRoles();
@@ -171,5 +190,40 @@ function drupal_celebrations_form_alter(&$form, $form_state, $form_id) {
     if ($currentUser->id() !== '1' && count($userRoles) === 1 && reset($userRoles) === 'authenticated') {
       $form['moderation_state']['#access'] = 0;
     }
+  }
+
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof ViewsForm && strpos($form_object->getBaseFormId(), 'views_form_media_library') === 0) {
+    $form['#attributes']['class'][] = 'media-library-views-form';
+  }
+}
+
+/**
+ * Implements hook_preprocess_links__media_library_menu().
+ *
+ * This targets the menu of available media types in the media library's modal
+ * dialog.
+ *
+ * @todo Do this in the relevant template once
+ *   https://www.drupal.org/project/drupal/issues/3088856 is resolved.
+ */
+function drupal_celebrations_preprocess_links__media_library_menu(array &$variables) {
+  foreach ($variables['links'] as &$link) {
+    $link['link']['#options']['attributes']['class'][] = 'media-library-menu__link';
+  }
+}
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function drupal_celebrations_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
   }
 }
