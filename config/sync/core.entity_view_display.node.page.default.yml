@@ -9,12 +9,72 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
-    enabled: false
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c7a5f2fa-dcac-4242-af96-b957eafeb42a:
+            uuid: c7a5f2fa-dcac-4242-af96-b957eafeb42a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:page:content_moderation_control'
+            additional: {  }
+            weight: 0
+          6657a658-309b-4309-a713-98729e5890a8:
+            uuid: 6657a658-309b-4309-a713-98729e5890a8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:page:links'
+            additional: {  }
+            weight: 1
+          f3cdbee5-6e53-4673-a07f-9df2e24941a3:
+            uuid: f3cdbee5-6e53-4673-a07f-9df2e24941a3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_hero'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+          aa9263e6-06a9-4530-947a-ac244ee2211f:
+            uuid: aa9263e6-06a9-4530-947a-ac244ee2211f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_content'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -51,3 +111,4 @@ content:
 hidden:
   langcode: true
   layout_builder__layout: true
+  search_api_excerpt: true

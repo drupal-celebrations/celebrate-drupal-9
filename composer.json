@@ -71,6 +71,7 @@
         ]
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -96,8 +97,10 @@
         "patches": {
             "drupal/search_api": {
                 "#3121637 - Replace theme functions with templates": "https://www.drupal.org/files/issues/2020-04-24/3121637-8--replace_theme_functions_with_templates.patch"
+            },
+            "drupal/facets": {
+                "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2020-01-27/facet-3073444-89-Allow-facets-filter-in-views.patch"
             }
         }
-    },
-    "composer-exit-on-patch-failure": true
+    }
 }

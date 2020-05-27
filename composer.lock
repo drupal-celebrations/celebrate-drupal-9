@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d288ff77c999d6d02356464a7d0ea74e",
+    "content-hash": "d2470207df8aaf3847eeeca8427822d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2245,6 +2245,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2020-01-27/facet-3073444-89-Allow-facets-filter-in-views.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
