@@ -1,0 +1,7 @@
+login_redirection:
+  anonymous: null
+  authenticated: /add-your-celebration
+  content_moderator: /admin/content
+  translator: /admin/content
+  administrator: /admin/content
+exclude_urls: ''
