@@ -281,6 +281,8 @@ module.exports = {
     borderWidth: ['responsive', 'first', 'last'],
     margin: ['responsive', 'first', 'last'],
     padding: ['responsive', 'first', 'last'],
+    wordBreak: ['responsive', 'hover', 'focus'],
+    whitespace: ['responsive', 'hover', 'focus'],
   },
   plugins: [
     typography,
