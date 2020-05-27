@@ -10,6 +10,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
+  - 'bypass honeypot protection'
   - 'create content translations'
   - 'delete content translations'
   - 'delete own page content'

@@ -18,6 +18,7 @@ permissions:
   - 'access user profiles'
   - 'administer menu'
   - 'administer users'
+  - 'bypass honeypot protection'
   - 'create page content'
   - 'create url aliases'
   - 'create video media'
