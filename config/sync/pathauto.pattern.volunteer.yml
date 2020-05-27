@@ -1,0 +1,22 @@
+uuid: daf4ad63-56e4-4b74-a03e-3e01bd9c0da1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: volunteer
+label: Volunteer
+type: 'canonical_entities:node'
+pattern: 'volunteer/[node:title]'
+selection_criteria:
+  e56c0508-eea9-4693-b516-4f82199880cf:
+    id: node_type
+    bundles:
+      volunteer: volunteer
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e56c0508-eea9-4693-b516-4f82199880cf
+selection_logic: and
+weight: -5
+relationships: {  }

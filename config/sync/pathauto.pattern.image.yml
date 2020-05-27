@@ -1,0 +1,22 @@
+uuid: fbca83da-71ac-4d6c-83ea-5dd93a1a057a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: image
+label: Image
+type: 'canonical_entities:node'
+pattern: 'image/[node:field_image_category]/[node:title]'
+selection_criteria:
+  f0adb08a-f27b-43e8-be86-e4f9511e6fab:
+    id: node_type
+    bundles:
+      image: image
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f0adb08a-f27b-43e8-be86-e4f9511e6fab
+selection_logic: and
+weight: -5
+relationships: {  }
