@@ -1,0 +1,22 @@
+uuid: f2b3550f-1139-4aac-9635-68dbeb9007e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accent_color
+    - paragraphs.paragraphs_type.hero
+  module:
+    - color_field
+id: paragraph.hero.field_accent_color
+field_name: field_accent_color
+entity_type: paragraph
+bundle: hero
+label: 'Accent color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
