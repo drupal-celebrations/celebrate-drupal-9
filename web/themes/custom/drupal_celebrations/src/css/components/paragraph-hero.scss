@@ -1,3 +1,14 @@
+.paragraph--type--hero h1 {
+  @apply text-white text-shadow text-hero;
+}
+
+.paragraph--type--hero img::after {
+  content: '';
+  @apply w-full h-full block absolute top-0 left-0 bottom-0 right-0;
+  background-color: rgba(0,0,0,0.4);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
 
 .paragraph--type--hero.modifier-black .field--type-image {
   @apply bg-black bg-opacity-75;

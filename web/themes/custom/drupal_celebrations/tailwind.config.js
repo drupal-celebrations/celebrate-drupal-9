@@ -88,6 +88,9 @@ module.exports = {
       },
     }),
     extend: {
+      fontSize: {
+        hero: '8rem',
+      },
       textStyles: theme => ({
         heading: {
           output: false,

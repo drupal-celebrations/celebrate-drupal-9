@@ -11,10 +11,21 @@ const camelCaseToKebabCase = function(string) {
 };
 
 module.exports = plugin.withOptions(function(options = {}) {
-  return function({ theme, e, addBase }) {
+  return function({ theme, variants, e, addBase, addUtilities }) {
     options = _.defaults({}, options, defaultOptions);
 
     const textStylesTheme = theme('textStyles');
+
+    const textShadowUtilities = _.fromPairs(
+      _.map(theme('textShadow'), (value, modifier) => {
+        return [
+          `.${e(`text-shadow${modifier === 'default' ? '' : `-${modifier}`}`)}`,
+          {
+            textShadow: value,
+          },
+        ];
+      })
+    );
 
     const resolveTextStyle = function(name, styles, topLevel = false) {
       if (_.isPlainObject(styles)) {
@@ -79,10 +90,12 @@ module.exports = plugin.withOptions(function(options = {}) {
     );
 
     addBase(textStyles);
+    addUtilities(textShadowUtilities, variants('textShadow'));
   };
 }, function() {
   return {
     theme: {
+      textShadow: {},
       textStyles: {},
     }
   };
