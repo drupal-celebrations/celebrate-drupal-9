@@ -23,6 +23,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_browser: 0
+  entity_redirect: 0
   entity_reference_revisions: 0
   facets: 0
   field: 0

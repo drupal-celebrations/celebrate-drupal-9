@@ -1,0 +1,9 @@
+services:
+  logger.channel.entity_redirect:
+    parent: logger.channel_base
+    arguments: ['entity_redirect']
+  entity_redirect.event_subscriber:
+    class: Drupal\entity_redirect\EventSubscriber\EntityRedirectSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
