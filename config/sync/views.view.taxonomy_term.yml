@@ -287,6 +287,7 @@ display:
           relationship: none
           view_mode: default
       display_extenders: {  }
+      enabled: false
     cache_metadata:
       contexts:
         - 'languages:language_interface'
