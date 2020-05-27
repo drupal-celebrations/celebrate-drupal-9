@@ -36,6 +36,7 @@ mix.disableNotifications()
       'templates/**/*',
       'src/**/*',
       'images/**/*',
-      'fonts/**/*'
+      'fonts/**/*',
+      '../../../modules/custom/**/*',
     ]
   });

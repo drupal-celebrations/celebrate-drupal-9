@@ -1,5 +1,10 @@
 .paragraph--type--hero h1 {
-  @apply text-white text-shadow text-hero;
+  @apply text-white text-shadow;
+}
+@screen sm {
+  .paragraph--type--hero h1 {
+    @apply text-hero;
+  }
 }
 
 .paragraph--type--hero img::after {
