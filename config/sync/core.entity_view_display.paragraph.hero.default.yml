@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_accent_color
     - field.field.paragraph.hero.field_button_link
     - field.field.paragraph.hero.field_hero_image
     - paragraphs.paragraphs_type.hero
@@ -34,4 +35,6 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_accent_color: true
+  search_api_excerpt: true

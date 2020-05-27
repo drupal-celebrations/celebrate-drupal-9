@@ -22,7 +22,7 @@ content:
   field_accent_color:
     weight: 4
     settings:
-      default_colors: '#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46,#42D692,#16A765,#7BD148,#B3DC6C,#FBE983,#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF,#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2,#CD74E6,#A47AE2'
+      default_colors: '#000000,#FFFFFF,#D7E1E8,#E33F1E,#ED8936,#FDCA40,#3FA21C,#38B2AC,#53B0EB,#667EEA,#9F7AEA,#ED64A6'
     third_party_settings: {  }
     type: color_field_widget_box
     region: content
