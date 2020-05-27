@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains content_submission.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function content_submission_theme() {
+  return [
+    'add_content' => [
+      'variables' => [
+        'content_types' => NULL
+      ],
+      'render element' => 'children',
+    ],
+    'user_links' => [
+      'variables' => [
+        'links' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

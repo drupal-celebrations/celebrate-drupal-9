@@ -1,0 +1,5 @@
+name: 'Content submission'
+type: module
+description: 'Content submission helpers.'
+core_version_requirement: ^8.8.0 || ^9.0
+package: 'Custom'
