@@ -1,0 +1,23 @@
+uuid: e68e7f98-8d68-4cde-bc9b-173dcf469f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coc_agreement
+    - node.type.image
+id: node.image.field_coc_agreement
+field_name: field_coc_agreement
+entity_type: node
+bundle: image
+label: 'My uploaded content complies with the Drupal Code of Conduct'
+description: 'You can check the Drupal Code of Conduct on https://www.drupal.org/dcoc'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

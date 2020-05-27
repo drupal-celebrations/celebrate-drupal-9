@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.video.field_cc_license
     - field.field.node.video.field_celebration
+    - field.field.node.video.field_coc_agreement
     - field.field.node.video.field_description
     - field.field.node.video.field_rights
     - field.field.node.video.field_video
@@ -30,6 +31,13 @@ content:
     third_party_settings: {  }
   field_cc_license:
     weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_coc_agreement:
+    weight: 26
     settings:
       display_label: true
     third_party_settings: {  }
