@@ -54,6 +54,9 @@ p {
 a:hover {
   @apply underline;
 }
+.field--type-text-long a {
+  @apply text-blue-400;
+}
 
 .prefix-item {
   @apply bg-gray-200 text-gray-600;
