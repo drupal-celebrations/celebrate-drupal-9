@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.image.field_celebration
+    - field.field.node.image.field_coc_agreement
     - field.field.node.image.field_description
     - field.field.node.image.field_image
     - field.field.node.image.field_image_category
@@ -46,6 +47,7 @@ content:
 hidden:
   content_moderation_control: true
   field_celebration: true
+  field_coc_agreement: true
   field_rights: true
   langcode: true
   links: true

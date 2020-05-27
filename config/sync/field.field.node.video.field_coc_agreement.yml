@@ -1,0 +1,23 @@
+uuid: 0f14a6c4-b873-4869-ba9b-4e050506fb5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coc_agreement
+    - node.type.video
+id: node.video.field_coc_agreement
+field_name: field_coc_agreement
+entity_type: node
+bundle: video
+label: 'My uploaded content complies with the Drupal Code of Conduct'
+description: 'You can check the Drupal Code of Conduct on https://www.drupal.org/dcoc'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
