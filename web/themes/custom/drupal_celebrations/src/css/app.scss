@@ -83,3 +83,77 @@ a:hover {
   max-width: 23%;
   margin: 1%;
 }
+
+
+.paragraph--type--hero.modifier-black .field--type-image {
+  @apply bg-black bg-opacity-75;
+}
+.paragraph--type--hero.modifier-black .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-white .field--type-image {
+  @apply bg-white bg-opacity-75;
+}
+.paragraph--type--hero.modifier-white .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-gray .field--type-image {
+  @apply bg-gray-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-gray .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-red .field--type-image {
+  @apply bg-red-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-red .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-orange .field--type-image {
+  @apply bg-orange-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-orange .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-yellow .field--type-image {
+  @apply bg-yellow-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-yellow .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-green .field--type-image {
+  @apply bg-green-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-green .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-teal .field--type-image {
+  @apply bg-teal-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-teal .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-blue .field--type-image {
+  @apply bg-blue-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-blue .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-indigo .field--type-image {
+  @apply bg-indigo-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-indigo .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-purple .field--type-image {
+  @apply bg-purple-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-purple .field--type-image img {
+  mix-blend-mode: overlay;
+}
+.paragraph--type--hero.modifier-pink .field--type-image {
+  @apply bg-pink-700 bg-opacity-75;
+}
+.paragraph--type--hero.modifier-pink .field--type-image img {
+  mix-blend-mode: overlay;
+}
