@@ -1,0 +1,15 @@
+uuid: a6d9afca-b786-4e39-9888-e6ae6718ace0
+langcode: en
+status: true
+dependencies: {  }
+name: square_2x
+label: 'Square 2X (2732x2732)'
+effects:
+  cfcff9a7-aac3-4caa-b76c-2e19ac8da359:
+    uuid: cfcff9a7-aac3-4caa-b76c-2e19ac8da359
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2732
+      height: 2732
+      anchor: center-center

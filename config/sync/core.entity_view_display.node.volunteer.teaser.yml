@@ -38,7 +38,7 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: card
+      view_mode: responsive_square
       link: false
     third_party_settings: {  }
   field_twitter_username:
@@ -48,11 +48,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  links: true
   search_api_excerpt: true

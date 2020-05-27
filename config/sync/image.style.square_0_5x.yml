@@ -1,0 +1,15 @@
+uuid: 028df0e8-2180-4bdb-8e0c-1ffa762ced7d
+langcode: en
+status: true
+dependencies: {  }
+name: square_0_5x
+label: 'Square 0.5X (683x683)'
+effects:
+  62ce9602-7d04-444b-a5a7-40dad1665588:
+    uuid: 62ce9602-7d04-444b-a5a7-40dad1665588
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 683
+      height: 683
+      anchor: center-center
