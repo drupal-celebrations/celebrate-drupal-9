@@ -12,7 +12,7 @@ dependencies:
 id: video_category
 theme: drupal_celebrations
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'facet_block:video_category'
 settings:

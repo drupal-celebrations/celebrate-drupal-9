@@ -11,7 +11,7 @@ _core:
 id: drupal_celebrations_messages
 theme: drupal_celebrations
 region: content
-weight: -1
+weight: -3
 provider: null
 plugin: system_messages_block
 settings:

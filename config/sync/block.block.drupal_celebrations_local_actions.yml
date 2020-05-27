@@ -9,7 +9,7 @@ _core:
 id: drupal_celebrations_local_actions
 theme: drupal_celebrations
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: local_actions_block
 settings:
