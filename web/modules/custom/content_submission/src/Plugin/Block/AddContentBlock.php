@@ -105,7 +105,7 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
         'block',
         'border',
         'border-blue-500',
-        'rounded py-2',
+        'py-2',
         'px-4',
       ];
       $primaryButtonClasses = array_merge($buttonClasses, [

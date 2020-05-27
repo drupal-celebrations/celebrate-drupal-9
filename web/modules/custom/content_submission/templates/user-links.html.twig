@@ -9,12 +9,13 @@
 */
 #}
 {% set classes = [
-    'clear-both',
+    'mb-4',
+    'sm:mb-8',
 ] %}
 <div{{ attributes.addClass(classes) }}>
-    <ul class="flex">
+    <ul class="mt-5 max-w-md sm:flex sm:justify-center md:mt-8 font-sans font-black">
     {% for link in links %}
-      <li class="flex-1 mr-2">
+      <li class="flex-1 mr-2 list-none text-xl">
         {{link}}
       </li>
     {% endfor %}
