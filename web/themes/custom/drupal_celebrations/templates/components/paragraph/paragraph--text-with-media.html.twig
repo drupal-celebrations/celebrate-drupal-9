@@ -39,14 +39,27 @@
  */
 #}
 {%
+  set color_type = paragraph.field_color_type.0.value
+%}
+{%
   set placement = paragraph.field_placement.0.value
 %}
 {%
-  set above_classes = placement == 'above' ? [
-    'row-start-1',
-    'row-end-2',
-    'col-start-1',
-    'col-end-2',
+  set placement_classes = [
+    placement == 'above' ? 'row-start-1 row-end-2 col-start-1 col-end-2',
+    placement in ['left', 'right'] ? 'py-4 justify-center',
+  ]
+%}
+{%
+  set content_classes = [
+    'mx-auto',
+    'container',
+    'p-page-gutter',
+    'placement--' ~ placement,
+    'relative',
+    placement in ['above'] ? 'grid items-center' : 'lg:grid lg:items-center',
+    placement in ['left', 'right'] ? 'lg:grid-cols-2',
+    placement in ['top', 'bottom'] ? 'lg:grid-flow-row',
   ]
 %}
 {%
@@ -55,39 +68,33 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'mx-auto',
-    'mb-8',
-    'container',
-    'p-page-gutter',
-    'placement--' ~ placement,
-    'relative',
-    placement in ['above'] ? 'grid' : 'lg:grid',
-    placement in ['above'] ? 'items-center' : 'lg:items-center',
-    placement in ['left', 'right'] ? 'lg:grid-cols-2',
-    placement in ['top', 'bottom'] ? 'lg:grid-flow-row',
-    colour_modifier_class,
+    'py-8',
+    colour_modifier_class ? 'modifier ' ~ colour_modifier_class,
+    color_type ? 'modifier-type ' ~ 'modifier-type-' ~ color_type,
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {% if placement is not empty and content.field_media|render is not empty %}
-        {% if placement in ['top', 'left'] %}
-        <div class="relative w-full mx-auto">
-          {{ content|without('field_media') }}
-        </div>
+    <div class="{{ content_classes | join(" ") }}">
+      {% block content %}
+        {% if placement is not empty and content.field_media|render is not empty %}
+          {% if placement in ['top', 'left'] %}
+          <div class="relative w-full mx-auto">
+            {{ content|without('field_media') }}
+          </div>
+          {% endif %}
+          <div class="relative max-w-xl mx-auto {{ placement_classes | join(" ") }}">
+            {{ content.field_media }}
+          </div>
+          {% if placement in ['right', 'bottom', 'above'] %}
+          <div class="relative max-w-xl mx-auto {{ placement_classes | join(" ") }}">
+            {{ content|without('field_media') }}
+          </div>
+          {% endif %}
+        {% else %}
+          {{ content }}
         {% endif %}
-        <div class="relative max-w-xl mx-auto {{ above_classes | join(" ") }}">
-          {{ content.field_media }}
-        </div>
-        {% if placement in ['right', 'bottom', 'above'] %}
-        <div class="relative max-w-xl mx-auto {{ above_classes | join(" ") }}">
-          {{ content|without('field_media') }}
-        </div>
-        {% endif %}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    {% endblock %}
+      {% endblock %}
+    </div>
   </div>
 {% endblock paragraph %}

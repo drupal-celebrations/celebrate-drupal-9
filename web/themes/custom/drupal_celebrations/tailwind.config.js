@@ -283,6 +283,7 @@ module.exports = {
     padding: ['responsive', 'first', 'last'],
     wordBreak: ['responsive', 'hover', 'focus'],
     whitespace: ['responsive', 'hover', 'focus'],
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [
     typography,

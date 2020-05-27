@@ -42,22 +42,29 @@
   set color_type = paragraph.field_color_type.0.value
 %}
 {%
+  set content_classes = [
+  'mx-auto',
+  'container',
+  'p-page-gutter',
+]
+%}
+{%
   set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
-    'mx-auto',
-    'container',
-    'p-page-gutter',
-    'mb-8',
-    colour_modifier_class,
-  ]
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'py-8',
+  colour_modifier_class ? 'modifier ' ~ colour_modifier_class,
+  color_type ? 'modifier-type ' ~ 'modifier-type-' ~ color_type,
+]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+    <div class="{{ content_classes | join(" ") }}">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
   </div>
 {% endblock paragraph %}

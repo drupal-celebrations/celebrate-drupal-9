@@ -40,9 +40,9 @@
 #}
 {%
   set hero_title_classes = [
-    paragraph.field_hero_image|keys is not empty ? 'absolute',
     'container',
     'p-page-gutter',
+    paragraph.field_hero_image|keys is not empty ? 'absolute',
   ]
 %}
 {%
@@ -58,7 +58,8 @@
     'justify-center',
     'relative',
     'mx-auto',
-    colour_modifier_class,
+    colour_modifier_class and paragraph.field_hero_image|keys is not empty ? 'modifier',
+    colour_modifier_class ? colour_modifier_class,
   ]
 %}
 {% block paragraph %}
