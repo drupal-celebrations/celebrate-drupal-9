@@ -22,8 +22,6 @@ display:
             first: '« Premier'
             last: 'Dernier »'
       fields:
-        media_bulk_form:
-          action_title: Action
         thumbnail__target_id:
           label: Vignette
           separator: ', '
