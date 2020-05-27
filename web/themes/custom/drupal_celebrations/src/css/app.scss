@@ -68,28 +68,9 @@ a:hover {
   @apply my-8;
 }
 
-.media-library-wrapper {
-  @apply flex;
-}
-
-.media-library-menu {
-  flex-basis: 20%;
-  flex-shrink: 0;
-}
-
-.media-library-content {
-  flex-grow: 1;
-}
-
-.media-library-views-form {
-  @apply flex;
-  flex-wrap: wrap;
-}
-
-.media-library-views-form .media-library-item {
-  @apply justify-between;
-  max-width: 23%;
-  margin: 1%;
+.node--view-mode-teaser h2,
+.node--view-mode-card h2 {
+  @apply text-lg;
 }
 
 [data-drupal-selector="views-exposed-form-celebrations-images-block"] .form-actions,
