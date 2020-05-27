@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "013ecb90decde673b3d7bc542015c62b",
+    "content-hash": "98cfc0d0ceff8a2c2e86a63faaabfcf1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1855,7 +1855,8 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
-                }
+                },
+                "patches_applied": []
             },
             "autoload": {
                 "psr-4": {
