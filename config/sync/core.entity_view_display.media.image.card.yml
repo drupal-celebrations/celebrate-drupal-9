@@ -5,11 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.media.card
     - field.field.media.image.field_media_image
-    - image.style.large
     - media.type.image
+    - responsive_image.styles.square
   module:
-    - image
     - layout_builder
+    - responsive_image
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -23,10 +23,10 @@ content:
     label: hidden
     weight: 0
     settings:
-      image_style: large
+      responsive_image_style: square
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
 hidden:
   created: true
