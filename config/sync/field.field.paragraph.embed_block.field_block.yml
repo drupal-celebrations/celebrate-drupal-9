@@ -1,0 +1,25 @@
+uuid: 3ae41499-97f9-4142-b8ee-138320cbf2ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.embed_block
+  module:
+    - block_field
+id: paragraph.embed_block.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: embed_block
+label: Block
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      add_content_block: add_content_block
+field_type: block_field
