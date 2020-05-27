@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - media.type.image
+    - media.type.user_picture
     - node.type.volunteer
 id: node.volunteer.field_image
 field_name: field_image
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      user_picture: user_picture
     sort:
       field: _none
     auto_create: false

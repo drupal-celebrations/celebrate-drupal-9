@@ -1,0 +1,14 @@
+uuid: cffc77f5-387e-46b1-942b-702c751c2e42
+langcode: en
+status: true
+dependencies: {  }
+id: user_picture
+label: 'User picture'
+description: 'Can be used for user profile and volunteers pictures.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

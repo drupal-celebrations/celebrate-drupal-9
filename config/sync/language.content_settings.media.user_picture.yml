@@ -1,0 +1,16 @@
+uuid: f0d8e3f0-e832-4769-ac5d-8f04e9433072
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.user_picture
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: media.user_picture
+target_entity_type_id: media
+target_bundle: user_picture
+default_langcode: site_default
+language_alterable: true
