@@ -87,6 +87,68 @@ function drupal_celebrations_preprocess_paragraph__hero(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_paragraph().
+ */
+function drupal_celebrations_preprocess_paragraph__text_with_media(&$variables) {
+  $variables['#cache']['contexts'][] = 'url';
+
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->hasField('field_accent_color')) {
+    // Simple mapping for values to class names
+    $colour_map_classes = [
+      '#000000' => 'modifier-black',
+      '#FFFFFF' => 'modifier-white',
+      '#D7E1E8' => 'modifier-gray',
+      '#E33F1E' => 'modifier-red',
+      '#ED8936' => 'modifier-orange',
+      '#FDCA40' => 'modifier-yellow',
+      '#3FA21C' => 'modifier-green',
+      '#38B2AC' => 'modifier-teal',
+      '#53B0EB' => 'modifier-blue',
+      '#667EEA' => 'modifier-indigo',
+      '#9F7AEA' => 'modifier-purple',
+      '#ED64A6' => 'modifier-pink',
+    ];
+    $accent_colour = $paragraph->get('field_accent_color')->getString();
+    if (isset($colour_map_classes[$accent_colour])) {
+      $variables['colour_modifier_class'] = $colour_map_classes[$accent_colour];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function drupal_celebrations_preprocess_paragraph__embed_view(&$variables) {
+  $variables['#cache']['contexts'][] = 'url';
+
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->hasField('field_accent_color')) {
+    // Simple mapping for values to class names
+    $colour_map_classes = [
+      '#000000' => 'modifier-black',
+      '#FFFFFF' => 'modifier-white',
+      '#D7E1E8' => 'modifier-gray',
+      '#E33F1E' => 'modifier-red',
+      '#ED8936' => 'modifier-orange',
+      '#FDCA40' => 'modifier-yellow',
+      '#3FA21C' => 'modifier-green',
+      '#38B2AC' => 'modifier-teal',
+      '#53B0EB' => 'modifier-blue',
+      '#667EEA' => 'modifier-indigo',
+      '#9F7AEA' => 'modifier-purple',
+      '#ED64A6' => 'modifier-pink',
+    ];
+    $accent_colour = $paragraph->get('field_accent_color')->getString();
+    if (isset($colour_map_classes[$accent_colour])) {
+      $variables['colour_modifier_class'] = $colour_map_classes[$accent_colour];
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function drupal_celebrations_preprocess_html(&$variables) {
