@@ -1,0 +1,22 @@
+{#
+/**
+* @file
+* Default theme implementation for user register or login link.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+    'clear-both',
+] %}
+<div{{ attributes.addClass(classes) }}>
+    <ul class="flex">
+    {% for link in links %}
+      <li class="flex-1 mr-2">
+        {{link}}
+      </li>
+    {% endfor %}
+    </ul>
+</div>

@@ -25,6 +25,9 @@ settings:
     target_bundles:
       hero: hero
     target_bundles_drag_drop:
+      embed_block:
+        weight: 5
+        enabled: false
       embed_view:
         weight: -5
         enabled: false
