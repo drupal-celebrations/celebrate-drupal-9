@@ -536,12 +536,22 @@ display:
         filters: false
         filter_groups: false
         cache: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       cache:
         type: none
+      use_more: true
+      use_more_always: false
+      use_more_text: 'All photos'
+      link_display: custom_url
+      link_url: /photos
     cache_metadata:
       max-age: -1
       contexts:
@@ -1050,12 +1060,22 @@ display:
         filters: false
         filter_groups: false
         cache: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       cache:
         type: none
+      use_more: true
+      use_more_always: false
+      use_more_text: 'All videos'
+      link_display: custom_url
+      link_url: /videos
     cache_metadata:
       max-age: -1
       contexts:
