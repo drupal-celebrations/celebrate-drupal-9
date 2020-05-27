@@ -4,8 +4,10 @@ status: true
 dependencies:
   module:
     - node
+    - user
     - search_api
   config:
+    - field.storage.user.field_country
     - field.storage.node.field_image_category
     - field.storage.node.field_video_category
     - search_api.server.database
@@ -23,6 +25,17 @@ field_settings:
     dependencies:
       module:
         - node
+  field_country:
+    label: Country
+    datasource_id: 'entity:node'
+    property_path: 'uid:entity:field_country'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_country
+      module:
+        - node
+        - user
   field_image_category:
     label: 'Image Category'
     datasource_id: 'entity:node'
@@ -70,6 +83,8 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
+    indexed_locked: true
+    type_locked: true
     dependencies:
       module:
         - node
@@ -78,8 +93,6 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
-    indexed_locked: true
-    type_locked: true
     dependencies:
       module:
         - node
@@ -138,6 +151,7 @@ processor_settings:
   html_filter:
     all_fields: true
     fields:
+      - field_country
       - rendered_item
       - title
       - type
@@ -145,18 +159,17 @@ processor_settings:
     alt: true
     tags:
       b: 2
-      em: 1
       h1: 5
       h2: 3
       h3: 2
       strong: 2
-      u: 1
     weights:
       preprocess_index: -15
       preprocess_query: -15
   ignorecase:
     all_fields: true
     fields:
+      - field_country
       - rendered_item
       - title
       - type
@@ -179,6 +192,7 @@ processor_settings:
   transliteration:
     all_fields: true
     fields:
+      - field_country
       - rendered_item
       - title
       - type
