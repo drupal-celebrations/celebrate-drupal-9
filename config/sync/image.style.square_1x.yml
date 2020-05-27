@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: square_1x
-label: 'Square 1X (1366x1366)'
+label: 'Square 1X (400x400)'
 effects:
   35b43de9-3af2-492e-8b94-055be4a6b3d7:
     uuid: 35b43de9-3af2-492e-8b94-055be4a6b3d7
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 1366
-      height: 1366
+      width: 400
+      height: 400
       anchor: center-center
