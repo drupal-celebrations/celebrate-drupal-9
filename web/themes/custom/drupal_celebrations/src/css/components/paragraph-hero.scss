@@ -1,7 +1,7 @@
 .paragraph--type--hero h1 {
   @apply text-white text-shadow;
 }
-@screen sm {
+@screen md {
   .paragraph--type--hero h1 {
     @apply text-hero;
   }
