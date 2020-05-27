@@ -26,21 +26,13 @@ bundle: video
 mode: full
 content:
   content_moderation_control:
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_celebration:
-    type: entity_reference_label
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
   field_description:
     type: text_default
-    weight: 3
+    weight: 2
     region: content
     label: hidden
     settings: {  }
@@ -63,12 +55,13 @@ content:
       link: true
     third_party_settings: {  }
   links:
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_cc_license: true
+  field_celebration: true
   field_coc_agreement: true
   field_rights: true
   langcode: true

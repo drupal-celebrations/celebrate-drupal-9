@@ -100,6 +100,11 @@
       {% endif %}
       <div class="mt-2 text-gray-700 text-base">
         {{ content | without('field_image', 'field_description', 'field_image_category') }}
+        {% if display_submitted and author_card %}
+          <footer class="node__meta">
+            {{ author_card }}
+          </footer>
+        {% endif %}
       </div>
   </div>
 </article>
