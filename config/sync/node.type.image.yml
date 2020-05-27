@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Image
 type: image
-description: 'Create an image to be used in the gallery overview pages.'
+description: 'Upload a photo about how you celebrate.'
 help: ''
 new_revision: true
 preview_mode: 1
