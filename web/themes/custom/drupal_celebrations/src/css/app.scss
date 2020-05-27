@@ -88,4 +88,14 @@ a:hover {
   margin: 1%;
 }
 
+[data-drupal-selector="views-exposed-form-celebrations-images-block"] .form-actions,
+[data-drupal-selector="views-exposed-form-celebrations-videos-block"] .form-actions {
+  display: none;
+}
 
+.facets-views-plugin {
+  @apply flex;
+  .block-facets {
+    @apply mr-8;
+  }
+}
