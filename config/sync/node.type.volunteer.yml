@@ -1,0 +1,17 @@
+uuid: 348f4b9b-74bd-41dc-811b-747041f8cf42
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Volunteer
+type: volunteer
+description: 'Team member that volunteers at the celebratedrupal.org project.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

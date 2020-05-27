@@ -1,0 +1,15 @@
+uuid: 7055b2a8-5c45-4927-82a3-c3265b70675c
+langcode: en
+status: true
+dependencies: {  }
+name: square_3x
+label: 'Square 3X (4098x4098)'
+effects:
+  70ae1b40-ef4b-4c35-a8a8-b74b8586c347:
+    uuid: 70ae1b40-ef4b-4c35-a8a8-b74b8586c347
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 4098
+      height: 4098
+      anchor: center-center

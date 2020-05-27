@@ -1,0 +1,15 @@
+uuid: a9b62ac3-c0dd-4d01-bb7d-eb6b0ccdb53d
+langcode: en
+status: true
+dependencies: {  }
+name: square_1x
+label: 'Square 1X (1366x1366)'
+effects:
+  35b43de9-3af2-492e-8b94-055be4a6b3d7:
+    uuid: 35b43de9-3af2-492e-8b94-055be4a6b3d7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1366
+      height: 1366
+      anchor: center-center

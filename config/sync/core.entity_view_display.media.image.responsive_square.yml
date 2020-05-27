@@ -1,0 +1,37 @@
+uuid: 1713aa5c-7d69-452d-8da9-af00c3dc8779
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.responsive_square
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.square
+  module:
+    - layout_builder
+    - responsive_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.responsive_square
+targetEntityType: media
+bundle: image
+mode: responsive_square
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      responsive_image_style: square
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

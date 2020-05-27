@@ -1,0 +1,54 @@
+uuid: 4cd958c4-f708-46d8-a570-681048084f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.volunteer.field_description
+    - field.field.node.volunteer.field_drupal_org_username
+    - field.field.node.volunteer.field_image
+    - field.field.node.volunteer.field_twitter_username
+    - node.type.volunteer
+  module:
+    - text
+    - user
+    - user_registration
+id: node.volunteer.teaser
+targetEntityType: node
+bundle: volunteer
+mode: teaser
+content:
+  field_description:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_drupal_org_username:
+    type: user_registration_drupal_org_username
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: responsive_square
+      link: false
+    third_party_settings: {  }
+  field_twitter_username:
+    type: user_registration_twitter_username
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

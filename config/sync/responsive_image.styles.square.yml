@@ -1,0 +1,25 @@
+uuid: aede9099-ecf6-4d7c-9c37-51317a40838c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.square_0_5x
+    - image.style.square_1x
+    - image.style.square_2x
+    - image.style.square_3x
+id: square
+label: Square
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: "(min-width: 1920px) 3840px,\r\n(min-width: 1536px) 3072px,\r\n(min-width: 1440px) 2880px,\r\n(min-width: 1366px) 2732px,\r\n(min-width: 768px) 1536px,\r\n(min-width: 576px) 1152px,\r\n100vw"
+      sizes_image_styles:
+        - square_0_5x
+        - square_1x
+        - square_2x
+        - square_3x
+breakpoint_group: responsive_image
+fallback_image_style: square_1x
