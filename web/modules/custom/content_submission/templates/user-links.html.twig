@@ -12,7 +12,11 @@
     'clear-both',
 ] %}
 <div{{ attributes.addClass(classes) }}>
+    <ul class="flex">
     {% for link in links %}
-        <p>{{link}}</p>
+      <li class="flex-1 mr-2">
+        {{link}}
+      </li>
     {% endfor %}
+    </ul>
 </div>

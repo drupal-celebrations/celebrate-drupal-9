@@ -78,8 +78,16 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
     return $build;
   }
 
-  private function getLinkFromRoute($label, $route, $class = '') {
+  private function getLinkFromRoute($label, $route, $classes = []) {
     $url = Url::fromRoute($route);
+    if (!empty($classes)) {
+      $options = [
+        'attributes' => [
+          'class' => $classes
+        ],
+      ];
+    }
+    $url->setOptions($options);
     return Link::fromTextAndUrl($label, $url)->toRenderable();
   }
 
@@ -92,11 +100,29 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
       $build = $this->getNodeTypeList();
     }
     else {
+      $buttonClasses = [
+        'text-center',
+        'block',
+        'border',
+        'border-blue-500',
+        'rounded py-2',
+        'px-4',
+      ];
+      $primaryButtonClasses = array_merge($buttonClasses, [
+        'bg-blue-500',
+        'hover:bg-blue-600',
+        'text-white',
+      ]);
+      $secondaryButtonClasses = array_merge($buttonClasses, [
+        'bg-white',
+        'hover:bg-blue-300',
+        'text-blue',
+      ]);
       $build = [
         '#theme' => 'user_links',
         '#links' => [
-          $this->getLinkFromRoute($this->t('Create an account'), 'user.register'),
-          $this->getLinkFromRoute($this->t('Login'), 'user.login'),
+          $this->getLinkFromRoute($this->t('Create an account'), 'user.register', $primaryButtonClasses),
+          $this->getLinkFromRoute($this->t('Login'), 'user.login', $secondaryButtonClasses),
         ]
       ];
     }
