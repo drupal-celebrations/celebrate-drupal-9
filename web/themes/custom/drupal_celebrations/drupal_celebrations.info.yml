@@ -5,8 +5,6 @@ description: "A theme for the Drupal Celebrations project."
 package: Custom
 version: VERSION
 core_version_requirement: "^9"
-dependencies:
-  - color_map:color_map
 
 regions:
   header: Header
