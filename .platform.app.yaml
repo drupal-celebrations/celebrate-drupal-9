@@ -61,6 +61,7 @@ build:
 hooks:
     build: |
         set -e
+        curl -sS https://platform.sh/cli/installer | php
         unset NPM_CONFIG_PREFIX
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | dash
         export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
@@ -141,3 +142,10 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd web ; drush core-cron'
+    backup:
+        spec: '0 4 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                platform backup:create --yes --no-wait
+            fi
+
