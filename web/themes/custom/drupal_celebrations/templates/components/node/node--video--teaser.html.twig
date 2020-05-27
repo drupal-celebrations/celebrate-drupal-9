@@ -85,26 +85,18 @@
   <a href="{{ url }}" rel="bookmark">{{ content.field_video }}</a>
 
   <div class="px-6 py-4">
-  {% if label %}
-    {{ title_prefix }}
-    {% if page %}
-      <header class="node__header">
-        <h1 class="page-title md:text-4xl sm:text-2xl text-xl">
-          {{ label }}
-        </h1>
-      </header>
-    {% else %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-    {{ title_suffix }}
-    {% if content.field_category %}
-      {{ content.field_category }}
-    {% endif %}
+  {% if content.field_video_category %}
+    {{ content.field_video_category }}
   {% endif %}
+    {% if label %}
+      {{ title_prefix }}
+      <h4{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h4>
+      {{ title_suffix }}
+    {% endif %}
     <div class="text-gray-700 text-base">
-      {{ content | without('field_video', 'field_category') }}
+      {{ content | without('field_video', 'field_video_category') }}
       {% if display_submitted and author_card %}
         <footer class="node__meta">
           {{ author_card }}
