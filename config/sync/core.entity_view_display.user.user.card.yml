@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.user.card
     - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_name
     - field.field.user.user.field_twitter_username
   module:
     - address
@@ -23,20 +24,28 @@ mode: card
 content:
   field_country:
     type: address_country_default
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_drupal_org_username:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: user_registration_drupal_org_username
     region: content
+  field_name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_twitter_username:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }

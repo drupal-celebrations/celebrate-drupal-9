@@ -6,6 +6,7 @@ dependencies:
     - core.entity_form_mode.user.register
     - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_name
     - field.field.user.user.field_twitter_username
   module:
     - address
@@ -22,19 +23,11 @@ content:
     third_party_settings: {  }
   field_country:
     type: address_country_default
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_drupal_org_username:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_twitter_username:
     weight: 2
     settings:
       size: 60
@@ -42,8 +35,24 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  timezone:
+  field_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_twitter_username:
     weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  timezone:
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -51,4 +60,5 @@ hidden:
   contact: true
   langcode: true
   language: true
+  path: true
   translation: true

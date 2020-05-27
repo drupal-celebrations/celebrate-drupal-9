@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_name
     - field.field.user.user.field_twitter_username
   module:
     - address
@@ -20,12 +21,20 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_country:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: address_country_default
     region: content
   field_drupal_org_username:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
     weight: 1
     settings:
       size: 60
@@ -34,7 +43,7 @@ content:
     type: string_textfield
     region: content
   field_twitter_username:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -42,7 +51,7 @@ content:
     type: string_textfield
     region: content
   timezone:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -50,4 +59,5 @@ hidden:
   contact: true
   langcode: true
   language: true
+  path: true
   translation: true

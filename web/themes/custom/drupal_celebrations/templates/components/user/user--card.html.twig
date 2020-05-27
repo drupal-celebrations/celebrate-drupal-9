@@ -17,9 +17,15 @@
  */
 #}
 <article{{ attributes.addClass('profile') }}>
+  <div class="font-semibold mt-2">
+  {% if content.field_name and content.field_name|render|trim is not empty %}
+    {{ content.field_name }}
+  {% else %}
+    {{ user.label }}
+  {% endif %}
+  </div>
   <div class="flex flex-auto">
     <div class="w-3/4">
-      {{ user.label }}
       {% if content.field_country %}
         {{ content.field_country }}
       {% endif %}
@@ -38,6 +44,6 @@
     </div>
   </div>
   {% if content %}
-    {{- content | without('field_country', 'field_drupal_org_username', 'field_twitter_username') -}}
+    {{- content | without('field_name', 'field_country', 'field_drupal_org_username', 'field_twitter_username') -}}
   {% endif %}
 </article>
