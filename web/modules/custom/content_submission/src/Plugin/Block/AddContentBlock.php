@@ -54,50 +54,14 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
   }
 
   /**
-   * Returns a render array of the node add list.
-   *
-   * @return array
-   */
-  private function getNodeTypeList() {
-    $build = [
-      '#theme' => 'node_add_list',
-      '#cache' => [
-        'tags' => $this->entityTypeManager->getDefinition('node_type')->getListCacheTags(),
-      ],
-    ];
-    $content = [];
-    // Only use node types the user has access to.
-    foreach ($this->entityTypeManager->getStorage('node_type')->loadMultiple() as $type) {
-      $access = $this->entityTypeManager->getAccessControlHandler('node')->createAccess($type->id(), NULL, [], TRUE);
-      if ($access->isAllowed()) {
-        $content[$type->id()] = $type;
-      }
-      $this->renderer->addCacheableDependency($build, $access);
-    }
-    $build['#content'] = $content;
-    return $build;
-  }
-
-  private function getLinkFromRoute($label, $route, $classes = []) {
-    $url = Url::fromRoute($route);
-    if (!empty($classes)) {
-      $options = [
-        'attributes' => [
-          'class' => $classes
-        ],
-      ];
-    }
-    $url->setOptions($options);
-    return Link::fromTextAndUrl($label, $url)->toRenderable();
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function build() {
     $build = [];
     if ($this->currentUser->isAuthenticated()) {
-      $build = $this->getNodeTypeList();
+      $build = [
+        '#theme' => 'add_content',
+      ];
     }
     else {
       $buttonClasses = [
