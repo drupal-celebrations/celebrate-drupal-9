@@ -4,11 +4,11 @@ const forms = require('@tailwindcss/custom-forms');
 const typography = require('./tailwind-local-typography');
 
 module.exports = {
-  // purge: [
-  //   './templates/**/*.html',
-  //   './templates/**/*.html.twig',
-  // ],
-  purge: false,
+  purge: [
+     './templates/**/*.html',
+     './templates/**/*.html.twig',
+  ],
+  // purge: false,
   theme: {
     colors: {
       ...colors,
