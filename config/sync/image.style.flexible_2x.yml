@@ -1,0 +1,15 @@
+uuid: 3e96dfd6-7aeb-4f63-9304-4430b6698d05
+langcode: en
+status: true
+dependencies: {  }
+name: flexible_2x
+label: 'Flexible 2X'
+effects:
+  a7b8ddac-23b7-4c7e-a88e-a8f88db1e184:
+    uuid: a7b8ddac-23b7-4c7e-a88e-a8f88db1e184
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: false

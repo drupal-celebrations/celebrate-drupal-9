@@ -1,0 +1,15 @@
+uuid: 4d162576-957d-4987-afd8-f70f2a2694cd
+langcode: en
+status: true
+dependencies: {  }
+name: flexible_3x
+label: 'Flexible 3X'
+effects:
+  4c5dada0-deca-4f0c-bbaa-8f330a37acb9:
+    uuid: 4c5dada0-deca-4f0c-bbaa-8f330a37acb9
+    id: image_scale
+    weight: 1
+    data:
+      width: 2400
+      height: null
+      upscale: false

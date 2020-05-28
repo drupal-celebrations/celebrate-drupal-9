@@ -1,0 +1,15 @@
+uuid: e00201aa-6ccb-4f75-9c2e-b3392f64ebcc
+langcode: en
+status: true
+dependencies: {  }
+name: flexible_0_5x
+label: 'Flexible 0.5X'
+effects:
+  428942ce-1236-4560-88fb-5471f2a220f7:
+    uuid: 428942ce-1236-4560-88fb-5471f2a220f7
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: false

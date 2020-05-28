@@ -1,0 +1,10 @@
+uuid: 70359ce1-890f-4c62-936b-4387ed0c8e9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.responsive_flexible
+label: 'Responsive flexible'
+targetEntityType: media
+cache: true

@@ -1,0 +1,15 @@
+uuid: 655385ba-a9b6-4ab7-b0a4-edf9ec7a70c7
+langcode: en
+status: true
+dependencies: {  }
+name: flexible_1x
+label: 'Flexible 1X (800w)'
+effects:
+  ecf7d3b4-05dc-4058-bb40-5fd59652d549:
+    uuid: ecf7d3b4-05dc-4058-bb40-5fd59652d549
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false
