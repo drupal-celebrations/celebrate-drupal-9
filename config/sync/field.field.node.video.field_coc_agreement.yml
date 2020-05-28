@@ -10,7 +10,7 @@ field_name: field_coc_agreement
 entity_type: node
 bundle: video
 label: 'My uploaded content complies with the Drupal Code of Conduct'
-description: 'You can check the Drupal Code of Conduct on https://www.drupal.org/dcoc'
+description: 'You can check the <a href="https://www.drupal.org/dcoc" target="_blank">Drupal Code of Conduct</a>.'
 required: true
 translatable: false
 default_value:
