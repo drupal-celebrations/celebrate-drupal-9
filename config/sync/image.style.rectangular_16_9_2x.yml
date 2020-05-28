@@ -1,0 +1,15 @@
+uuid: 8ef8089a-ea2b-483b-91ac-bf04bbc5c96c
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_16_9_2x
+label: 'Rectangular 16:9 2X (2732x1536)'
+effects:
+  aaf6bd27-83c0-4c92-bd3b-5af3e1060bda:
+    uuid: aaf6bd27-83c0-4c92-bd3b-5af3e1060bda
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2732
+      height: 1536
+      anchor: center-center

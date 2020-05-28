@@ -1,0 +1,15 @@
+uuid: bfa88790-6ec6-4f34-a401-8e7278f3009b
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_16_9_0_5x
+label: 'Rectangular 16:9 0.5X (683x384)'
+effects:
+  d26f4d56-f6eb-4889-8bdf-a3e5654a1e35:
+    uuid: d26f4d56-f6eb-4889-8bdf-a3e5654a1e35
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 683
+      height: 384
+      anchor: center-center

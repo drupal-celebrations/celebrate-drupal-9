@@ -1,0 +1,15 @@
+uuid: daf5339c-fb4e-4d7c-a125-2fd21ce5dad6
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_16_9_3x
+label: 'Rectangular 16:9 3X (4098x2304)'
+effects:
+  490721e7-019e-430e-beab-07d6eaba4201:
+    uuid: 490721e7-019e-430e-beab-07d6eaba4201
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 4098
+      height: 2304
+      anchor: center-center

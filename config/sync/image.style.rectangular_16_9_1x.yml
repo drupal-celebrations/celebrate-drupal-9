@@ -1,0 +1,15 @@
+uuid: aec0cd45-5c83-4e49-8fb0-0c5a1a58dbcf
+langcode: en
+status: true
+dependencies: {  }
+name: rectangular_16_9_1x
+label: 'Rectangular 16:9 1X (1366x768)'
+effects:
+  10de7dde-a8aa-49cf-9edb-6ce24a9a358e:
+    uuid: 10de7dde-a8aa-49cf-9edb-6ce24a9a358e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1366
+      height: 768
+      anchor: center-center
