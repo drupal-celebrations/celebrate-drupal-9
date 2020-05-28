@@ -1,8 +1,9 @@
-uuid: 2ced17e7-b14d-45c9-bff3-7744f3cd3daa
+uuid: 3aacbc2e-f7b7-463c-b16d-ec9c007539bd
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.event.field_celebration
     - field.field.node.event.field_coc_agreement
     - field.field.node.event.field_description
@@ -13,13 +14,18 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - layout_builder
     - link
     - text
     - user
-id: node.event.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.event.full
 targetEntityType: node
 bundle: event
-mode: default
+mode: full
 content:
   field_description:
     weight: 3
@@ -49,7 +55,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: card
+      view_mode: responsive_rectangular
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
