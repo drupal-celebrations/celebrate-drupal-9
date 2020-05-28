@@ -1,110 +1,114 @@
+.paragraph--type--embed-view.modifier {
 
-.paragraph--type--embed-view.modifier-black.modifier-type-leak-bg {
-  @apply bg-black;
-}
-.paragraph--type--embed-view.modifier-white.modifier-type-leak-bg {
-  @apply bg-white;
-}
-.paragraph--type--embed-view.modifier-gray.modifier-type-leak-bg {
-  @apply bg-gray-200;
-}
-.paragraph--type--embed-view.modifier-red.modifier-type-leak-bg {
-  @apply bg-red-200;
-}
-.paragraph--type--embed-view.modifier-orange.modifier-type-leak-bg {
-  @apply bg-orange-200;
-}
-.paragraph--type--embed-view.modifier-yellow.modifier-type-leak-bg {
-  @apply bg-yellow-200;
-}
-.paragraph--type--embed-view.modifier-green.modifier-type-leak-bg {
-  @apply bg-green-200;
-}
-.paragraph--type--embed-view.modifier-teal.modifier-type-leak-bg {
-  @apply bg-teal-200;
-}
-.paragraph--type--embed-view.modifier-blue.modifier-type-leak-bg {
-  @apply bg-blue-200;
-}
-.paragraph--type--embed-view.modifier-indigo.modifier-type-leak-bg {
-  @apply bg-indigo-200;
-}
-.paragraph--type--embed-view.modifier-purple.modifier-type-leak-bg {
-  @apply bg-purple-200;
-}
-.paragraph--type--embed-view.modifier-pink.modifier-type-leak-bg {
-  @apply bg-pink-200;
-}
+  &.modifier-type-leak-bg {
+    .field--type-image {
+      overflow: hidden;
+    }
+    .field--type-image img {
+      &:hover {
+        @apply scale-110;
+        mix-blend-mode: overlay;
+      }
+      @apply transform;
+      mix-blend-mode: normal;
+    }
+  }
 
-.paragraph--type--embed-view.modifier-black .field--type-image {
-  @apply bg-black bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-black .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-white .field--type-image {
-  @apply bg-white bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-white .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-gray .field--type-image {
-  @apply bg-gray-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-gray .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-red .field--type-image {
-  @apply bg-red-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-red .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-orange .field--type-image {
-  @apply bg-orange-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-orange .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-yellow .field--type-image {
-  @apply bg-yellow-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-yellow .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-green .field--type-image {
-  @apply bg-green-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-green .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-teal .field--type-image {
-  @apply bg-teal-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-teal .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-blue .field--type-image {
-  @apply bg-blue-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-blue .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-indigo .field--type-image {
-  @apply bg-indigo-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-indigo .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-purple .field--type-image {
-  @apply bg-purple-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-purple .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--embed-view.modifier-pink .field--type-image {
-  @apply bg-pink-700 bg-opacity-75;
-}
-.paragraph--type--embed-view.modifier-pink .field--type-image img {
-  mix-blend-mode: overlay;
+  &.modifier-black {
+    &.modifier-type-leak-bg {
+      @apply bg-black;
+    }
+    .field--type-image {
+      @apply bg-black bg-opacity-75;
+    }
+  }
+  &.modifier-white {
+    &.modifier-type-leak-bg {
+      @apply bg-white;
+    }
+    .field--type-image {
+      @apply bg-white bg-opacity-75;
+    }
+  }
+  &.modifier-gray {
+    &.modifier-type-leak-bg {
+      @apply bg-gray-200;
+    }
+    .field--type-image {
+      @apply bg-gray-700 bg-opacity-75;
+    }
+  }
+  &.modifier-red {
+    &.modifier-type-leak-bg {
+      @apply bg-red-200;
+    }
+    .field--type-image {
+      @apply bg-red-700 bg-opacity-75;
+    }
+  }
+  &.modifier-orange {
+    &.modifier-type-leak-bg {
+      @apply bg-orange-200;
+    }
+    .field--type-image {
+      @apply bg-orange-700 bg-opacity-75;
+    }
+  }
+  &.modifier-yellow {
+    &.modifier-type-leak-bg {
+      @apply bg-yellow-200;
+    }
+    .field--type-image {
+      @apply bg-yellow-700 bg-opacity-75;
+    }
+  }
+  &.modifier-green {
+    &.modifier-type-leak-bg {
+      @apply bg-green-200;
+    }
+    .field--type-image {
+      @apply bg-green-700 bg-opacity-75;
+    }
+  }
+  &.modifier-teal {
+    &.modifier-type-leak-bg {
+      @apply bg-teal-200;
+    }
+    .field--type-image {
+      @apply bg-teal-700 bg-opacity-75;
+    }
+  }
+  &.modifier-blue {
+    &.modifier-type-leak-bg {
+      @apply bg-blue-200;
+    }
+    .field--type-image {
+      @apply bg-blue-700 bg-opacity-75;
+    }
+  }
+  &.modifier-indigo {
+    &.modifier-type-leak-bg {
+      @apply bg-indigo-200;
+    }
+    .field--type-image {
+      @apply bg-indigo-700 bg-opacity-75;
+    }
+  }
+  &.modifier-purple {
+    &.modifier-type-leak-bg {
+      @apply bg-purple-200;
+    }
+    .field--type-image {
+      @apply bg-purple-700 bg-opacity-75;
+    }
+  }
+  &.modifier-pink {
+    &.modifier-type-leak-bg {
+      @apply bg-pink-200;
+    }
+    .field--type-image {
+      @apply bg-pink-700 bg-opacity-75;
+    }
+  }
+
 }
