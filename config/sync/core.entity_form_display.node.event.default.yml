@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_celebration
+    - field.field.node.event.field_coc_agreement
     - field.field.node.event.field_description
     - field.field.node.event.field_event_host_name
     - field.field.node.event.field_event_time
@@ -29,6 +30,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_coc_agreement:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_description:
     weight: 8
     settings:

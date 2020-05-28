@@ -1,0 +1,23 @@
+uuid: 80a1966f-4657-4b08-863b-2a29349ce812
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coc_agreement
+    - node.type.event
+id: node.event.field_coc_agreement
+field_name: field_coc_agreement
+entity_type: node
+bundle: event
+label: 'The event I''m hosting complies with the Drupal Code of Conduct'
+description: 'You can check the Drupal Code of Conduct on https://www.drupal.org/dcoc'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
