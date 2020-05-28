@@ -8,4 +8,5 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
+  description: 'A platform to gather together as a community to celebrate Drupal with the world.'
   title: '[current-page:title] | [site:name]'
