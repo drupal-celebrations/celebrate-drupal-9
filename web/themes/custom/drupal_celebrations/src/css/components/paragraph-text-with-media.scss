@@ -36,77 +36,76 @@
 .paragraph--type--text-with-media.modifier-pink.modifier-type-leak-bg {
   @apply bg-pink-200;
 }
+.paragraph--type--text-with-media.modifier {
 
+  &.modifier-type-leak-bg {
+    .field--type-image img {
+      &:hover {
+        mix-blend-mode: overlay;
+      }
+      mix-blend-mode: normal;
+    }
+  }
 
-.paragraph--type--text-with-media.modifier-black .field--type-image {
-  @apply bg-black bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-black .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-white .field--type-image {
-  @apply bg-white bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-white .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-gray .field--type-image {
-  @apply bg-gray-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-gray .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-red .field--type-image {
-  @apply bg-red-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-red .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-orange .field--type-image {
-  @apply bg-orange-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-orange .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-yellow .field--type-image {
-  @apply bg-yellow-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-yellow .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-green .field--type-image {
-  @apply bg-green-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-green .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-teal .field--type-image {
-  @apply bg-teal-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-teal .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-blue .field--type-image {
-  @apply bg-blue-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-blue .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-indigo .field--type-image {
-  @apply bg-indigo-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-indigo .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-purple .field--type-image {
-  @apply bg-purple-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-purple .field--type-image img {
-  mix-blend-mode: overlay;
-}
-.paragraph--type--text-with-media.modifier-pink .field--type-image {
-  @apply bg-pink-700 bg-opacity-75;
-}
-.paragraph--type--text-with-media.modifier-pink .field--type-image img {
-  mix-blend-mode: overlay;
+  &.modifier-black {
+    .field--type-image {
+      @apply bg-black bg-opacity-75;
+    }
+  }
+  &.modifier-white {
+    .field--type-image {
+      @apply bg-white bg-opacity-75;
+    }
+  }
+  &.modifier-gray {
+    .field--type-image {
+      @apply bg-gray-700 bg-opacity-75;
+    }
+  }
+  &.modifier-red {
+    .field--type-image {
+      @apply bg-red-700 bg-opacity-75;
+    }
+  }
+  &.modifier-orange {
+    .field--type-image {
+      @apply bg-orange-700 bg-opacity-75;
+    }
+  }
+  &.modifier-yellow {
+    .field--type-image {
+      @apply bg-yellow-700 bg-opacity-75;
+    }
+  }
+  &.modifier-green {
+    .field--type-image {
+      @apply bg-green-700 bg-opacity-75;
+    }
+  }
+  &.modifier-teal {
+    .field--type-image {
+      @apply bg-teal-700 bg-opacity-75;
+    }
+  }
+  &.modifier-blue {
+    .field--type-image {
+      @apply bg-blue-700 bg-opacity-75;
+    }
+  }
+  &.modifier-indigo {
+    .field--type-image {
+      @apply bg-indigo-700 bg-opacity-75;
+    }
+  }
+  &.modifier-purple {
+    .field--type-image {
+      @apply bg-purple-700 bg-opacity-75;
+    }
+  }
+  &.modifier-pink {
+    .field--type-image {
+      @apply bg-pink-700 bg-opacity-75;
+    }
+  }
+
 }

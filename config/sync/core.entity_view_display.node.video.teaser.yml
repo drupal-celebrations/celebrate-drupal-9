@@ -26,7 +26,7 @@ content:
     region: content
     label: hidden
     settings:
-      trim_length: 600
+      trim_length: 84
     third_party_settings: {  }
   field_video:
     type: entity_reference_entity_view
