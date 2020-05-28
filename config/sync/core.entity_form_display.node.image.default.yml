@@ -42,7 +42,7 @@ content:
       placeholder: ''
     third_party_settings:
       maxlength:
-        maxlength_js: 1000
+        maxlength_js: 280
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
         maxlength_js_enforce: true
         maxlength_js_truncate_html: true

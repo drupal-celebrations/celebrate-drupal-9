@@ -10,6 +10,7 @@ dependencies:
     - node.type.volunteer
   module:
     - content_moderation
+    - maxlength
     - media_library
     - path
     - text
@@ -29,7 +30,12 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 280
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+        maxlength_js_truncate_html: false
     type: text_textarea
     region: content
   field_drupal_org_username:
