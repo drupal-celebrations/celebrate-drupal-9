@@ -6,7 +6,7 @@
     @apply text-6xl;
   }
 }
-@screen lg {
+@screen xl {
   .paragraph--type--hero h1 {
     @apply text-hero;
   }
