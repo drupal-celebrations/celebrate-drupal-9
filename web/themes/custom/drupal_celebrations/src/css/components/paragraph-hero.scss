@@ -3,6 +3,11 @@
 }
 @screen md {
   .paragraph--type--hero h1 {
+    @apply text-6xl;
+  }
+}
+@screen lg {
+  .paragraph--type--hero h1 {
     @apply text-hero;
   }
 }
