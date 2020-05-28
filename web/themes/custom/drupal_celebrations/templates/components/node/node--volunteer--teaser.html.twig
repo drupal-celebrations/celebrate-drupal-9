@@ -82,7 +82,13 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  {{ content.field_image }}
+{#  {% if content.field_image and content.field_image|render|trim is not empty %}#}
+{#    {{ content.field_image }}#}
+{#  {% else %}#}
+{#    <div class="no-profile-image">#}
+{#      #}
+{#    </div>#}
+{#  {% endif %}#}
 
   <div class="px-6 py-4">
   {% if label %}
