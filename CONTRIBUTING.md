@@ -2,7 +2,7 @@
 
 Follow these guidelines if you'd like to contribute to the project!
 
-Please note we have a [Code of Conduct]('.github/CODE_OF_CONDUCT.md'), please
+Please note we have a [Code of Conduct](.github/CODE_OF_CONDUCT.md), please
  follow it in all your interactions with the project.
 
 ---
