@@ -66,13 +66,9 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  links:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_celebration: true
   field_coc_agreement: true
   langcode: true
+  links: true
   search_api_excerpt: true

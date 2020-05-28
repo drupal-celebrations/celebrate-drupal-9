@@ -136,6 +136,7 @@ datasource_settings:
     bundles:
       default: false
       selected:
+        - event
         - image
         - video
     languages:

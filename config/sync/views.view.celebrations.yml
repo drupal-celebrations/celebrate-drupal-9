@@ -79,6 +79,7 @@ display:
         options:
           view_modes:
             'entity:node':
+              event: teaser
               image: teaser
               video: teaser
       fields: {  }
@@ -394,6 +395,7 @@ display:
       path: events
       cache:
         type: none
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

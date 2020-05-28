@@ -68,42 +68,40 @@
 #}
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'mx-auto',
-    'container',
-    'p-page-gutter',
-    'py-8',
-  ]
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'max-w-sm',
+  'overflow-hidden',
+  'block',
+]
 %}
 
 <article{{ attributes.addClass(classes) }}>
   <div class="relative">
-    {{ content.field_image }}
+    <a href="{{ url }}" rel="bookmark">
+      {{ content.field_image }}
+    </a>
   </div>
-  <div class="relative mt-8 mx-auto">
-    <div class="bg-white">
+  <div class="relative pb-4 mx-auto">
+    <div class="bg-white p-6 shadow-md mb-6">
       {% if label %}
-      {{ title_prefix }}
-        {% if page %}
-          <header class="node__header">
-            <h1 class="page-title md:text-4xl sm:text-2xl text-xl">
-              {{ label }}
-            </h1>
-          </header>
-        {% else %}
-        <h4{{ title_attributes.addClass('mt-1 font-semibold text-lg leading-tight') }}>
+        {{ title_prefix }}
+        <h4{{ title_attributes.addClass('mt-1 font-semibold text-lg leading-tight truncate w-full hover:whitespace-normal hover:break-words') }}>
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         </h4>
-        {% endif %}
         {{ title_suffix }}
       {% endif %}
       <div class="mt-2 text-gray-700 text-base">
-        {{ content | without('field_image') }}
+        {{ content | without('field_image', 'field_description') }}
+        {% if display_submitted and author_card %}
+          <footer class="node__meta">
+            {{ author_card }}
+          </footer>
+        {% endif %}
       </div>
-    </div>
+  </div>
 </article>
