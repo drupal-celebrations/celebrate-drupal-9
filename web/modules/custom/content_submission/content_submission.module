@@ -11,9 +11,7 @@
 function content_submission_theme() {
   return [
     'add_content' => [
-      'variables' => [
-        'content_types' => NULL
-      ],
+      'variables' => [],
       'render element' => 'children',
     ],
     'user_links' => [
