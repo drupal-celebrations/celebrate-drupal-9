@@ -4,16 +4,16 @@ unprotected_forms:
   - search_block_form
   - views_exposed_form
   - honeypot_settings_form
-protect_all_forms: true
+protect_all_forms: false
 log: false
 element_name: url
 time_limit: 5
 expire: 300
 form_settings:
-  user_register_form: false
-  user_pass: false
-  contact_message_contact_form: false
-  contact_message_personal_form: false
+  user_register_form: true
+  user_pass: true
+  contact_message_contact_form: true
+  contact_message_personal_form: true
   node_event_form: false
   node_image_form: false
   node_page_form: false
