@@ -83,7 +83,15 @@
 
 <article{{ attributes.addClass(classes) }}>
   <div class="relative">
-    {{ content.field_image }}
+    {% if content.field_image|render|trim is not empty %}
+      {{ content.field_image }}
+    {% else %}
+      <article class="contextual-region media media--type-image media--view-mode-responsive-rectangular">
+        <div class="field field--name-field-media-image field--type-image field--label-hidden mx-auto field__item">
+          <img src="/themes/custom/drupal_celebrations/images/balloons.jpg" alt="Balloons">
+        </div>
+      </article>
+    {% endif %}
   </div>
   <div class="relative mt-8 mx-auto">
     <div class="bg-white">
