@@ -28,7 +28,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: search_api_tag
         options: {  }
       query:
         type: views_query
@@ -548,7 +548,8 @@ display:
         groups:
           1: AND
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       use_more: true
       use_more_always: false
       use_more_text: 'All photos'
@@ -661,7 +662,8 @@ display:
         groups:
           1: AND
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -959,7 +961,8 @@ display:
         groups:
           1: AND
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1072,7 +1075,8 @@ display:
         groups:
           1: AND
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       use_more: true
       use_more_always: false
       use_more_text: 'All videos'
