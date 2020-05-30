@@ -1,0 +1,7 @@
+name: 'Media library view own'
+type: module
+description: 'View own Media entities only while using the Media library if the current user does not have the 'access media overview' permission.'
+core_version_requirement: ^8.8.0 || ^9.0
+package: 'Media'
+dependencies:
+  - drupal:media_library
