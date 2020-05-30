@@ -53,6 +53,19 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
     return $instance;
   }
 
+  private function getLinkFromRoute($label, $route, $classes = []) {
+    $url = Url::fromRoute($route);
+    if (!empty($classes)) {
+      $options = [
+        'attributes' => [
+          'class' => $classes
+        ],
+      ];
+    }
+    $url->setOptions($options);
+    return Link::fromTextAndUrl($label, $url)->toRenderable();
+  }
+
   /**
    * {@inheritdoc}
    */
