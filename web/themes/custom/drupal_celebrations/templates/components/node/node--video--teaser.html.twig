@@ -78,6 +78,9 @@
     'overflow-hidden',
     'bg-white',
     'shadow-md',
+    'flex',
+    'flex-col',
+    'h-full',
   ]
 %}
 
@@ -85,7 +88,7 @@
 
   <a href="{{ url }}" rel="bookmark">{{ content.field_video }}</a>
 
-  <div class="px-6 py-4">
+  <div class="px-6 mt-4 flex-1">
   {% if content.field_video_category %}
     {{ content.field_video_category }}
   {% endif %}
@@ -98,12 +101,12 @@
     {% endif %}
     <div class="text-gray-700 text-base">
       {{ content | without('field_video', 'field_video_category') }}
-      {% if display_submitted and author_card %}
-        <footer class="node__meta">
-          {{ author_card }}
-        </footer>
-      {% endif %}
     </div>
   </div>
+  {% if display_submitted and author_card %}
+    <footer class="node__meta px-6 mb-4">
+      {{ author_card }}
+    </footer>
+  {% endif %}
 
 </article>
