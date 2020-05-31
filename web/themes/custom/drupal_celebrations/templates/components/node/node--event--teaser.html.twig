@@ -76,40 +76,44 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'max-w-sm',
   'overflow-hidden',
-  'block',
+  'bg-white',
+  'shadow-md',
+  'flex',
+  'flex-col',
+  'h-full',
 ]
 %}
 
 <article{{ attributes.addClass(classes) }}>
-  <div class="relative">
-    <a href="{{ url }}" rel="bookmark">
-      {% if content.field_image|render|trim is not empty %}
-        {{ content.field_image }}
-      {% else %}
-        <article class="contextual-region media media--type-image media--view-mode-responsive-rectangular">
-          <div class="field field--name-field-media-image field--type-image field--label-hidden mx-auto field__item">
-            <img src="/themes/custom/drupal_celebrations/images/balloons.jpg" alt="Balloons">
-          </div>
-        </article>
-      {% endif %}
-    </a>
+
+  <a href="{{ url }}" rel="bookmark">
+    {% if content.field_image|render|trim is not empty %}
+      {{ content.field_image }}
+    {% else %}
+      <article class="contextual-region media media--type-image media--view-mode-responsive-rectangular">
+        <div class="field field--name-field-media-image field--type-image field--label-hidden mx-auto field__item">
+          <img src="/themes/custom/drupal_celebrations/images/balloons.jpg" alt="Balloons">
+        </div>
+      </article>
+    {% endif %}
+  </a>
+
+  <div class="px-6 mt-4 flex-1">
+    {% if label %}
+      {{ title_prefix }}
+      <h4{{ title_attributes.addClass('mt-1 font-semibold text-lg leading-tight truncate w-full hover:whitespace-normal hover:break-words') }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h4>
+      {{ title_suffix }}
+    {% endif %}
+    <div class="text-gray-700 text-base">
+      {{ content | without('field_image', 'field_description') }}
+    </div>
   </div>
-  <div class="relative pb-4 mx-auto">
-    <div class="bg-white p-6 shadow-md mb-6">
-      {% if label %}
-        {{ title_prefix }}
-        <h4{{ title_attributes.addClass('mt-1 font-semibold text-lg leading-tight truncate w-full hover:whitespace-normal hover:break-words') }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h4>
-        {{ title_suffix }}
-      {% endif %}
-      <div class="mt-2 text-gray-700 text-base">
-        {{ content | without('field_image', 'field_description') }}
-        {% if display_submitted and author_card %}
-          <footer class="node__meta">
-            {{ author_card }}
-          </footer>
-        {% endif %}
-      </div>
-  </div>
+  {% if display_submitted and author_card %}
+    <footer class="node__meta px-6 mb-4">
+      {{ author_card }}
+    </footer>
+  {% endif %}
+
 </article>

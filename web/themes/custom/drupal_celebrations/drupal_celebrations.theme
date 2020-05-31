@@ -37,7 +37,7 @@ function drupal_celebrations_preprocess_node(&$variables) {
     unset($variables['label']);
   }
   // Append the author card view.
-  if ($node->bundle() === 'image' || $node->bundle() === 'video') {
+  if (in_array($node->bundle(), ['image', 'video', 'event'])) {
     $authorId = $node->getOwnerId();
     // The user could have been deleted after node creation
     // and assigned to anonymous.
