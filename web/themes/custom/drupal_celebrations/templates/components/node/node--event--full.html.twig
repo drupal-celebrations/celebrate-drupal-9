@@ -114,4 +114,9 @@
         {{ content | without('field_image') }}
       </div>
     </div>
+    {% if display_submitted and author_card %}
+      <footer class="node__meta mb-4">
+        {{ author_card }}
+      </footer>
+    {% endif %}
 </article>
