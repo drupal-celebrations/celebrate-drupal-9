@@ -27,7 +27,7 @@
         "drupal/disable_language": "1.x-dev",
         "drupal/entity_browser": "^2.5",
         "drupal/facets": "^1.4",
-        "drupal/gin": "^3.0",
+        "drupal/gin": "3.x-dev",
         "drupal/honeypot": "2.0.x-dev",
         "drupal/maxlength": "1.x-dev",
         "drupal/metatag": "1.x-dev",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1dc588b036a2e5e65676c866abe2a4e",
+    "content-hash": "3cc8b696681e7c1543675b5c751f84b0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2488,29 +2488,26 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-alpha14",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-alpha14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-alpha14.zip",
-                "reference": "8.x-3.0-alpha14",
-                "shasum": "0470f37241caf18cf6c868493cf9c1eecb2ea371"
+                "reference": "85d9ca23a39dcbec54e1b3b67e80d811f1b069c6"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-theme",
             "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-3.0-alpha14",
-                    "datestamp": "1590401622",
+                    "version": "8.x-3.0-alpha14+8-dev",
+                    "datestamp": "1590957966",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2533,7 +2530,8 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/gin",
                 "issues": "https://www.drupal.org/project/issues/gin"
-            }
+            },
+            "time": "2020-05-31T20:48:19+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -7414,6 +7412,7 @@
     "stability-flags": {
         "drupal/block_field": 5,
         "drupal/disable_language": 20,
+        "drupal/gin": 20,
         "drupal/honeypot": 20,
         "drupal/maxlength": 20,
         "drupal/metatag": 20,
