@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_celebration
     - field.field.node.event.field_coc_agreement
     - field.field.node.event.field_description
+    - field.field.node.event.field_event_end_time
     - field.field.node.event.field_event_host_name
     - field.field.node.event.field_event_time
     - field.field.node.event.field_image
@@ -26,12 +27,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_coc_agreement:
-    weight: 26
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
@@ -50,8 +51,14 @@ content:
         maxlength_js_truncate_html: false
     type: text_textarea
     region: content
+  field_event_end_time:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_event_host_name:
-    weight: 6
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -59,13 +66,13 @@ content:
     type: string_textfield
     region: content
   field_event_time:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_image:
-    weight: 5
+    weight: 4
     settings:
       media_types: {  }
     third_party_settings: {  }
@@ -79,13 +86,6 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  langcode:
-    type: language_select
-    weight: 1
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
     weight: 10
@@ -94,7 +94,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -114,12 +114,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_celebration: true
+  langcode: true
   promote: true
   sticky: true
   uid: true

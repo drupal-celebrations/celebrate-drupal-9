@@ -11,7 +11,7 @@ id: node.event.field_event_time
 field_name: field_event_time
 entity_type: node
 bundle: event
-label: 'Event time'
+label: 'Start time'
 description: "Enter the start of the event in the format: day / month / year. Hour : minute : seconds.\r\n"
 required: true
 translatable: false

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_celebration
     - field.field.node.event.field_coc_agreement
     - field.field.node.event.field_description
+    - field.field.node.event.field_event_end_time
     - field.field.node.event.field_event_host_name
     - field.field.node.event.field_event_time
     - field.field.node.event.field_image
@@ -22,11 +23,20 @@ bundle: event
 mode: default
 content:
   field_description:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_event_end_time:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_event_host_name:
     weight: 1
@@ -38,7 +48,7 @@ content:
     region: content
   field_event_time:
     weight: 2
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: short
@@ -55,7 +65,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_remote_meeting_url:
-    weight: 4
+    weight: 5
     label: above
     settings:
       trim_length: 80
