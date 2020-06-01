@@ -15,4 +15,4 @@ description: 'Host an online event and share the virtual key with everyone.'
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: false
+display_submitted: true
