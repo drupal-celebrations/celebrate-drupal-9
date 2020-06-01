@@ -30,6 +30,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  gin_toolbar: 0
   hide_revision_info: 0
   honeypot: 0
   hosting_platform_sh: 0

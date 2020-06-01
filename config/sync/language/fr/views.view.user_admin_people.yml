@@ -66,6 +66,7 @@ display:
           content: 'Personne n''est disponible.'
       use_more_text: plus
   page_1:
+    display_title: Page
     display_options:
       menu:
         title: Lister

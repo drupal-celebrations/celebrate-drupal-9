@@ -29,3 +29,5 @@ display:
     display_title: Maître
   feed_1:
     display_title: Flux
+  page_1:
+    display_title: Page
