@@ -34,7 +34,7 @@ content:
     type: datetime_default
     weight: 3
     region: content
-    label: hidden
+    label: above
     settings:
       timezone_override: ''
       format_type: short
@@ -51,7 +51,7 @@ content:
     type: datetime_default
     weight: 2
     region: content
-    label: hidden
+    label: above
     settings:
       timezone_override: ''
       format_type: short

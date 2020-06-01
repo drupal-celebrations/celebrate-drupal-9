@@ -31,7 +31,7 @@ content:
     region: content
   field_event_end_time:
     weight: 3
-    label: hidden
+    label: above
     settings:
       timezone_override: ''
       format_type: short
@@ -48,7 +48,7 @@ content:
     region: content
   field_event_time:
     weight: 2
-    label: hidden
+    label: above
     settings:
       timezone_override: ''
       format_type: short
