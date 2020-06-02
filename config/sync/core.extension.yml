@@ -19,6 +19,7 @@ module:
   ctools: 0
   current_user_else_all: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
@@ -48,6 +49,8 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  metatag_facebook: 0
+  metatag_twitter_cards: 0
   node: 0
   oembed_providers: 0
   options: 0

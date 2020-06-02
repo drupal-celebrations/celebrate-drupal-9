@@ -1,0 +1,10 @@
+uuid: 3c3a0a97-4517-4072-a74a-aae50ec95e82
+langcode: en
+status: true
+dependencies: {  }
+id: node__video
+label: 'Content: Video'
+tags:
+  twitter_cards_description: '[node:field_description:value]'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary
