@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_celebration
     - field.field.node.event.field_coc_agreement
     - field.field.node.event.field_description
+    - field.field.node.event.field_event_date_time
     - field.field.node.event.field_event_end_time
     - field.field.node.event.field_event_host_name
     - field.field.node.event.field_event_time
@@ -14,7 +15,7 @@ dependencies:
     - field.field.node.event.field_remote_meeting_url
     - node.type.event
   module:
-    - datetime
+    - datetime_range
     - text
     - user
 id: node.event.teaser
@@ -24,20 +25,21 @@ mode: teaser
 content:
   field_description:
     type: text_trimmed
-    weight: 4
+    weight: 3
     region: content
     label: hidden
     settings:
       trim_length: 84
     third_party_settings: {  }
-  field_event_end_time:
-    type: datetime_default
-    weight: 3
+  field_event_date_time:
+    type: daterange_default
+    weight: 2
     region: content
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: short
+      separator: '-'
     third_party_settings: {  }
   field_event_host_name:
     type: string
@@ -46,15 +48,6 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
-  field_event_time:
-    type: datetime_default
-    weight: 2
-    region: content
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: short
     third_party_settings: {  }
   field_image:
     type: entity_reference_entity_view
@@ -68,6 +61,8 @@ content:
 hidden:
   field_celebration: true
   field_coc_agreement: true
+  field_event_end_time: true
+  field_event_time: true
   field_remote_meeting_url: true
   langcode: true
   links: true
