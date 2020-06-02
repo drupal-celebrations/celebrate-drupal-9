@@ -207,49 +207,42 @@ function drupal_celebrations_theme_suggestions_form_alter(array &$suggestions, a
 function drupal_celebrations_preprocess_field(&$variables) {
   $categoryFields = ['field_video_category', 'field_image_category'];
   if (in_array($variables['field_name'], $categoryFields)) {
-    $categoryClasses = [
-      'inline-block',
-      'px-3',
-      'py-1',
-      'text-sm',
-      'font-semibold',
-      'mr-2',
-      'mb-2',
-    ];
+    if (!\Drupal::moduleHandler()->moduleExists('color_map')) {
+      return;
+    }
 
-    if (\Drupal::moduleHandler()->moduleExists('color_map')) {
-      /** @var \Drupal\color_map\ColorMap $colorMap */
-      $colorMap = Drupal::service('color_map');
-      foreach ($variables['items'] as &$item) {
-        $color = '';
-        if (
-          array_key_exists('content', $item) &&
-          array_key_exists('#options', $item['content']) &&
-          array_key_exists('entity', $item['content']['#options']) &&
-          $item['content']['#options']['entity'] instanceof TermInterface
-        ) {
-          /** @var \Drupal\taxonomy\TermInterface $term */
-          $term = $item['content']['#options']['entity'];
-          if (
-            $term->hasField('field_accent_colour') &&
-            !$term->get('field_accent_colour')->isEmpty()
-          ) {
-            $color = $term->get('field_accent_colour')->getValue()[0]['color'];
-          }
-        }
-        $categoryClasses[] = 'bg-' . $colorMap->getTailwindClass($color);
-        $categoryClasses[] = 'text-' . $colorMap->getTailwindContrastClass($color);
-        if (!array_key_exists('#attributes', $item['content'])) {
-          $item['content']['#attributes'] = [];
-        }
-        if (!array_key_exists('class', $item['content']['#attributes'])) {
-          $item['content']['#attributes']['class'] = [];
-        }
-        $item['content']['#attributes']['class'] = array_merge(
-          $item['content']['#attributes']['class'],
-          $categoryClasses
-        );
+    /** @var \Drupal\color_map\ColorMap $colorMap */
+    $colorMap = Drupal::service('color_map');
+    foreach ($variables['items'] as &$item) {
+      if (!isset($item['content']['#options']['entity'])) {
+        continue;
       }
+
+      if (!$item['content']['#options']['entity'] instanceof TermInterface) {
+        continue;
+      }
+
+      /** @var \Drupal\taxonomy\TermInterface $term */
+      $term = $item['content']['#options']['entity'];
+
+      if (!$term->hasField('field_accent_colour')) {
+        continue;
+      }
+
+      if ($term->get('field_accent_colour')->isEmpty()) {
+        continue;
+      }
+
+      $accentColourValue = $term->get('field_accent_colour')->getValue();
+
+      if (!isset($accentColourValue[0]['color'])) {
+        continue;
+      }
+
+      $color = $accentColourValue[0]['color'];
+
+      $variables['accent_colour'][] = 'bg-' . $colorMap->getTailwindClass($color);
+      $variables['accent_colour'][] = 'text-' . $colorMap->getTailwindContrastClass($color);
     }
   }
 }
