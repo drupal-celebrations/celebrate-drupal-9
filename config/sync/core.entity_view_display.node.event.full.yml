@@ -8,9 +8,7 @@ dependencies:
     - field.field.node.event.field_coc_agreement
     - field.field.node.event.field_description
     - field.field.node.event.field_event_date_time
-    - field.field.node.event.field_event_end_time
     - field.field.node.event.field_event_host_name
-    - field.field.node.event.field_event_time
     - field.field.node.event.field_image
     - field.field.node.event.field_remote_meeting_url
     - node.type.event
@@ -78,8 +76,6 @@ content:
 hidden:
   field_celebration: true
   field_coc_agreement: true
-  field_event_end_time: true
-  field_event_time: true
   langcode: true
   links: true
   search_api_excerpt: true
