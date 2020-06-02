@@ -250,6 +250,39 @@ function drupal_celebrations_preprocess_field(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
+function drupal_celebrations_preprocess_field__field_event_date_time(&$variables) {
+  $currentUser = \Drupal::currentUser();
+
+  $time_is = '';
+  $timezone = $currentUser->getTimeZone();
+  if (is_null($timezone)) {
+    $timezone = date_default_timezone_get();
+  }
+
+  $array_timezone = explode('/', $timezone);
+  if (count($array_timezone) === 1) {
+    $time_is = sprintf('https://time.is/%s', implode('', $array_timezone));
+  }
+  if (count($array_timezone) >= 2) {
+    $slice_timezone = array_slice($array_timezone, 1);
+    $reverse_timezone = array_reverse($slice_timezone);
+    $time_is = sprintf('https://time.is/%s', implode('', $reverse_timezone));
+  }
+
+  if (isset($variables['items'][0]['content']) && $time_is) {
+    if (isset($variables['items'][0]['content']['end_date']['#attributes'])) {
+      $variables['items'][0]['content']['end_date']['#attributes']['time_is'] = $time_is;
+      $variables['items'][0]['content']['end_date']['#attributes']['timezone'] = $timezone;
+    } elseif (isset($variables['items'][0]['content']['start_date']['#attributes']['time_is'])) {
+      $variables['items'][0]['content']['start_date']['#attributes']['time_is'] = $time_is;
+      $variables['items'][0]['content']['start_date']['#attributes']['timezone'] = $timezone;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function drupal_celebrations_preprocess_views_view_unformatted(&$variables) {
   if (array_key_exists('view', $variables)) {
     /** @var \Drupal\views\ViewExecutable $view */
