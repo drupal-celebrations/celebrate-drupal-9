@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.field_company_account
     - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_name
@@ -21,14 +22,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_company_account:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_country:
     type: address_country_default
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_drupal_org_username:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -44,7 +52,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_twitter_username:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -52,7 +60,7 @@ content:
     type: string_textfield
     region: content
   timezone:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.card
+    - field.field.user.user.field_company_account
     - field.field.user.user.field_country
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_name
@@ -52,6 +53,7 @@ content:
     type: user_registration_twitter_username
     region: content
 hidden:
+  field_company_account: true
   langcode: true
   member_for: true
   search_api_excerpt: true

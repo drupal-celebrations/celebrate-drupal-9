@@ -1,0 +1,24 @@
+uuid: ac8c334a-61d4-4d9c-bd7d-b3fcf65589bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_company_account
+  module:
+    - user
+id: user.user.field_company_account
+field_name: field_company_account
+entity_type: user
+bundle: user
+label: 'Company account'
+description: "Check this field if this user account is being used as a company account. It will remove the `/u` prefix on the frontend that displays the drupal.org username.\r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Company
+  off_label: User
+field_type: boolean
