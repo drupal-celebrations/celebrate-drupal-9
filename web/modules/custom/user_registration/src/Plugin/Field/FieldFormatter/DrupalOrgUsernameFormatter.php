@@ -31,6 +31,12 @@ class DrupalOrgUsernameFormatter extends FormatterBase {
     $element = [];
     foreach ($items as $delta => $item) {
       $linkPath = 'https://drupal.org/u/' . $item->value;
+
+      $entity = $item->getEntity();
+      if ($entity->hasField('field_company_account') && $entity->get('field_company_account')->value) {
+        $linkPath = 'https://drupal.org/' . $item->value;
+      }
+
       $imageAlt = $this->t('Drupal.org profile of @name', [
         '@name' => $item->value,
       ]);
