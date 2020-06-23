@@ -1529,17 +1529,17 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "41ea0e3321e6d1e190c486be49a99e60446d8dd7"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "cf8ee1aa8adfc604db4394655e3ba4c423d5f24a"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
@@ -1547,8 +1547,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1585017179",
+                    "version": "8.x-2.3",
+                    "datestamp": "1592535597",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1557,7 +1557,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -1601,7 +1601,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "http://cgit.drupalcode.org/admin_toolbar",
+                "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -2504,7 +2504,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "b36d9da5743fd3ca22833ad34ee0ff53886da1b4"
+                "reference": "68482db2f68611832a0904f6d05ad998730fcd3d"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2515,8 +2515,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha18+1-dev",
-                    "datestamp": "1592254743",
+                    "version": "8.x-3.0-alpha19+15-dev",
+                    "datestamp": "1592853696",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2543,7 +2543,7 @@
                 "source": "https://git.drupalcode.org/project/gin",
                 "issues": "https://www.drupal.org/project/issues/gin"
             },
-            "time": "2020-06-15T21:31:45+00:00"
+            "time": "2020-06-23T07:37:22+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2551,7 +2551,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "85101047652ccce791cebd0d58ac6d1aed66173e"
+                "reference": "836805d97833d35b7cdbba0c01ecc99c3b26e7cb"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2562,8 +2562,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta7+1-dev",
-                    "datestamp": "1591545320",
+                    "version": "8.x-1.0-beta7+4-dev",
+                    "datestamp": "1592766287",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2589,7 +2589,7 @@
                 "source": "http://cgit.drupalcode.org/gin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/gin_toolbar"
             },
-            "time": "2020-06-17T19:43:26+00:00"
+            "time": "2020-06-21T19:03:26+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -3387,16 +3387,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "10.2.2",
+            "version": "10.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "8307a4e7dae9c63a279d8b59b9dca6c1973576c2"
+                "reference": "166dade258c1f1771354c001c0f73a37b3d214c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/8307a4e7dae9c63a279d8b59b9dca6c1973576c2",
-                "reference": "8307a4e7dae9c63a279d8b59b9dca6c1973576c2",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/166dade258c1f1771354c001c0f73a37b3d214c9",
+                "reference": "166dade258c1f1771354c001c0f73a37b3d214c9",
                 "shasum": ""
             },
             "require": {
@@ -3404,7 +3404,7 @@
                 "composer/semver": "^1.4",
                 "consolidation/config": "^1.2",
                 "consolidation/filter-via-dot-access-data": "^1",
-                "consolidation/robo": "^1 || ^2",
+                "consolidation/robo": "^1.4.11 || ^2",
                 "consolidation/site-alias": "^3.0.0@stable",
                 "consolidation/site-process": "^2.1 || ^4",
                 "ext-dom": "*",
@@ -3423,6 +3423,7 @@
             "require-dev": {
                 "composer/installers": "^1.7",
                 "cweagans/composer-patches": "~1.0",
+                "david-garcia/phpwhois": "4.3.0",
                 "drupal/alinks": "1.0.0",
                 "drupal/core-recommended": "^8.8",
                 "g1a/composer-test-scenarios": "^3",
@@ -3512,7 +3513,13 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2020-02-26T21:07:53+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/weitzman",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-06-22T14:57:31+00:00"
         },
         {
             "name": "egulias/email-validator",
