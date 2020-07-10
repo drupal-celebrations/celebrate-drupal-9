@@ -1228,16 +1228,16 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.6.5",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "fc0206348e17e530d09463fef07ba8968406cd6d"
+                "reference": "5f0470363ff042d0057006ae7acabc5d7b5252d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/fc0206348e17e530d09463fef07ba8968406cd6d",
-                "reference": "fc0206348e17e530d09463fef07ba8968406cd6d",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/5f0470363ff042d0057006ae7acabc5d7b5252d5",
+                "reference": "5f0470363ff042d0057006ae7acabc5d7b5252d5",
                 "shasum": ""
             },
             "require": {
@@ -1303,7 +1303,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-25T19:24:35+00:00"
+            "time": "2020-06-22T19:14:02+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1726,16 +1726,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "1cd5f38665c789df215b0f145798b44bd88fdab2"
+                "reference": "ea6e0cef3240dc8e48f797698226467de121e9c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/1cd5f38665c789df215b0f145798b44bd88fdab2",
-                "reference": "1cd5f38665c789df215b0f145798b44bd88fdab2",
+                "url": "https://api.github.com/repos/drupal/core/zipball/ea6e0cef3240dc8e48f797698226467de121e9c9",
+                "reference": "ea6e0cef3240dc8e48f797698226467de121e9c9",
                 "shasum": ""
             },
             "require": {
@@ -1966,11 +1966,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-06-17T17:56:46+00:00"
+            "time": "2020-07-08T18:31:41+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2017,7 +2017,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2055,16 +2055,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "032550bef2acd2c356a47e98065ce11969facd69"
+                "reference": "c39d02c45dbc26088a2ff004b52fd3aedf2620fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/032550bef2acd2c356a47e98065ce11969facd69",
-                "reference": "032550bef2acd2c356a47e98065ce11969facd69",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/c39d02c45dbc26088a2ff004b52fd3aedf2620fe",
+                "reference": "c39d02c45dbc26088a2ff004b52fd3aedf2620fe",
                 "shasum": ""
             },
             "require": {
@@ -2073,7 +2073,7 @@
                 "doctrine/annotations": "1.10.3",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.1",
-                "drupal/core": "9.0.1",
+                "drupal/core": "9.0.2",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
                 "guzzlehttp/promises": "v1.3.1",
@@ -2133,7 +2133,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-06-17T17:56:46+00:00"
+            "time": "2020-07-08T18:31:41+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -2504,7 +2504,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "45670a832e065ba15ee21f824aad5835ee70e8d4"
+                "reference": "7b9caa02652ae940e6de6f17665d40f3edd0a038"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2515,8 +2515,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha21+5-dev",
-                    "datestamp": "1593764884",
+                    "version": "8.x-3.0-alpha22+10-dev",
+                    "datestamp": "1594295974",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2543,7 +2543,7 @@
                 "source": "https://git.drupalcode.org/project/gin",
                 "issues": "https://www.drupal.org/project/issues/gin"
             },
-            "time": "2020-07-03T08:27:37+00:00"
+            "time": "2020-07-10T10:36:15+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2551,7 +2551,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "354eaf30ebffae300ed324a2b35802cb6814258b"
+                "reference": "4f736318a4ff3a933cda1fb4c2e5204913525fca"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2562,8 +2562,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta9+1-dev",
-                    "datestamp": "1593702532",
+                    "version": "8.x-1.0-beta10+0-dev",
+                    "datestamp": "1593777156",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2589,7 +2589,7 @@
                 "source": "http://cgit.drupalcode.org/gin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/gin_toolbar"
             },
-            "time": "2020-07-03T08:56:30+00:00"
+            "time": "2020-07-06T16:33:42+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -2759,7 +2759,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "1f4649c4ae900cf7b499a73ff0c08daa3e9f32e7"
+                "reference": "368021aa00069318395edce4e66f75f8ad55a909"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2777,8 +2777,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.13+3-dev",
-                    "datestamp": "1592913418",
+                    "version": "8.x-1.13+7-dev",
+                    "datestamp": "1594313071",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2787,7 +2787,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2811,7 +2811,7 @@
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
             },
-            "time": "2020-06-25T16:47:08+00:00"
+            "time": "2020-07-09T16:45:11+00:00"
         },
         {
             "name": "drupal/oembed_providers",
@@ -7497,20 +7497,20 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0",
+                "php": "^5.3.3 || ^7.0 || ^8.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -7542,7 +7542,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-06-16T10:16:42+00:00"
+            "time": "2020-07-08T17:02:28+00:00"
         },
         {
             "name": "webmozart/path-util",
