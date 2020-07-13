@@ -7,6 +7,7 @@ dependencies:
     - user
     - search_api
   config:
+    - field.storage.node.field_celebration
     - field.storage.user.field_country
     - field.storage.node.field_image_category
     - field.storage.node.field_video_category
@@ -25,6 +26,14 @@ field_settings:
     dependencies:
       module:
         - node
+  field_celebration:
+    label: Celebration
+    datasource_id: 'entity:node'
+    property_path: field_celebration
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_celebration
   field_country:
     label: Country
     datasource_id: 'entity:node'
@@ -79,20 +88,12 @@ field_settings:
         'entity:node':
           page: search_result
   status:
-    label: status
+    label: Published
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
     indexed_locked: true
     type_locked: true
-    dependencies:
-      module:
-        - node
-  status_1:
-    label: Published
-    datasource_id: 'entity:node'
-    property_path: status
-    type: boolean
     dependencies:
       module:
         - node

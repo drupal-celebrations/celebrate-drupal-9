@@ -1,0 +1,9 @@
+uuid: 52070762-c77d-4bf6-b173-0cef3f27e77d
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__celebrations__images_block
+name: 'search_api:views_block__celebrations__images_block'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

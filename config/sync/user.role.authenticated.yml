@@ -15,7 +15,6 @@ permissions:
   - 'access site-wide contact form'
   - 'cancel account'
   - 'change own username'
-  - 'create event content'
   - 'create image content'
   - 'create image media'
   - 'create media'

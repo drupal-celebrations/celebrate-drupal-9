@@ -2504,7 +2504,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "7b9caa02652ae940e6de6f17665d40f3edd0a038"
+                "reference": "76bc648a491092615730c494fa4be87eaafa04e0"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2515,8 +2515,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha22+10-dev",
-                    "datestamp": "1594295974",
+                    "version": "8.x-3.0-alpha22+16-dev",
+                    "datestamp": "1594586698",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2543,7 +2543,7 @@
                 "source": "https://git.drupalcode.org/project/gin",
                 "issues": "https://www.drupal.org/project/issues/gin"
             },
-            "time": "2020-07-10T10:36:15+00:00"
+            "time": "2020-07-12T20:44:40+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2551,7 +2551,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "4f736318a4ff3a933cda1fb4c2e5204913525fca"
+                "reference": "10c3ffd204213f020594e466b3646a3f6b9c5050"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2562,8 +2562,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta10+0-dev",
-                    "datestamp": "1593777156",
+                    "version": "8.x-1.0-beta10+2-dev",
+                    "datestamp": "1594469425",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2589,7 +2589,7 @@
                 "source": "http://cgit.drupalcode.org/gin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/gin_toolbar"
             },
-            "time": "2020-07-06T16:33:42+00:00"
+            "time": "2020-07-11T12:10:02+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -2815,17 +2815,17 @@
         },
         {
             "name": "drupal/oembed_providers",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/oembed_providers.git",
-                "reference": "1.0.1"
+                "reference": "1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "1ea1a9c46344750be97729d54b1998f22bd1b9c0"
+                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "a58af96b7faac30ea4e0a8dee7bd6cbb903874bd"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
@@ -2833,8 +2833,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1593609201",
+                    "version": "1.0.2",
+                    "datestamp": "1594424661",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

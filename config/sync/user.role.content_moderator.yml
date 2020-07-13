@@ -19,6 +19,7 @@ permissions:
   - 'administer menu'
   - 'administer users'
   - 'bypass honeypot protection'
+  - 'create event content'
   - 'create page content'
   - 'create url aliases'
   - 'create video media'
