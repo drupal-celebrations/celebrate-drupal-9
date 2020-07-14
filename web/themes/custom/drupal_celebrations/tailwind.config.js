@@ -1,5 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const { colors } = defaultTheme;
+const {
+  colors,
+  screens
+} = defaultTheme;
 const forms = require('@tailwindcss/custom-forms');
 const typography = require('./tailwind-local-typography');
 
@@ -67,6 +70,10 @@ module.exports = {
         '800': '#254F6A',
         '900': '#193547',
       },
+    },
+    screens: {
+      ...screens,
+      '2xl': '1600px'
     },
     fontFamily: {
       sans: ["metropolis", "sans-serif"],
