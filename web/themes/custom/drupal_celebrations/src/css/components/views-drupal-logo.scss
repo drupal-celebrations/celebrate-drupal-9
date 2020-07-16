@@ -387,4 +387,7 @@
     grid-area: 13 / 9 / 14 / 10;
   }
 
+  article:nth-child(n + 96) {
+    grid-area: 14;
+  }
 }
