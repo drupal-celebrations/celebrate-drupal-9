@@ -4,6 +4,7 @@
 @import "./components/paragraph-hero";
 @import "./components/paragraph-text-with-media";
 @import "./components/paragraph-embed-view";
+@import "./components/views-drupal-logo";
 
 html {
   @apply font-serif;
@@ -16,6 +17,7 @@ html {
 .p-page-gutter {
   @apply px-4;
 }
+
 @screen sm {
   .p-page-gutter {
     @apply px-6;
@@ -55,6 +57,7 @@ p {
 a:hover {
   @apply underline;
 }
+
 .field--type-text-long a {
   @apply text-blue-600;
 }
@@ -80,6 +83,7 @@ a:hover {
 
 .facets-views-plugin {
   @apply flex;
+
   .block-facets {
     @apply mr-8;
   }

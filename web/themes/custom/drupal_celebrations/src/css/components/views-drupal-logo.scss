@@ -1,0 +1,390 @@
+.views-drupal-logo-grid {
+  @apply grid items-center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+
+  >article>.relative:nth-child(2) {
+    display: none;
+  }
+
+  article:nth-of-type(1) {
+    grid-area: 1 / 6 / 2 / 7;
+  }
+
+  article:nth-of-type(2) {
+    grid-area: 1 / 7 / 2 / 8;
+  }
+
+  article:nth-of-type(3) {
+    grid-area: 2 / 5 / 3 / 6;
+  }
+
+  article:nth-of-type(4) {
+    grid-area: 2 / 6 / 3 / 7;
+  }
+
+  article:nth-of-type(5) {
+    grid-area: 2 / 7 / 3 / 8;
+  }
+
+  article:nth-of-type(6) {
+    grid-area: 2 / 8 / 3 / 9;
+  }
+
+  article:nth-of-type(7) {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+
+  article:nth-of-type(8) {
+    grid-area: 3 / 5 / 4 / 6;
+  }
+
+  article:nth-of-type(9) {
+    grid-area: 3 / 6 / 4 / 7;
+  }
+
+  article:nth-of-type(10) {
+    grid-area: 3 / 7 / 4 / 8;
+  }
+
+  article:nth-of-type(11) {
+    grid-area: 3 / 8 / 4 / 9;
+  }
+
+  article:nth-of-type(12) {
+    grid-area: 3 / 9 / 4 / 10;
+  }
+
+  article:nth-of-type(13) {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+
+  article:nth-of-type(14) {
+    grid-area: 4 / 4 / 5 / 5;
+  }
+
+  article:nth-of-type(15) {
+    grid-area: 4 / 5 / 5 / 6;
+  }
+
+  article:nth-of-type(16) {
+    grid-area: 4 / 6 / 5 / 7;
+  }
+
+  article:nth-of-type(17) {
+    grid-area: 4 / 7 / 5 / 8;
+  }
+
+  article:nth-of-type(18) {
+    grid-area: 4 / 8 / 5 / 9;
+  }
+
+  article:nth-of-type(19) {
+    grid-area: 4 / 9 / 5 / 10;
+  }
+
+  article:nth-of-type(20) {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+
+  article:nth-of-type(21) {
+    grid-area: 5 / 3 / 6 / 4;
+  }
+
+  article:nth-of-type(22) {
+    grid-area: 5 / 4 / 6 / 5;
+  }
+
+  article:nth-of-type(23) {
+    grid-area: 5 / 5 / 6 / 6;
+  }
+
+  article:nth-of-type(24) {
+    grid-area: 5 / 6 / 6 / 7;
+  }
+
+  article:nth-of-type(25) {
+    grid-area: 5 / 8 / 6 / 9;
+  }
+
+  article:nth-of-type(26) {
+    grid-area: 5 / 9 / 6 / 10;
+  }
+
+  article:nth-of-type(27) {
+    grid-area: 5 / 10 / 6 / 11;
+  }
+
+  article:nth-of-type(28) {
+    grid-area: 6 / 2 / 7 / 3;
+  }
+
+  article:nth-of-type(29) {
+    grid-area: 6 / 3 / 7 / 4;
+  }
+
+  article:nth-of-type(30) {
+    grid-area: 6 / 4 / 7 / 5;
+  }
+
+  article:nth-of-type(31) {
+    grid-area: 6 / 5 / 7 / 6;
+  }
+
+  article:nth-of-type(32) {
+    grid-area: 6 / 6 / 7 / 7;
+  }
+
+  article:nth-of-type(33) {
+    grid-area: 6 / 7 / 7 / 8;
+  }
+
+  article:nth-of-type(34) {
+    grid-area: 6 / 9 / 7 / 10;
+  }
+
+  article:nth-of-type(35) {
+    grid-area: 6 / 10 / 7 / 11;
+  }
+
+  article:nth-of-type(36) {
+    grid-area: 6 / 11 / 7 / 12;
+  }
+
+  article:nth-of-type(37) {
+    grid-area: 7 / 2 / 8 / 3;
+  }
+
+  article:nth-of-type(38) {
+    grid-area: 7 / 3 / 8 / 4;
+  }
+
+  article:nth-of-type(39) {
+    grid-area: 7 / 4 / 8 / 5;
+  }
+
+  article:nth-of-type(40) {
+    grid-area: 7 / 5 / 8 / 6;
+  }
+
+  article:nth-of-type(41) {
+    grid-area: 7 / 6 / 8 / 7;
+  }
+
+  article:nth-of-type(42) {
+    grid-area: 7 / 7 / 8 / 8;
+  }
+
+  article:nth-of-type(43) {
+    grid-area: 7 / 8 / 8 / 9;
+  }
+
+  article:nth-of-type(44) {
+    grid-area: 7 / 9 / 8 / 10;
+  }
+
+  article:nth-of-type(45) {
+    grid-area: 7 / 10 / 8 / 11;
+  }
+
+  article:nth-of-type(46) {
+    grid-area: 7 / 11 / 8 / 12;
+  }
+
+  article:nth-of-type(47) {
+    grid-area: 8 / 2 / 9 / 3;
+  }
+
+  article:nth-of-type(48) {
+    grid-area: 8 / 3 / 9 / 4;
+  }
+
+  article:nth-of-type(49) {
+    grid-area: 8 / 5 / 9 / 6;
+  }
+
+  article:nth-of-type(50) {
+    grid-area: 8 / 6 / 9 / 7;
+  }
+
+  article:nth-of-type(51) {
+    grid-area: 8 / 7 / 9 / 8;
+  }
+
+  article:nth-of-type(52) {
+    grid-area: 8 / 8 / 9 / 9;
+  }
+
+  article:nth-of-type(53) {
+    grid-area: 8 / 9 / 9 / 10;
+  }
+
+  article:nth-of-type(54) {
+    grid-area: 8 / 10 / 9 / 11;
+  }
+
+  article:nth-of-type(55) {
+    grid-area: 8 / 11 / 9 / 12;
+  }
+
+  article:nth-of-type(56) {
+    grid-area: 9 / 2 / 10 / 3;
+  }
+
+  article:nth-of-type(57) {
+    grid-area: 9 / 3 / 10 / 4;
+  }
+
+  article:nth-of-type(58) {
+    grid-area: 9 / 4 / 10 / 5;
+  }
+
+  article:nth-of-type(59) {
+    grid-area: 9 / 5 / 10 / 6;
+  }
+
+  article:nth-of-type(60) {
+    grid-area: 9 / 6 / 10 / 7;
+  }
+
+  article:nth-of-type(61) {
+    grid-area: 9 / 7 / 10 / 8;
+  }
+
+  article:nth-of-type(62) {
+    grid-area: 9 / 8 / 10 / 9;
+  }
+
+  article:nth-of-type(63) {
+    grid-area: 9 / 9 / 10 / 10;
+  }
+
+  article:nth-of-type(64) {
+    grid-area: 9 / 10 / 10 / 11;
+  }
+
+  article:nth-of-type(65) {
+    grid-area: 9 / 11 / 10 / 12;
+  }
+
+  article:nth-of-type(66) {
+    grid-area: 10 / 2 / 11 / 3;
+  }
+
+  article:nth-of-type(67) {
+    grid-area: 10 / 3 / 11 / 4;
+  }
+
+  article:nth-of-type(68) {
+    grid-area: 10 / 4 / 11 / 5;
+  }
+
+  article:nth-of-type(69) {
+    grid-area: 10 / 5 / 11 / 6;
+  }
+
+  article:nth-of-type(70) {
+    grid-area: 10 / 8 / 11 / 9;
+  }
+
+  article:nth-of-type(71) {
+    grid-area: 10 / 9 / 11 / 10;
+  }
+
+  article:nth-of-type(72) {
+    grid-area: 10 / 10 / 11 / 11;
+  }
+
+  article:nth-of-type(73) {
+    grid-area: 10 / 11 / 11 / 12;
+  }
+
+  article:nth-of-type(74) {
+    grid-area: 11 / 2 / 12 / 3;
+  }
+
+  article:nth-of-type(75) {
+    grid-area: 11 / 3 / 12 / 4;
+  }
+
+  article:nth-of-type(76) {
+    grid-area: 11 / 4 / 12 / 5;
+  }
+
+  article:nth-of-type(77) {
+    grid-area: 11 / 5 / 12 / 6;
+  }
+
+  article:nth-of-type(78) {
+    grid-area: 11 / 8 / 12 / 9;
+  }
+
+  article:nth-of-type(79) {
+    grid-area: 11 / 9 / 12 / 10;
+  }
+
+  article:nth-of-type(80) {
+    grid-area: 11 / 10 / 12 / 11;
+  }
+
+  article:nth-of-type(81) {
+    grid-area: 11 / 11 / 12 / 12;
+  }
+
+  article:nth-of-type(82) {
+    grid-area: 12 / 3 / 13 / 4;
+  }
+
+  article:nth-of-type(83) {
+    grid-area: 12 / 4 / 13 / 5;
+  }
+
+  article:nth-of-type(84) {
+    grid-area: 12 / 5 / 13 / 6;
+  }
+
+  article:nth-of-type(85) {
+    grid-area: 12 / 6 / 13 / 7;
+  }
+
+  article:nth-of-type(86) {
+    grid-area: 12 / 7 / 13 / 8;
+  }
+
+  article:nth-of-type(87) {
+    grid-area: 12 / 8 / 13 / 9;
+  }
+
+  article:nth-of-type(88) {
+    grid-area: 12 / 9 / 13 / 10;
+  }
+
+  article:nth-of-type(89) {
+    grid-area: 12 / 10 / 13 / 11;
+  }
+
+  article:nth-of-type(90) {
+    grid-area: 13 / 4 / 14 / 5;
+  }
+
+  article:nth-of-type(91) {
+    grid-area: 13 / 5 / 14 / 6;
+  }
+
+  article:nth-of-type(92) {
+    grid-area: 13 / 6 / 14 / 7;
+  }
+
+  article:nth-of-type(93) {
+    grid-area: 13 / 7 / 14 / 8;
+  }
+
+  article:nth-of-type(94) {
+    grid-area: 13 / 8 / 14 / 9;
+  }
+
+  article:nth-of-type(95) {
+    grid-area: 13 / 9 / 14 / 10;
+  }
+
+}

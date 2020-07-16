@@ -188,7 +188,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: ignore
+          default_action: default
           exception:
             value: all
             title_enable: false
@@ -220,6 +220,128 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:search_api.index.celebration'
+  drupalcon_global_2020_photo:
+    display_plugin: block
+    id: drupalcon_global_2020_photo
+    display_title: 'DrupalCon Global 2020 - Photo block'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      filters:
+        status:
+          id: status
+          table: search_api_index_celebration
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        type:
+          id: type
+          table: search_api_index_celebration
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            image: image
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+      defaults:
+        filters: false
+        filter_groups: false
+        cache: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+        pager: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      cache:
+        type: none
+      use_more: false
+      use_more_always: false
+      use_more_text: 'All photos'
+      link_display: custom_url
+      link_url: /photos
+      pager:
+        type: none
+        options:
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -822,7 +944,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: default
+          default_action: ignore
           exception:
             value: all
             title_enable: false

@@ -19,14 +19,15 @@
 {%
   set classes = [
     view_id in ['taxonomy_term'] ? 'mx-auto container p-page-gutter my-6',
-    view_id in ['celebrations'] and view_display_id in ['videos_page', 'images_page', 'events_page'] ? 'mx-auto container p-page-gutter my-6',
+    view_id in ['celebrations'] and view_display_id in ['videos_page', 'events_page'] ? 'mx-auto container p-page-gutter my-6',
     view_id in ['celebrations', 'taxonomy_term'] ? 'md:grid-cols-2 lg:grid-cols-3',
     view_id in ['volunteers'] ? 'md:grid-cols-3 lg:grid-cols-4',
     view_id in ['celebrations', 'volunteers', 'taxonomy_term'] ? 'grid grid-gap grid-flow-row gap-6',
+    view_id in ['celebrations'] and view_display_id in ['images_page'] ? 'views-drupal-logo-grid',
   ]
 %}
 
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }} style="">
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
