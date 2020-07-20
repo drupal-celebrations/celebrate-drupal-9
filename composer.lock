@@ -2441,11 +2441,17 @@
         },
         {
             "name": "drupal/facets",
-            "version": "dev-1.x",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/facets.git",
-                "reference": "cd4833907bf87c6aa2c1087cd2980ccfd9e85c82"
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "35b6cd9f0b8bda41581452a2da45a3f2da9d016b"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2455,17 +2461,16 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev",
-                    "dev-8.x-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.4+30-dev",
-                    "datestamp": "1591356557",
+                    "version": "8.x-1.5",
+                    "datestamp": "1595015391",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
                 },
                 "patches_applied": {
                     "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2020-01-27/facet-3073444-89-Allow-facets-filter-in-views.patch"
@@ -2495,8 +2500,7 @@
                 "source": "git://git.drupal.org/project/facets.git",
                 "issues": "https://www.drupal.org/project/issues/facets",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
-            },
-            "time": "2020-06-08T05:13:18+00:00"
+            }
         },
         {
             "name": "drupal/gin",
@@ -2504,7 +2508,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "5bc2194836d852628a7b76eabfe925618e85e726"
+                "reference": "3857ae2e4423ab5b62e96cffc4905ca17d23f08a"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2515,8 +2519,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha23+1-dev",
-                    "datestamp": "1594801573",
+                    "version": "8.x-3.0-alpha23+5-dev",
+                    "datestamp": "1595109978",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2554,7 +2558,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2020-07-15T18:06:34+00:00"
+            "time": "2020-07-19T21:20:09+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2837,17 +2841,17 @@
         },
         {
             "name": "drupal/oembed_providers",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/oembed_providers.git",
-                "reference": "1.0.2"
+                "reference": "1.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "a58af96b7faac30ea4e0a8dee7bd6cbb903874bd"
+                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "3d25c8cb937ecfde52cab1ecf88f80efa0a80d58"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
@@ -2855,8 +2859,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1594424661",
+                    "version": "1.0.3",
+                    "datestamp": "1594998415",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
