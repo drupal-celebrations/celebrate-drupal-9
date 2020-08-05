@@ -1653,17 +1653,17 @@
         },
         {
             "name": "drupal/color_field",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/color_field.git",
-                "reference": "8.x-2.3"
+                "reference": "8.x-2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.3.zip",
-                "reference": "8.x-2.3",
-                "shasum": "88e40c8575924f74634f62bbea95b823ffd9053e"
+                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "11c163a409f4f70083f188d917fecc6052c53a2f"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -1679,8 +1679,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.3",
-                    "datestamp": "1592252308",
+                    "version": "8.x-2.4",
+                    "datestamp": "1596479692",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2544,7 +2544,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "c076642dda0a5e5fc4c83bd355080d5c79c289ac"
+                "reference": "aa5ca3b6f5d5f3927774ae858ab8fd6ba733d4e9"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2555,8 +2555,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha24+1-dev",
-                    "datestamp": "1595854627",
+                    "version": "8.x-3.0-alpha24+8-dev",
+                    "datestamp": "1596532662",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2594,7 +2594,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2020-07-27T13:07:15+00:00"
+            "time": "2020-08-04T16:02:52+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2659,7 +2659,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/honeypot.git",
-                "reference": "f2fad8b9b9cecb97a483cd68e9fc973106ec855a"
+                "reference": "43dcba515d98523fcb0e03b65e077e274ab6e3b1"
             },
             "require": {
                 "drupal/core": "^8.0 || ^9.0"
@@ -2670,8 +2670,8 @@
                     "dev-2.0.x": "2.0.x-dev"
                 },
                 "drupal": {
-                    "version": "2.0.0+0-dev",
-                    "datestamp": "1588104922",
+                    "version": "2.0.0+1-dev",
+                    "datestamp": "1590338397",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2711,7 +2711,7 @@
                 "source": "https://git.drupalcode.org/project/honeypot",
                 "issues": "https://www.drupal.org/project/issues/honeypot"
             },
-            "time": "2020-05-24T16:38:27+00:00"
+            "time": "2020-07-31T17:53:58+00:00"
         },
         {
             "name": "drupal/maxlength",
@@ -2932,7 +2932,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "2eb93aa0b8e12a07fc75e6cb7e82702e03f88fcb"
+                "reference": "d39f66167d6de1ed36c5c3f992bb5f713d909966"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -2960,8 +2960,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.12+2-dev",
-                    "datestamp": "1591219499",
+                    "version": "8.x-1.12+3-dev",
+                    "datestamp": "1593340799",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3003,7 +3003,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
             },
-            "time": "2020-06-28T10:39:42+00:00"
+            "time": "2020-07-30T21:01:01+00:00"
         },
         {
             "name": "drupal/pathauto",
@@ -3449,20 +3449,20 @@
         },
         {
             "name": "drush/drush",
-            "version": "10.3.1",
+            "version": "10.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "aad2b17ad34801d9b55cff903e3e7db65d754b80"
+                "reference": "0904ee08d4af9007eb15a0947af3ba27fe6b3408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/aad2b17ad34801d9b55cff903e3e7db65d754b80",
-                "reference": "aad2b17ad34801d9b55cff903e3e7db65d754b80",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/0904ee08d4af9007eb15a0947af3ba27fe6b3408",
+                "reference": "0904ee08d4af9007eb15a0947af3ba27fe6b3408",
                 "shasum": ""
             },
             "require": {
-                "chi-teck/drupal-code-generator": "^1.30.5",
+                "chi-teck/drupal-code-generator": "^1.32.1",
                 "composer/semver": "^1.4",
                 "consolidation/config": "^1.2",
                 "consolidation/filter-via-dot-access-data": "^1",
@@ -3581,7 +3581,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-06-30T19:43:45+00:00"
+            "time": "2020-08-04T19:20:10+00:00"
         },
         {
             "name": "egulias/email-validator",
