@@ -1712,16 +1712,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.0.2",
+            "version": "9.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ea6e0cef3240dc8e48f797698226467de121e9c9"
+                "reference": "883018fe0aa16cee450bb043fcb4893c05438283"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ea6e0cef3240dc8e48f797698226467de121e9c9",
-                "reference": "ea6e0cef3240dc8e48f797698226467de121e9c9",
+                "url": "https://api.github.com/repos/drupal/core/zipball/883018fe0aa16cee450bb043fcb4893c05438283",
+                "reference": "883018fe0aa16cee450bb043fcb4893c05438283",
                 "shasum": ""
             },
             "require": {
@@ -1952,11 +1952,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-07-08T18:31:41+00:00"
+            "time": "2020-08-05T21:47:03+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.0.2",
+            "version": "9.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2003,16 +2003,16 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.0.2",
+            "version": "9.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "571ad1a0824d53e1f780584b883ee61a5c8c0b28"
+                "reference": "fbb9d944f82a1f25ab967a8bc22d3dc19479bd11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/571ad1a0824d53e1f780584b883ee61a5c8c0b28",
-                "reference": "571ad1a0824d53e1f780584b883ee61a5c8c0b28",
+                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/fbb9d944f82a1f25ab967a8bc22d3dc19479bd11",
+                "reference": "fbb9d944f82a1f25ab967a8bc22d3dc19479bd11",
                 "shasum": ""
             },
             "require": {
@@ -2037,20 +2037,20 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2020-05-04T10:06:27+00:00"
+            "time": "2020-08-02T22:04:44+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.0.2",
+            "version": "9.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "c39d02c45dbc26088a2ff004b52fd3aedf2620fe"
+                "reference": "50da17643f7192fb2771f9fbb7b55fc2b22d8be1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/c39d02c45dbc26088a2ff004b52fd3aedf2620fe",
-                "reference": "c39d02c45dbc26088a2ff004b52fd3aedf2620fe",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/50da17643f7192fb2771f9fbb7b55fc2b22d8be1",
+                "reference": "50da17643f7192fb2771f9fbb7b55fc2b22d8be1",
                 "shasum": ""
             },
             "require": {
@@ -2059,7 +2059,7 @@
                 "doctrine/annotations": "1.10.3",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.1",
-                "drupal/core": "9.0.2",
+                "drupal/core": "9.0.3",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
                 "guzzlehttp/promises": "v1.3.1",
@@ -2119,7 +2119,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2020-07-08T18:31:41+00:00"
+            "time": "2020-08-05T21:47:03+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -2544,7 +2544,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "aa5ca3b6f5d5f3927774ae858ab8fd6ba733d4e9"
+                "reference": "d0099fd9e304f96b737c693aeb3f7d8bb1f8b88b"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2555,8 +2555,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha24+8-dev",
-                    "datestamp": "1596532662",
+                    "version": "8.x-3.0-alpha24+19-dev",
+                    "datestamp": "1597405049",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2594,7 +2594,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2020-08-04T16:02:52+00:00"
+            "time": "2020-08-14T11:37:10+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2602,7 +2602,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "9008d4470102013d24299d45e9394fc6995349b9"
+                "reference": "25deb55f6307e9c51865a7eb21273caa3f19b604"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2613,8 +2613,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta11+1-dev",
-                    "datestamp": "1594802713",
+                    "version": "8.x-1.0-beta11+3-dev",
+                    "datestamp": "1597393907",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2651,7 +2651,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2020-07-15T18:09:46+00:00"
+            "time": "2020-08-14T08:31:13+00:00"
         },
         {
             "name": "drupal/honeypot",
@@ -2821,7 +2821,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "368021aa00069318395edce4e66f75f8ad55a909"
+                "reference": "31d4e71525f19d29f336a87d8ad145c086168a3f"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2831,6 +2831,7 @@
                 "drupal/metatag_dc": "*",
                 "drupal/metatag_open_graph": "*",
                 "drupal/page_manager": "4.x-dev",
+                "drupal/panelizer": "4.x-dev",
                 "drupal/redirect": "1.x-dev"
             },
             "type": "drupal-module",
@@ -2839,8 +2840,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.13+7-dev",
-                    "datestamp": "1594313071",
+                    "version": "8.x-1.14+0-dev",
+                    "datestamp": "1597183551",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2873,7 +2874,7 @@
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
             },
-            "time": "2020-07-09T16:45:11+00:00"
+            "time": "2020-08-11T22:05:31+00:00"
         },
         {
             "name": "drupal/oembed_providers",
@@ -2932,7 +2933,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "d39f66167d6de1ed36c5c3f992bb5f713d909966"
+                "reference": "b668219dcb79d18bca89c6eb92c573dcadf9b3cb"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
@@ -2960,8 +2961,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.12+3-dev",
-                    "datestamp": "1593340799",
+                    "version": "8.x-1.12+8-dev",
+                    "datestamp": "1597050650",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3003,7 +3004,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
             },
-            "time": "2020-07-30T21:01:01+00:00"
+            "time": "2020-08-13T09:39:05+00:00"
         },
         {
             "name": "drupal/pathauto",
@@ -3392,7 +3393,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/viewsreference.git",
-                "reference": "d56042cee95bff34e039e8b90c44004255323a68"
+                "reference": "1f35c69829477fd4eea425e62072d254419fcd7b"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -3406,8 +3407,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha7+7-dev",
-                    "datestamp": "1595865274",
+                    "version": "8.x-2.0-beta2+0-dev",
+                    "datestamp": "1597234953",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3445,7 +3446,7 @@
                 "source": "https://git.drupalcode.org/project/viewsreference",
                 "issues": "https://www.drupal.org/project/issues/viewsreference"
             },
-            "time": "2020-07-27T15:54:16+00:00"
+            "time": "2020-08-12T12:22:04+00:00"
         },
         {
             "name": "drush/drush",
@@ -4431,16 +4432,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.7.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "21dce06dfbf0365c6a7cc8fdbdc995926c6a9300"
+                "reference": "8c58eb4cd4f3883f82611abeac2efbc3dbed787e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/21dce06dfbf0365c6a7cc8fdbdc995926c6a9300",
-                "reference": "21dce06dfbf0365c6a7cc8fdbdc995926c6a9300",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8c58eb4cd4f3883f82611abeac2efbc3dbed787e",
+                "reference": "8c58eb4cd4f3883f82611abeac2efbc3dbed787e",
                 "shasum": ""
             },
             "require": {
@@ -4448,8 +4449,8 @@
                 "php": ">=7.0"
             },
             "require-dev": {
-                "ircmaxell/php-yacc": "0.0.5",
-                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
+                "ircmaxell/php-yacc": "^0.0.6",
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -4457,7 +4458,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7-dev"
+                    "dev-master": "4.8-dev"
                 }
             },
             "autoload": {
@@ -4479,7 +4480,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-07-25T13:18:53+00:00"
+            "time": "2020-08-09T10:23:20+00:00"
         },
         {
             "name": "pear/archive_tar",
