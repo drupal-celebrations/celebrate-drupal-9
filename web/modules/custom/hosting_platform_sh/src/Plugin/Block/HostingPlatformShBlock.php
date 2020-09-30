@@ -25,7 +25,7 @@ class HostingPlatformShBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    return ['#markup' => '<span>' . $this->t('Hosting by <a href=":hosting">Platform.sh</a>', [':hosting' => 'https://www.platform.sh']) . '</span>'];
+    return ['#markup' => '<span>' . $this->t('Hosting by <a href=":hosting">Platform.sh</a>', [':hosting' => 'https://www.platform.sh?medium=referral&utm_campaign=sponsored_sites&utm_source=celebratedrupal']) . '</span>'];
   }
 
 }
