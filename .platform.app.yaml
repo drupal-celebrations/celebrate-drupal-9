@@ -148,4 +148,9 @@ crons:
             if [ "$PLATFORM_BRANCH" = master ]; then
                 platform backup:create --yes --no-wait
             fi
-
+    renewcert:
+        spec: '0 2 2,16 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                platform redeploy --yes --no-wait
+            fi

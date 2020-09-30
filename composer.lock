@@ -2544,7 +2544,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "beffe921ccb896099568ea3ae28be2c2424fccf7"
+                "reference": "04fdfca31e96d1b5398e1abc372f0690a7797234"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2555,8 +2555,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha26+11-dev",
-                    "datestamp": "1600895806",
+                    "version": "8.x-3.0-alpha26+12-dev",
+                    "datestamp": "1601290555",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2594,7 +2594,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2020-09-23T21:16:24+00:00"
+            "time": "2020-09-28T10:55:34+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
