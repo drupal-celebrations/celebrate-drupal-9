@@ -2598,7 +2598,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "3fb4db2b034c811153a1a91a18c4988cc3cbeb43"
+                "reference": "26171c9055c29ddf1a908c94693c8e35875f836a"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2609,8 +2609,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha27+9-dev",
-                    "datestamp": "1602084364",
+                    "version": "8.x-3.0-alpha27+14-dev",
+                    "datestamp": "1603045577",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2648,7 +2648,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2020-10-07T19:51:09+00:00"
+            "time": "2020-10-18T18:49:56+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -2932,17 +2932,17 @@
         },
         {
             "name": "drupal/oembed_providers",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/oembed_providers.git",
-                "reference": "1.0.3"
+                "reference": "1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.0.3.zip",
-                "reference": "1.0.3",
-                "shasum": "3d25c8cb937ecfde52cab1ecf88f80efa0a80d58"
+                "url": "https://ftp.drupal.org/files/projects/oembed_providers-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "9f5472093ff96332c746ad325a6f12d6063c6cd0"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
@@ -2950,8 +2950,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.3",
-                    "datestamp": "1594998415",
+                    "version": "1.1.0",
+                    "datestamp": "1602789889",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
