@@ -7,7 +7,7 @@ dependencies:
     - node.type.event
     - taxonomy.vocabulary.celebration
   content:
-    - 'taxonomy_term:celebration:367299ea-5624-4fb6-a1ac-b32061f6028f'
+    - 'taxonomy_term:celebration:374e4eef-cbb5-4559-9db8-e0e9bd923bad'
 id: node.event.field_celebration
 field_name: field_celebration
 entity_type: node
@@ -18,7 +18,7 @@ required: true
 translatable: false
 default_value:
   -
-    target_uuid: 367299ea-5624-4fb6-a1ac-b32061f6028f
+    target_uuid: 374e4eef-cbb5-4559-9db8-e0e9bd923bad
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
