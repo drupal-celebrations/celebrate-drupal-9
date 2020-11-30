@@ -27,7 +27,7 @@
         "drupal/core-recommended": "^9",
         "drupal/disable_language": "1.x-dev",
         "drupal/entity_browser": "^2.5",
-        "drupal/facets": "^1.4",
+        "drupal/facets": "1.5",
         "drupal/file_mdm": "^2.1",
         "drupal/gin": "3.x-dev",
         "drupal/gin_toolbar": "1.x-dev",
