@@ -16,17 +16,30 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
-    'flex',
     'items-end',
     'justify-between',
     'flex-wrap',
-    'container',
-    'p-page-gutter',
-    'mx-auto',
-    'leading-4',
+    'hidden',
+    'md:flex',
+    'md:pt-8',
   ]
 %}
+
 {% if content %}
+  {% set region_header = 'region-' ~ region|clean_class %}
+  {% set region_header_toggle = region_header ~ '-toggle'|clean_id %}
+  <style>
+    #{{ region_header_toggle ~ ':checked + .' ~ region_header }} {
+      display: flex;
+    }
+  </style>
+  <label for="{{ region_header_toggle }}" class="cursor-pointer text-gray-500 hover:text-white focus:text-white focus:outline-none md:hidden pt-4">
+    <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+    </svg>
+  </label>
+  <input id="{{ region_header_toggle }}" type="checkbox" class="visually-hidden" aria-label="Toggle header navigation">
+
   <div{{ attributes.addClass(classes) }}>
     {{ content }}
   </div>

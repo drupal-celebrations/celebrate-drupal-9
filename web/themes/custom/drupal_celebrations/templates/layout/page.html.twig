@@ -50,13 +50,28 @@
     'md:py-12',
   ]
 %}
-
+{%
+  set header_classes = [
+    'flex',
+    'items-end',
+    'justify-between',
+    'flex-wrap',
+    'container',
+    'p-page-gutter',
+    'mx-auto',
+    'leading-4',
+  ]
+%}
 {% if page.header|render|striptags|trim is not empty %}
-  <header class="layout-header bg-blue-500 {{ page_classes | safe_join(' ') }}" role="banner">
-    {% if page.header|render|striptags|trim is not empty %}
-      {{ page.header }}
+<header class="layout-header bg-blue-500 {{ page_classes | safe_join(' ') }}" role="banner">
+  <div class="{{ header_classes | safe_join(' ') }}">
+    {% if page.header_logo|render|striptags|trim is not empty %}
+      {{ page.header_logo }}
     {% endif %}
-  </header>
+
+    {{ page.header }}
+  </div>
+</header>
 {% endif %}
 
 {% if page.breadcrumbs|render|striptags|trim is not empty %}
@@ -80,10 +95,12 @@
   {% endif %}
 {% endif %}
 
+{% if page.content|render|striptags|trim is not empty %}
 <main role="main" class="main mx-auto">
   <a id="main-content" tabindex="-1" class="sr-only"></a>{# link is in html.html.twig #}
   {{ page.content }}
 </main>
+{% endif %}
 
 {% if page.footer|render|striptags|trim is not empty %}
 <footer class="footer bg-gray-900 text-white {{  page_classes | safe_join(' ') }}" role="contentinfo">

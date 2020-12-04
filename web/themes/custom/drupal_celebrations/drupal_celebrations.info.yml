@@ -7,6 +7,7 @@ version: VERSION
 core_version_requirement: "^9"
 
 regions:
+  header_logo: Header Logo
   header: Header
   content: Content
   footer: Footer

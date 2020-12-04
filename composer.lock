@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "685a532ebf3c7a3299a4ec58c09135fb",
+    "content-hash": "bdba4417f4014c85b43a906ad3718954",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2905,11 +2905,17 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "dev-1.x",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "b1147b9ab442be4219baf1b60101ce7f3d0edf71"
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "9bf9f1517ad015d0c93ca1460e284c557624aa90"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2924,15 +2930,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.14+17-dev",
-                    "datestamp": "1605375471",
+                    "version": "8.x-1.14",
+                    "datestamp": "1597183852",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -2961,8 +2964,7 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
-            },
-            "time": "2020-11-14T20:56:53+00:00"
+            }
         },
         {
             "name": "drupal/oembed_providers",
@@ -3352,29 +3354,26 @@
         },
         {
             "name": "drupal/token",
-            "version": "1.7.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token.git",
-                "reference": "8.x-1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
+                "reference": "195fca31519225d63f5b543a4e6b039931bfc6ef"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1589314266",
+                    "version": "8.x-1.7+2-dev",
+                    "datestamp": "1603181432",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -3417,7 +3416,8 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
-            }
+            },
+            "time": "2020-10-20T09:53:08+00:00"
         },
         {
             "name": "drupal/views_infinite_scroll",
@@ -8008,8 +8008,8 @@
         "drupal/gin_toolbar": 20,
         "drupal/honeypot": 20,
         "drupal/maxlength": 20,
-        "drupal/metatag": 20,
         "drupal/paragraphs": 20,
+        "drupal/token": 20,
         "drupal/viewsreference": 20
     },
     "prefer-stable": true,
