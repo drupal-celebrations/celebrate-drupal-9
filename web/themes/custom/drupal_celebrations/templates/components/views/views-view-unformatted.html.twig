@@ -22,10 +22,23 @@
     view_id in ['celebrations'] and view_display_id in ['videos_page', 'events_page'] ? 'mx-auto container p-page-gutter my-6',
     view_id in ['celebrations', 'taxonomy_term'] ? 'md:grid-cols-2 lg:grid-cols-3',
     view_id in ['volunteers'] ? 'md:grid-cols-3 lg:grid-cols-4',
-    view_id in ['celebrations', 'volunteers', 'taxonomy_term'] and view_display_id not in ['images_page'] ? 'grid grid-gap grid-flow-row gap-6',
-    view_id in ['celebrations'] and view_display_id in ['images_page'] ? 'grid grid-gap grid-flow-row gap-4 views-drupal-logo-grid p-page-gutter my-6',
+    view_id in ['celebrations', 'volunteers', 'taxonomy_term'] and view_display_id not in ['images_page', 'dconeu2020_photos_page'] ? 'grid grid-gap grid-flow-row gap-6',
+    view_id in ['celebrations'] and view_display_id in ['images_page', 'dconeu2020_photos_page'] ? 'grid grid-gap grid-flow-row gap-4 p-page-gutter my-6',
+    view_id in ['celebrations'] and view_display_id in ['images_page'] ? 'views-drupal-logo-grid',
+    view_id in ['celebrations'] and view_display_id in ['dconeu2020_photos_page'] ? 'views-european-architecture',
   ]
 %}
+
+{% if view_id in ['celebrations'] and view_display_id in ['dconeu2020_photos_page'] %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    for (const mediaImg of document.querySelectorAll('article.node--type-image .field--name-field-media-image')) {
+      const imgUrl = mediaImg.querySelector('.field--name-field-media-image img').src;
+      mediaImg.style.backgroundImage = `url(${imgUrl})`;
+    }
+  });
+</script>
+{% endif %}
 
 <div{{ attributes.addClass(classes) }}>
   {% if title %}
