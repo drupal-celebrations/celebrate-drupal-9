@@ -10,8 +10,8 @@ _core:
   default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
 id: drupal_celebrations_branding
 theme: drupal_celebrations
-region: header
-weight: -5
+region: header_logo
+weight: -4
 provider: null
 plugin: system_branding_block
 settings:
