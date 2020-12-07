@@ -31,10 +31,38 @@
 
 {% if view_id in ['celebrations'] and view_display_id in ['dconeu2020_photos_page'] %}
 <script>
+  const mediaBackgroundColours = [
+    'bg-blue-400',
+    'bg-gray-400',
+    'bg-green-400',
+    'bg-indigo-400',
+    'bg-orange-400',
+    'bg-pink-400',
+    'bg-purple-400',
+    'bg-red-400',
+    'bg-teal-400',
+    'bg-yellow-400',
+  ];
+
   document.addEventListener('DOMContentLoaded', () => {
     for (const mediaImg of document.querySelectorAll('article.node--type-image .field--name-field-media-image')) {
       const imgUrl = mediaImg.querySelector('.field--name-field-media-image img').src;
       mediaImg.style.backgroundImage = `url(${imgUrl})`;
+
+      let mediaColour = mediaBackgroundColours[Math.floor(Math.random() * mediaBackgroundColours.length)];
+
+      mediaImg.addEventListener("mouseover", function( event ) {
+        if (event.target) {
+          mediaImg.classList.add(mediaColour);
+          mediaImg.style.backgroundBlendMode = 'overlay';
+        }
+      }, false);
+      mediaImg.addEventListener("mouseleave", function( event ) {
+        if (event.target) {
+          mediaImg.classList.remove(mediaColour);
+          mediaImg.style.backgroundBlendMode = 'unset';
+        }
+      }, false);
     }
   });
 </script>
