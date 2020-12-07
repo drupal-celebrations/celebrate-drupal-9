@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - search_api.index.celebration
+  content:
+    - 'block_content:basic_block:60211601-87e1-405b-ab59-ba291e7811aa'
   module:
     - facets
     - search_api
@@ -288,6 +290,7 @@ display:
         arguments: false
         title: false
         empty: false
+        header: false
       filter_groups:
         operator: AND
         groups:
@@ -347,6 +350,20 @@ display:
             value: '<p class="mx-auto container p-page-gutter py-4">No images submitted yet, please check back later.</p>'
             format: full_html
           plugin_id: text
+      header:
+        entity_block_content:
+          id: entity_block_content
+          table: views
+          field: entity_block_content
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: 60211601-87e1-405b-ab59-ba291e7811aa
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
     cache_metadata:
       max-age: -1
       contexts:
