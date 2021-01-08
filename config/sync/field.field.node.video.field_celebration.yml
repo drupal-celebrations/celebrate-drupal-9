@@ -7,7 +7,7 @@ dependencies:
     - node.type.video
     - taxonomy.vocabulary.celebration
   content:
-    - 'taxonomy_term:celebration:374e4eef-cbb5-4559-9db8-e0e9bd923bad'
+    - 'taxonomy_term:celebration:f99e443f-8596-4f6f-99f3-b8b0375c613b'
 id: node.video.field_celebration
 field_name: field_celebration
 entity_type: node
@@ -18,7 +18,7 @@ required: true
 translatable: false
 default_value:
   -
-    target_uuid: 374e4eef-cbb5-4559-9db8-e0e9bd923bad
+    target_uuid: f99e443f-8596-4f6f-99f3-b8b0375c613b
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
