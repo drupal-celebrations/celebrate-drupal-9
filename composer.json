@@ -18,7 +18,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "9999999-dev",
         "drupal/address": "^1.8",
-        "drupal/admin_toolbar": "^2.2",
+        "drupal/admin_toolbar": "^3.0",
         "drupal/block_field": "^1.0@RC",
         "drupal/color_field": "^2.2",
         "drupal/core": "^9.0",
@@ -46,8 +46,6 @@
         "drush/drush": "^10.2",
         "platformsh/config-reader": "^2.3",
         "vlucas/phpdotenv": "^4.1"
-    },
-    "require-dev": {
     },
     "conflict": {
         "drupal/drupal": "*"

@@ -40,7 +40,7 @@ Or use `drush uli` to create a one-time login link.
 
 ## Services
 
-* PHP 7.3
+* PHP 7.4
 * MariaDB 10.4
 * Redis 5
 

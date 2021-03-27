@@ -1,7 +1,7 @@
 preset_accent_color: blue
 preset_focus_color: gin
-enable_darkmode: false
-classic_toolbar: '1'
+enable_darkmode: true
+classic_toolbar: vertical
 icon_default: true
 icon_path: ''
 _core:
@@ -16,3 +16,5 @@ favicon:
 accent_color: '#000000'
 focus_color: '#000000'
 icon_upload: ''
+high_contrast_mode: false
+show_user_theme_settings: false
