@@ -19,7 +19,7 @@
         "cweagans/composer-patches": "9999999-dev",
         "drupal/address": "^1.8",
         "drupal/admin_toolbar": "^3.0",
-        "drupal/block_field": "^1.0@RC",
+        "drupal/block_field": "1.x-dev",
         "drupal/color_field": "^2.2",
         "drupal/core": "^9.0",
         "drupal/core-composer-scaffold": "^9",
