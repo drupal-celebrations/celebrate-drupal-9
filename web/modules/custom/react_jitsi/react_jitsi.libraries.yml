@@ -1,0 +1,4 @@
+react_jitsi:
+  version: 1.0
+  js:
+    dist/app.js: { minified: true }
