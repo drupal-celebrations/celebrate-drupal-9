@@ -104,7 +104,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "#3186415 - OEmbed throws fetched resource did not have a valid Content-Type header for text/html responses": "https://www.drupal.org/files/issues/2020-12-04/3186415-8.9.x-youtube-headers-html.patch"
+                "#3186415 - OEmbed throws fetched resource did not have a valid Content-Type header for text/html responses": "https://www.drupal.org/files/issues/2020-12-04/3186415-8.9.x-youtube-headers-html.patch",
+                "#3181946 - ReplicaKillSwitch unnecessarily starts a session on each request": "patches/core/3181946-replicakillswitch.patch"
             },
             "drupal/facets": {
                 "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2020-01-27/facet-3073444-89-Allow-facets-filter-in-views.patch"

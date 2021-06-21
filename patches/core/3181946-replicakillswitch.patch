@@ -1,0 +1,14 @@
+diff --git a/core/lib/Drupal/Core/Database/ReplicaKillSwitch.php b/core/lib/Drupal/Core/Database/ReplicaKillSwitch.php
+index 584a97c67b3958772b22bb657a357040702b0e65..6e639327d0d71afc0968c8d8ee2654c177bd5482 100644
+--- a/core/lib/Drupal/Core/Database/ReplicaKillSwitch.php
++++ b/core/lib/Drupal/Core/Database/ReplicaKillSwitch.php
+@@ -92,7 +92,8 @@ public function checkReplicaServer(RequestEvent $event) {
+     // use the 'database.replica_kill_switch' service's trigger() method to set
+     // 'ignore_replica_server' session flag to the timestamp after which the
+     // replica can be re-enabled.
+-    if ($this->session->has('ignore_replica_server')) {
++    $connection_info = Database::getConnectionInfo();
++    if (count($connection_info) > 1 && $this->session->has('ignore_replica_server')) {
+       if ($this->session->get('ignore_replica_server') >= $this->time->getRequestTime()) {
+         Database::ignoreTarget('default', 'replica');
+       }
