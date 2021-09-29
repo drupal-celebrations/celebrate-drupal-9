@@ -103,9 +103,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/core": {
-                "#3186415 - OEmbed throws fetched resource did not have a valid Content-Type header for text/html responses": "https://www.drupal.org/files/issues/2020-12-04/3186415-8.9.x-youtube-headers-html.patch"
-            },
             "drupal/facets": {
                 "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2020-01-27/facet-3073444-89-Allow-facets-filter-in-views.patch"
             },
