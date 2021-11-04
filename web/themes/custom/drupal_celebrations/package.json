@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn run production",
-    "develop": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=webpack.config.js",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=webpack.config.js",
-    "production": "cross-env NODE_ENV=production webpack --no-progress --hide-modules --config=webpack.config.js",
-    "watch": "yarn run develop --watch"
+    "develop": "mix",
+    "hot": "mix watch --hot",
+    "production": "mix --production",
+    "watch": "mix --watch"
   },
   "dependencies": {
     "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4",
+    "laravel-mix": "^6.0.37",
     "postcss-css-variables": "^0.17.0",
     "resolve-url-loader": "^3.1.1",
     "sass": "^1.26.5",
@@ -28,8 +28,8 @@
     "browser-sync-webpack-plugin": "2.2.2",
     "husky": "^4.2.5",
     "lodash": "^4.17.15",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
   }
 }
