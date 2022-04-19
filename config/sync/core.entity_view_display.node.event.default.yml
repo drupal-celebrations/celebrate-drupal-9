@@ -22,41 +22,41 @@ bundle: event
 mode: default
 content:
   field_description:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   field_event_date_time:
-    weight: 2
+    type: daterange_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: short
       separator: '-'
     third_party_settings: {  }
-    type: daterange_default
+    weight: 2
     region: content
   field_event_host_name:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_image:
-    weight: 0
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: card
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
   field_remote_meeting_url:
-    weight: 4
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -65,7 +65,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
 hidden:
   field_celebration: true

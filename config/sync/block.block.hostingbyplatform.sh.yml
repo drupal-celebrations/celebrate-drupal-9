@@ -15,6 +15,6 @@ plugin: hosting_platform_sh_block
 settings:
   id: hosting_platform_sh_block
   label: 'Hosting by platform.sh'
-  provider: hosting_platform_sh
   label_display: '0'
+  provider: hosting_platform_sh
 visibility: {  }

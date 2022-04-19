@@ -18,47 +18,47 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.video.full
 targetEntityType: node
 bundle: video
 mode: full
 content:
   content_moderation_control:
-    weight: 4
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_description:
     type: text_default
-    weight: 2
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_video:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: full
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_video_category:
     type: entity_reference_label
-    weight: 1
-    region: content
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-  links:
-    weight: 3
+    weight: 1
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   field_cc_license: true
   field_celebration: true

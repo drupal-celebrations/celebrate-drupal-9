@@ -18,40 +18,40 @@ bundle: volunteer
 mode: default
 content:
   field_description:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_drupal_org_username:
-    weight: 2
+    type: user_registration_drupal_org_username
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_drupal_org_username
+    weight: 2
     region: content
   field_image:
-    weight: 0
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: responsive_square
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
   field_twitter_username:
-    weight: 3
+    type: user_registration_twitter_username
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_twitter_username
+    weight: 3
     region: content
   links:
-    weight: 4
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
 hidden:
   langcode: true
   search_api_excerpt: true

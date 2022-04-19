@@ -15,13 +15,13 @@ bundle: embed_view
 mode: default
 content:
   field_views_reference:
-    weight: 0
+    type: viewsreference_formatter
     label: hidden
     settings:
       plugin_types:
         - block
     third_party_settings: {  }
-    type: viewsreference_formatter
+    weight: 0
     region: content
 hidden:
   field_accent_color: true

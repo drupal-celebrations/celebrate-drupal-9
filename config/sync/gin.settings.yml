@@ -1,20 +1,20 @@
-preset_accent_color: blue
-preset_focus_color: gin
-enable_darkmode: true
-classic_toolbar: vertical
-icon_default: true
-icon_path: ''
 _core:
   default_config_hash: bFamv6RfelnqY1J3G4wWSf02pL3GghIcwyKzZIoGniQ
+favicon:
+  use_default: true
 features:
-  node_user_picture: false
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
-favicon:
-  use_default: true
+  node_user_picture: false
+preset_accent_color: blue
+preset_focus_color: gin
+enable_darkmode: '1'
+classic_toolbar: vertical
+high_contrast_mode: false
 accent_color: '#000000'
 focus_color: '#000000'
-icon_upload: ''
-high_contrast_mode: false
 show_user_theme_settings: false
+icon_default: true
+icon_path: ''
+icon_upload: ''

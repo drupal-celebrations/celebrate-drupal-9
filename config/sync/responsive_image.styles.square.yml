@@ -11,8 +11,6 @@ id: square
 label: Square
 image_style_mappings:
   -
-    breakpoint_id: responsive_image.viewport_sizing
-    multiplier: 1x
     image_mapping_type: sizes
     image_mapping:
       sizes: "(min-width: 1920px) 3840px,\r\n(min-width: 1536px) 3072px,\r\n(min-width: 1440px) 2880px,\r\n(min-width: 1366px) 2732px,\r\n(min-width: 768px) 1536px,\r\n(min-width: 576px) 1152px,\r\n100vw"
@@ -21,5 +19,7 @@ image_style_mappings:
         - square_1x
         - square_2x
         - square_3x
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
 breakpoint_group: responsive_image
 fallback_image_style: square_1x

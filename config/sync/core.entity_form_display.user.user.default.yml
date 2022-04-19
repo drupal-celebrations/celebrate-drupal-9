@@ -22,42 +22,42 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_company_account:
+    type: boolean_checkbox
     weight: 2
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_country:
+    type: address_country_default
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: address_country_default
-    region: content
   field_drupal_org_username:
+    type: string_textfield
     weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_name:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_twitter_username:
+    type: string_textfield
     weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   timezone:
     weight: 5
     region: content

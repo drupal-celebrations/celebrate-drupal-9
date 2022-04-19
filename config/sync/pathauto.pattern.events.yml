@@ -11,12 +11,12 @@ pattern: 'events/[node:title]'
 selection_criteria:
   52a68bde-02d4-473e-ae3b-9e97e4ea3fb5:
     id: node_type
-    bundles:
-      event: event
     negate: false
+    uuid: 52a68bde-02d4-473e-ae3b-9e97e4ea3fb5
     context_mapping:
       node: node
-    uuid: 52a68bde-02d4-473e-ae3b-9e97e4ea3fb5
+    bundles:
+      event: event
 selection_logic: and
 weight: -5
 relationships: {  }

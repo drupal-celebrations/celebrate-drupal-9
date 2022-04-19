@@ -16,24 +16,24 @@ bundle: embed_view
 mode: default
 content:
   field_accent_color:
+    type: color_field_widget_box
     weight: 1
+    region: content
     settings:
       default_colors: '#000000,#FFFFFF,#D7E1E8,#E33F1E,#ED8936,#FDCA40,#3FA21C,#38B2AC,#53B0EB,#667EEA,#9F7AEA,#ED64A6'
     third_party_settings: {  }
-    type: color_field_widget_box
-    region: content
   field_color_type:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 2
     region: content
-  field_views_reference:
-    weight: 0
     settings: {  }
     third_party_settings: {  }
+  field_views_reference:
     type: viewsreference_select
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

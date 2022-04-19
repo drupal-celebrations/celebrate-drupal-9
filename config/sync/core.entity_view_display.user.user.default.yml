@@ -18,39 +18,39 @@ bundle: user
 mode: default
 content:
   field_country:
-    weight: 4
+    type: address_country_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: address_country_default
+    weight: 4
     region: content
   field_drupal_org_username:
-    weight: 2
+    type: user_registration_drupal_org_username
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_drupal_org_username
+    weight: 2
     region: content
   field_name:
-    weight: 1
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_twitter_username:
-    weight: 3
+    type: user_registration_twitter_username
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_twitter_username
+    weight: 3
     region: content
   member_for:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_company_account: true
   langcode: true

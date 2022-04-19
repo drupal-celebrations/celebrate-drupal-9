@@ -11,8 +11,6 @@ id: rectangular_16_9
 label: 'Rectangular 16:9'
 image_style_mappings:
   -
-    breakpoint_id: responsive_image.viewport_sizing
-    multiplier: 1x
     image_mapping_type: sizes
     image_mapping:
       sizes: "(min-width: 3072px) 3072px,\r\n(min-width: 1366px) 1366px,\r\n(min-width: 576px) 576px,\r\n100vw"
@@ -21,5 +19,7 @@ image_style_mappings:
         - rectangular_16_9_1x
         - rectangular_16_9_2x
         - rectangular_16_9_3x
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
 breakpoint_group: responsive_image
 fallback_image_style: rectangular_16_9_1x

@@ -29,14 +29,16 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_coc_agreement:
+    type: boolean_checkbox
     weight: 30
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_description:
+    type: text_textarea
     weight: 28
+    region: content
     settings:
       rows: 5
       placeholder: ''
@@ -46,28 +48,26 @@ content:
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
         maxlength_js_enforce: true
         maxlength_js_truncate_html: true
-    type: text_textarea
-    region: content
   field_image:
     type: media_library_widget
     weight: 27
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_image_category:
+    type: options_select
     weight: 26
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_rights:
+    type: boolean_checkbox
     weight: 29
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   langcode:
     type: language_select
     weight: 1
@@ -78,8 +78,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 5
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -89,10 +89,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield

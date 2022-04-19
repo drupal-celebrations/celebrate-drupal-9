@@ -20,34 +20,34 @@ mode: teaser
 content:
   field_description:
     type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 1
     region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_drupal_org_username:
     type: user_registration_drupal_org_username
-    weight: 2
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: responsive_square
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_twitter_username:
     type: user_registration_twitter_username
-    weight: 3
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   langcode: true
   links: true

@@ -26,6 +26,7 @@ content:
   field_content:
     type: paragraphs
     weight: 102
+    region: content
     settings:
       title: Content
       title_plural: Content
@@ -41,10 +42,10 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_hero:
     type: paragraphs
     weight: 101
+    region: content
     settings:
       title: Hero
       title_plural: Hero
@@ -60,7 +61,6 @@ content:
         collapse_edit_all: '0'
         duplicate: '0'
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 1
@@ -71,8 +71,8 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 100
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -82,10 +82,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield

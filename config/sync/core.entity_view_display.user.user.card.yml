@@ -16,8 +16,8 @@ dependencies:
     - user_registration
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: user.user.card
 targetEntityType: user
 bundle: user
@@ -25,32 +25,32 @@ mode: card
 content:
   field_country:
     type: address_country_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 1
     region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_drupal_org_username:
-    weight: 2
+    type: user_registration_drupal_org_username
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_drupal_org_username
+    weight: 2
     region: content
   field_name:
     type: string
-    weight: 0
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_twitter_username:
-    weight: 3
+    type: user_registration_twitter_username
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: user_registration_twitter_username
+    weight: 3
     region: content
 hidden:
   field_company_account: true

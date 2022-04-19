@@ -11,12 +11,12 @@ pattern: 'video/[node:field_video_category]/[node:title]'
 selection_criteria:
   2bb72a3d-d9e5-4a2c-9a9c-e383920987d3:
     id: node_type
-    bundles:
-      video: video
     negate: false
+    uuid: 2bb72a3d-d9e5-4a2c-9a9c-e383920987d3
     context_mapping:
       node: node
-    uuid: 2bb72a3d-d9e5-4a2c-9a9c-e383920987d3
+    bundles:
+      video: video
 selection_logic: and
 weight: -5
 relationships: {  }

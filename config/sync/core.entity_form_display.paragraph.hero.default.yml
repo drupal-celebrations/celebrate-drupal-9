@@ -17,27 +17,27 @@ bundle: hero
 mode: default
 content:
   field_accent_color:
+    type: color_field_widget_box
     weight: 2
+    region: content
     settings:
       default_colors: '#000000,#FFFFFF,#D7E1E8,#E33F1E,#ED8936,#FDCA40,#3FA21C,#38B2AC,#53B0EB,#667EEA,#9F7AEA,#ED64A6'
     third_party_settings: {  }
-    type: color_field_widget_box
-    region: content
   field_button_link:
+    type: link_default
     weight: 1
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_hero_image:
     type: media_library_widget
     weight: 0
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

@@ -11,12 +11,12 @@ pattern: 'volunteer/[node:title]'
 selection_criteria:
   e56c0508-eea9-4693-b516-4f82199880cf:
     id: node_type
-    bundles:
-      volunteer: volunteer
     negate: false
+    uuid: e56c0508-eea9-4693-b516-4f82199880cf
     context_mapping:
       node: node
-    uuid: e56c0508-eea9-4693-b516-4f82199880cf
+    bundles:
+      volunteer: volunteer
 selection_logic: and
 weight: -5
 relationships: {  }

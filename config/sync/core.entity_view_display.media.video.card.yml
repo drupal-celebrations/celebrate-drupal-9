@@ -12,8 +12,8 @@ dependencies:
     - responsive_image
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: media.video.card
 targetEntityType: media
 bundle: video
@@ -21,13 +21,13 @@ mode: card
 content:
   thumbnail:
     type: responsive_image
-    weight: 0
-    region: content
     label: hidden
     settings:
       responsive_image_style: rectangular_16_9
       image_link: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   field_media_oembed_video: true

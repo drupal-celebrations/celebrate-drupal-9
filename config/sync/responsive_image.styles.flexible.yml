@@ -11,8 +11,6 @@ id: flexible
 label: Flexible
 image_style_mappings:
   -
-    breakpoint_id: responsive_image.viewport_sizing
-    multiplier: 1x
     image_mapping_type: sizes
     image_mapping:
       sizes: "(min-width: 1920px) 2400px,\r\n(min-width: 1600px) 1600px,\r\n(min-width: 768px) 800px,\r\n(min-width: 576px) 400px,\r\n100vw"
@@ -21,5 +19,7 @@ image_style_mappings:
         - flexible_1x
         - flexible_2x
         - flexible_3x
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
 breakpoint_group: responsive_image
 fallback_image_style: flexible_1x

@@ -17,47 +17,47 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.image.full
 targetEntityType: node
 bundle: image
 mode: full
 content:
   content_moderation_control:
-    weight: 4
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_description:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: responsive_flexible
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_image_category:
-    weight: 1
+    type: entity_reference_label
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
   links:
-    weight: 3
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   field_celebration: true
   field_coc_agreement: true

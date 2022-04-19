@@ -22,29 +22,29 @@ mode: teaser
 content:
   field_description:
     type: text_trimmed
-    weight: 2
-    region: content
     label: hidden
     settings:
       trim_length: 84
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_video:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: card
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_video_category:
     type: entity_reference_label
-    weight: 1
-    region: content
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   content_moderation_control: true
   field_cc_license: true
