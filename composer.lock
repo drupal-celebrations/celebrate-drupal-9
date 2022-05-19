@@ -1669,16 +1669,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.12",
+            "version": "9.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ed6af33093f66a9c5048d02f9f2c326ad0e7e90c"
+                "reference": "02ba7a3a42612a04124ac5131df0726e1e5097c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ed6af33093f66a9c5048d02f9f2c326ad0e7e90c",
-                "reference": "ed6af33093f66a9c5048d02f9f2c326ad0e7e90c",
+                "url": "https://api.github.com/repos/drupal/core/zipball/02ba7a3a42612a04124ac5131df0726e1e5097c6",
+                "reference": "02ba7a3a42612a04124ac5131df0726e1e5097c6",
                 "shasum": ""
             },
             "require": {
@@ -1919,11 +1919,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2022-04-20T14:25:27+00:00"
+            "time": "2022-05-11T09:20:58+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.3.12",
+            "version": "9.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1970,7 +1970,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.3.12",
+            "version": "9.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2008,16 +2008,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.3.12",
+            "version": "9.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "a8fa50016c1aa1eb7f4e54f590e6343d286c418f"
+                "reference": "0fe76c7af47fafcff37d8cb6053014e52e0f4a69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a8fa50016c1aa1eb7f4e54f590e6343d286c418f",
-                "reference": "a8fa50016c1aa1eb7f4e54f590e6343d286c418f",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/0fe76c7af47fafcff37d8cb6053014e52e0f4a69",
+                "reference": "0fe76c7af47fafcff37d8cb6053014e52e0f4a69",
                 "shasum": ""
             },
             "require": {
@@ -2026,7 +2026,7 @@
                 "doctrine/annotations": "1.13.2",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.3.12",
+                "drupal/core": "9.3.13",
                 "egulias/email-validator": "3.1.2",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.5.1",
@@ -2087,7 +2087,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2022-04-20T14:25:27+00:00"
+            "time": "2022-05-11T09:20:58+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -2518,7 +2518,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "3dbfffeeb140a35c83ebcfb99ecba93d49a6cbef"
+                "reference": "18a7a6f14967fe5a6ec4eeb03ba4ca9800651a23"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9 || ^10",
@@ -2530,8 +2530,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-beta2+5-dev",
-                    "datestamp": "1650913707",
+                    "version": "8.x-3.0-beta2+19-dev",
+                    "datestamp": "1652630898",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2570,7 +2570,7 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ],
-            "time": "2022-04-25T19:08:12+00:00"
+            "time": "2022-05-15T16:08:05+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -3213,10 +3213,10 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token.git",
-                "reference": "15851380ed51d57397b7195f5129cf4ae2eab1ae"
+                "reference": "3dd84d94fd8d9a6902e8170e68d3842c1d48cbe9"
             },
             "require": {
-                "drupal/core": "^9.1 || ^10"
+                "drupal/core": "^9.2 || ^10"
             },
             "type": "drupal-module",
             "extra": {
@@ -3224,8 +3224,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.10+5-dev",
-                    "datestamp": "1643803193",
+                    "version": "8.x-1.10+9-dev",
+                    "datestamp": "1652134574",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3272,7 +3272,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
             },
-            "time": "2022-02-02T12:27:25+00:00"
+            "time": "2022-05-07T10:15:15+00:00"
         },
         {
             "name": "drupal/views_infinite_scroll",
