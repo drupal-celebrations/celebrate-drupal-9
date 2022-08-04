@@ -62,7 +62,7 @@ hooks:
     build: |
         set -e
         curl -sS https://platform.sh/cli/installer | php
-        unset NPM_CONFIG_PREFIX
+        #unset NPM_CONFIG_PREFIX
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | dash
         export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
