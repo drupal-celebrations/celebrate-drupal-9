@@ -15,8 +15,8 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "9999999-dev",
+        "composer/installers": "^2.1",
+        "cweagans/composer-patches": "^1.7",
         "drupal/address": "^1.8",
         "drupal/admin_toolbar": "^3.0",
         "drupal/block_field": "1.x-dev",
@@ -27,25 +27,25 @@
         "drupal/core-recommended": "^9",
         "drupal/disable_language": "1.x-dev",
         "drupal/entity_browser": "^2.5",
-        "drupal/facets": "1.5",
+        "drupal/facets": "^2.0",
         "drupal/file_mdm": "^2.1",
         "drupal/gin": "3.x-dev",
         "drupal/gin_toolbar": "1.x-dev",
         "drupal/honeypot": "2.0.x-dev",
         "drupal/maxlength": "1.x-dev",
         "drupal/metatag": "^1.14",
-        "drupal/oembed_providers": "^1.0",
+        "drupal/oembed_providers": "^2.1",
         "drupal/paragraphs": "1.x-dev",
         "drupal/pathauto": "^1.8",
         "drupal/redirect_after_login": "^2.6",
         "drupal/redis": "^1.4",
         "drupal/search_api": "^1.16",
         "drupal/token": "1.x-dev@dev",
-        "drupal/views_infinite_scroll": "^1.7",
+        "drupal/views_infinite_scroll": "^2.0",
         "drupal/viewsreference": "2.x-dev",
-        "drush/drush": "^10.2",
+        "drush/drush": "^11.1",
         "platformsh/config-reader": "^2.3",
-        "vlucas/phpdotenv": "^4.1"
+        "vlucas/phpdotenv": "^5.4"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -110,7 +110,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/facets": {
-                "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2020-01-27/facet-3073444-89-Allow-facets-filter-in-views.patch"
+                "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2022-06-24/facets-2.0.x-2939710-31%2B3073444-153.patch"
             },
             "drupal/redirect_after_login": {
                 "#3214949 - Headers have already been sent after upgrade": "https://www.drupal.org/files/issues/2021-06-20/3214949.patch"
