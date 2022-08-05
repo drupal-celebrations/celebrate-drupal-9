@@ -68,6 +68,7 @@ hooks:
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
         nvm install node
         nvm use node
+        npm config delete prefix
         yarn install
         yarn run build
     # The deploy hook runs after your application has been deployed and started.
