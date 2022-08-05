@@ -110,7 +110,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/facets": {
-                "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2022-06-24/facets-2.0.x-2939710-31%2B3073444-153.patch"
+                "#3073444 - Create views plugins to render facets and summaries in filters and areas": "https://www.drupal.org/files/issues/2022-06-24/facets-2.0.x-2939710-31%2B3073444-152_0.patch"
             },
             "drupal/redirect_after_login": {
                 "#3214949 - Headers have already been sent after upgrade": "https://www.drupal.org/files/issues/2021-06-20/3214949.patch"
