@@ -67,6 +67,7 @@ hooks:
         export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
         nvm install node
+        nvm alias default node
         nvm use node
         npm config delete prefix
         yarn install
