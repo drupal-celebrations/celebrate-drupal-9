@@ -57,19 +57,42 @@ mounts:
 build:
     flavor: composer
 
+variables:
+    env:
+        # Update these for your desired NVM and Node versions.
+        NVM_VERSION: v0.39.1
+        NODE_VERSION: v18.7.0
+
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
         set -e
-        curl -sS https://platform.sh/cli/installer | php
         unset NPM_CONFIG_PREFIX
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | dash
         export NVM_DIR="$PLATFORM_APP_DIR/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
-        nvm install node
-        nvm alias default node
-        nvm use node
-        npm config delete prefix
+
+        # Link cache with app
+        if [ ! -d "$PLATFORM_CACHE_DIR/.nvm" ]; then
+            mkdir -p $PLATFORM_CACHE_DIR/.nvm
+        fi
+        ln -s $PLATFORM_CACHE_DIR/.nvm $NVM_DIR
+
+        # Check for Node.js version and install if not present
+        if [ ! -d "$PLATFORM_CACHE_DIR/.nvm/versions/node/$NODE_VERSION" ]; then
+            # Get nvm install script if correct version not present
+            export NVM_INSTALL_FILE="${PLATFORM_CACHE_DIR}/nvm_${NVM_VERSION}_install.sh"
+            if [ ! -f "$NVM_INSTALL_FILE" ]; then
+                wget -nc -O "$NVM_INSTALL_FILE" "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_VERSION/install.sh"
+            fi
+
+            # Install, automatically using NODE_VERSION
+            bash $NVM_INSTALL_FILE
+        fi
+
+        # Activate nvm
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+        # Use the specified version
+        nvm use "$NODE_VERSION"
         yarn install
         yarn run build
     # The deploy hook runs after your application has been deployed and started.
