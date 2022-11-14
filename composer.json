@@ -38,13 +38,13 @@
         "drupal/paragraphs": "1.x-dev",
         "drupal/pathauto": "^1.8",
         "drupal/redirect_after_login": "^2.6",
-        "drupal/redis": "^1.4",
+        "drupal/redis": "^1.6",
         "drupal/search_api": "^1.16",
         "drupal/token": "1.x-dev@dev",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/viewsreference": "2.x-dev",
         "drush/drush": "^11.1",
-        "platformsh/config-reader": "^2.3",
+        "platformsh/config-reader": "^2.4",
         "vlucas/phpdotenv": "^5.4"
     },
     "conflict": {

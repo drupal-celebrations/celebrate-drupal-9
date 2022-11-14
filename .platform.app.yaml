@@ -17,7 +17,7 @@ type: 'php:8.1'
 relationships:
     database: 'db:mysql'
 ## Uncomment this line to enable Redis caching for Drupal.
-#    redis: 'cache:redis'
+    rediscache: 'cacheredis:redis'
 
 # Add additional PHP extensions.
 runtime:
