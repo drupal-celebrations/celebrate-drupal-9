@@ -21,10 +21,9 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/block_field": "1.x-dev",
         "drupal/color_field": "^2.2",
-        "drupal/core": "^9.2",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
+        "drupal/core": "^9.4",
+        "drupal/core-composer-scaffold": "^9.4",
+        "drupal/core-recommended": "^9.4",
         "drupal/disable_language": "1.x-dev",
         "drupal/entity_browser": "^2.5",
         "drupal/facets": "^2.0",
@@ -58,8 +57,7 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
-            "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-composer-scaffold": true
         }
     },
     "autoload": {
@@ -103,9 +101,6 @@
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
-        },
-        "drupal-core-project-message": {
-            "include-keys": ["homepage", "support"]
         },
         "enable-patching": true,
         "patches": {
