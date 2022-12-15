@@ -31,11 +31,7 @@ settings:
           name: Media
           items:
             - Blockquote
-  plugins:
-    stylescombo:
-      styles: ''
-    language:
-      language_list: un
+  plugins: {  }
 image_upload:
   status: false
   scheme: public
