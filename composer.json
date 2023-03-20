@@ -37,6 +37,7 @@
         "drupal/oembed_providers": "^2.1",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
+        "drupal/redirect": "^1.8",
         "drupal/redirect_after_login": "^2.7",
         "drupal/redis": "^1.6",
         "drupal/search_api": "^1.28",
