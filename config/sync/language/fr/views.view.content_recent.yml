@@ -2,8 +2,12 @@ label: 'Contenu récent'
 description: 'Contenu récent.'
 display:
   default:
-    display_title: Maître
+    display_title: 'Par défaut'
     display_options:
+      title: 'Contenu récent'
+      fields:
+        changed:
+          separator: ', '
       exposed_form:
         options:
           submit_button: Appliquer
@@ -11,10 +15,6 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-      fields:
-        changed:
-          separator: ', '
-      title: 'Contenu récent'
       empty:
         area_text_custom:
           content: 'Aucun contenu disponible.'

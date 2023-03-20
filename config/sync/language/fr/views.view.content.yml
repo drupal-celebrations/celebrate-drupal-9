@@ -2,21 +2,9 @@ label: Contenu
 description: 'Trouver et gérer le contenu.'
 display:
   default:
+    display_title: 'Par défaut'
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtrer
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        options:
-          tags:
-            previous: '‹ Précédent'
-            next: 'Suivant ›'
-            first: '« Premier'
-            last: 'Dernier »'
+      title: Contenu
       fields:
         title:
           label: Titre
@@ -28,12 +16,29 @@ display:
         status:
           label: État
           settings:
-            format_custom_true: Publié
             format_custom_false: 'Non publié'
+            format_custom_true: Publié
         changed:
           label: 'Mis à jour'
         operations:
           label: Actions
+      pager:
+        options:
+          tags:
+            next: 'Suivant ›'
+            previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'Aucun contenu disponible.'
       filters:
         title:
           expose:
@@ -54,16 +59,11 @@ display:
         langcode:
           expose:
             label: Langue
-      title: Contenu
-      empty:
-        area_text_custom:
-          content: 'Aucun contenu disponible.'
-    display_title: Maître
   page_1:
+    display_title: Page
     display_options:
       menu:
         title: Contenu
       tab_options:
         title: Contenu
         description: 'Trouver et gérer le contenu'
-    display_title: Page

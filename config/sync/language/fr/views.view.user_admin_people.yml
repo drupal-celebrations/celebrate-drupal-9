@@ -2,26 +2,9 @@ label: Personnes
 description: 'Trouver et gérer les personnes interagissant avec votre site.'
 display:
   default:
-    display_title: Maître
+    display_title: 'Par défaut'
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtrer
-          reset_button_label: Réinitialiser
-          exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        options:
-          tags:
-            previous: '‹ Précédent'
-            next: 'Suivant ›'
-            first: '« Premier'
-            last: 'Dernier »'
-          expose:
-            items_per_page_label: 'Éléments par page'
-            items_per_page_options_all_label: '- Tout -'
-            offset_label: Décalage
+      title: Personnes
       fields:
         user_bulk_form:
           label: 'Mise à jour en masse'
@@ -30,8 +13,8 @@ display:
         status:
           label: État
           settings:
-            format_custom_true: Actif
             format_custom_false: Bloqué
+            format_custom_true: Actif
         roles_target_id:
           label: Rôles
         created:
@@ -42,6 +25,27 @@ display:
           label: Actions
         mail:
           separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Suivant ›'
+            previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'Personne n''est disponible.'
       filters:
         combine:
           expose:
@@ -60,10 +64,6 @@ display:
         permission:
           expose:
             label: Droit
-      title: Personnes
-      empty:
-        area_text_custom:
-          content: 'Personne n''est disponible.'
       use_more_text: plus
   page_1:
     display_title: Page

@@ -1,9 +1,3 @@
 _core:
   default_config_hash: lgWtCY9jfjkig9RkOgXl1JO2lGljsH4yqnQeKK1VpoA
 external_fetch: true
-allowed_providers:
-  - Codepen
-  - Instagram
-  - Twitter
-  - Vimeo
-  - YouTube
