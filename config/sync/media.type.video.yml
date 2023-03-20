@@ -1,7 +1,11 @@
 uuid: 998fae2c-a420-4ff1-93ea-445905c6dda9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - oembed_providers.bucket.video
+  module:
+    - oembed_providers
 id: video
 label: Video
 description: 'Used for adding remote videos.'

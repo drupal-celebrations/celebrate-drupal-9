@@ -1,8 +1,21 @@
 label: 'Bibliothèque Media'
 display:
   default:
-    display_title: Maître
+    display_title: 'Par défaut'
     display_options:
+      title: Média
+      fields:
+        media_bulk_form:
+          action_title: Action
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
       exposed_form:
         options:
           submit_button: 'Appliquer les filtres'
@@ -10,18 +23,19 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-      pager:
-        options:
+      empty:
+        area_text_custom:
+          content: 'Aucun média disponible.'
+      sorts:
+        created:
           expose:
-            items_per_page_label: 'Éléments par page'
-            items_per_page_options_all_label: '- Tout -'
-            offset_label: Décalage
-          tags:
-            previous: ‹‹
-            next: ››
-      fields:
-        media_bulk_form:
-          action_title: Action
+            label: 'Les plus récents d''abord'
+        name:
+          expose:
+            label: 'Nom (A-Z)'
+        name_1:
+          expose:
+            label: 'Nom (Z-A)'
       filters:
         status:
           expose:
@@ -44,20 +58,6 @@ display:
         langcode:
           expose:
             label: Langue
-      sorts:
-        created:
-          expose:
-            label: 'Les plus récents d''abord'
-        name:
-          expose:
-            label: 'Nom (A-Z)'
-        name_1:
-          expose:
-            label: 'Nom (Z-A)'
-      title: Média
-      empty:
-        area_text_custom:
-          content: 'Aucun média disponible.'
   page:
     display_title: Page
     display_options:
@@ -79,14 +79,14 @@ display:
   widget:
     display_title: Widget
     display_options:
-      filters:
-        name:
-          expose:
-            label: Nom
       arguments:
         bundle:
           exception:
             title: Tout
+      filters:
+        name:
+          expose:
+            label: Nom
       header:
         display_link_grid:
           label: Grille
@@ -104,14 +104,14 @@ display:
           label: Auteur
         changed:
           label: 'Mis à jour'
-      filters:
-        name:
-          expose:
-            label: Nom
       arguments:
         bundle:
           exception:
             title: Tout
+      filters:
+        name:
+          expose:
+            label: Nom
       header:
         display_link_grid:
           label: Grille
