@@ -41,7 +41,7 @@ class DrupalOrgUsernameFormatter extends FormatterBase {
         '@name' => $item->value,
       ]);
 
-      $uri = drupal_get_path('module', 'user_registration') . '/images/drupal-evergreen-logo.svg';
+      $uri = \Drupal::service('extension.list.module')->getPath('user_registration') . '/images/drupal-evergreen-logo.svg';
       $imagePath = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
 
       $element[$delta] = $this->getIconLink($imagePath, $imageAlt, '20', $linkPath)->toRenderable();
