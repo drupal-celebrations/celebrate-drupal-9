@@ -1,7 +1,26 @@
 uuid: 61061368-9409-4d2f-803d-b2ec243f9c36
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - media.type.image
+    - media.type.video
+    - node.type.page
+    - taxonomy.vocabulary.celebration
+    - taxonomy.vocabulary.image_category
+    - taxonomy.vocabulary.video_category
+  module:
+    - block_content
+    - content_moderation
+    - content_translation
+    - contextual
+    - file
+    - filter
+    - honeypot
+    - node
+    - toolbar
 id: translator
 label: Translator
 weight: -7

@@ -1,7 +1,11 @@
 uuid: 78e3c2d4-8a3c-4b12-81f7-9b5b1fc18452
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - media
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous

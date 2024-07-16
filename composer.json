@@ -22,6 +22,7 @@
         "drupal/admin_toolbar": "^3.3",
         "drupal/block_field": "^1.0@RC",
         "drupal/ckeditor": "^1.0",
+        "drupal/color": "^1.0",
         "drupal/color_field": "^3.0",
         "drupal/core": "^10.3",
         "drupal/core-composer-scaffold": "^10.3",
