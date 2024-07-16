@@ -34,7 +34,10 @@ class TwitterUsernameFormatter extends FormatterBase {
       $imageAlt = $this->t('Twitter profile of @name', [
         '@name' => $item->value,
       ]);
-      $imagePath = file_create_url(drupal_get_path('module', 'user_registration') . '/images/twitter-logo.svg');
+
+      $uri = drupal_get_path('module', 'user_registration') . '/images/twitter-logo.svg';
+      $imagePath = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+
       $element[$delta] = $this->getIconLink($imagePath, $imageAlt, '25', $linkPath)->toRenderable();
     }
     return $element;
