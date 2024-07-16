@@ -34,7 +34,7 @@ display:
           sort_desc_label: Desc
       empty:
         area_text_custom:
-          content: 'Il n''y a pas de bloc personnalisé disponible.'
+          content: "Il n'y a pas de bloc personnalisé disponible."
       filters:
         info:
           expose:

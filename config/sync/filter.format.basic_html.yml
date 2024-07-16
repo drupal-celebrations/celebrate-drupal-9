@@ -42,6 +42,18 @@ filters:
     status: true
     weight: 9
     settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 1
+    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -60,9 +72,3 @@ filters:
         default: default
       allowed_media_types:
         image: image
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: true
-    weight: 10
-    settings: {  }

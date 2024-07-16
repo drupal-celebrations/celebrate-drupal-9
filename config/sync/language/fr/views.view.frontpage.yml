@@ -1,5 +1,5 @@
-label: 'Page d''accueil'
-description: 'Tout le contenu promu en page d''accueil.'
+label: "Page d'accueil"
+description: "Tout le contenu promu en page d'accueil."
 display:
   default:
     display_title: 'Par défaut'

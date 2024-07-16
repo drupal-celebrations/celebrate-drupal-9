@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: basic_block
 label: 'Basic Block'
-revision: 1
+revision: true
 description: ''

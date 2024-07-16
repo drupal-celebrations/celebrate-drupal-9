@@ -29,7 +29,7 @@ display:
       sorts:
         created:
           expose:
-            label: 'Les plus récents d''abord'
+            label: "Les plus récents d'abord"
         name:
           expose:
             label: 'Nom (A-Z)'

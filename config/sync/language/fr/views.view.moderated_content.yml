@@ -43,7 +43,7 @@ display:
           sort_desc_label: Desc
       empty:
         area_text_custom:
-          content: 'Aucun contenu modéré disponible. Seules les versions de contenu en attente, telles que ''Brouillon'', sont listées ici.'
+          content: "Aucun contenu modéré disponible. Seules les versions de contenu en attente, telles que 'Brouillon', sont listées ici."
       filters:
         title:
           expose:

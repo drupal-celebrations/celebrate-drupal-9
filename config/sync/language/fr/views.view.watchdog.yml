@@ -43,8 +43,8 @@ display:
           sort_desc_label: Desc
       empty:
         area:
-          admin_label: 'Aucune entrée du journal n''est disponible.'
-          content: 'Aucune entrée du journal n''est disponible.'
+          admin_label: "Aucune entrée du journal n'est disponible."
+          content: "Aucune entrée du journal n'est disponible."
       filters:
         type:
           expose:

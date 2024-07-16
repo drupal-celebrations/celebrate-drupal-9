@@ -9,7 +9,7 @@ display:
         user_bulk_form:
           label: 'Mise à jour en masse'
         name:
-          label: 'Nom d''utilisateur'
+          label: "Nom d'utilisateur"
         status:
           label: État
           settings:
@@ -45,7 +45,7 @@ display:
           sort_desc_label: Desc
       empty:
         area_text_custom:
-          content: 'Personne n''est disponible.'
+          content: "Personne n'est disponible."
       filters:
         combine:
           expose:

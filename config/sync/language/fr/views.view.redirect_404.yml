@@ -45,8 +45,8 @@ display:
       title: 'Réparer les pages 404'
       empty:
         area_text_custom:
-          content: 'Il n''y a aucune erreur 404 à corriger.'
+          content: "Il n'y a aucune erreur 404 à corriger."
   page_1:
     display_title: Page
     display_options:
-      display_description: 'Liste les chemins d''erreur 404 sans aucune redirection assignée pour le moment.'
+      display_description: "Liste les chemins d'erreur 404 sans aucune redirection assignée pour le moment."
