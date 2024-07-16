@@ -15,16 +15,16 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.2",
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.7",
         "drupal/address": "^1.11",
         "drupal/admin_toolbar": "^3.3",
         "drupal/block_field": "^1.0@RC",
-        "drupal/color_field": "^2.5",
-        "drupal/core": "^9.5",
-        "drupal/core-composer-scaffold": "^9.5",
-        "drupal/core-recommended": "^9.5",
+        "drupal/color_field": "^3.0",
+        "drupal/core": "^10.3",
+        "drupal/core-composer-scaffold": "^10.3",
+        "drupal/core-recommended": "^10.3",
         "drupal/disable_language": "^1.0@beta",
         "drupal/entity_browser": "^2.8",
         "drupal/facets": "^2.0",
@@ -44,7 +44,7 @@
         "drupal/token": "^1.11",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/viewsreference": "^1.8",
-        "drush/drush": "^11.4",
+        "drush/drush": "^12.5",
         "platformsh/config-reader": "^2.4",
         "vlucas/phpdotenv": "^5.5"
     },
@@ -106,9 +106,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/redirect_after_login": {
-                "#3214949 - Headers have already been sent after upgrade": "https://www.drupal.org/files/issues/2021-06-20/3214949.patch"
-            }
         }
     }
 }
