@@ -1,0 +1,7 @@
+react_jitsi.controller_react_page:
+  path: 'meet'
+  defaults:
+    _controller: '\Drupal\react_jitsi\Controller\ReactJitsiController::reactPage'
+    _title: 'Meet Remotely'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter.
+ */
+function react_jitsi_page_attachments_alter(array &$attachments) {
+  if (\Drupal::service('path.current')->getPath() === '/meet') {
+    $attachments['#attached']['library'][] = 'react_jitsi/react_jitsirou';
+  }
+}
