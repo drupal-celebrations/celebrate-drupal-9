@@ -2,9 +2,12 @@
 
 namespace Drupal\content_submission\Plugin\Block;
 
+use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -26,14 +29,14 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $entityTypeManager;
+  protected EntityTypeManagerInterface $entityTypeManager;
 
   /**
    * Drupal\Core\Session\AccountProxyInterface definition.
    *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
-  protected $currentUser;
+  protected AccountProxyInterface $currentUser;
 
   /**
    * Drupal\Core\Render\RendererInterface definition.
@@ -45,7 +48,7 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): AddContentBlock|ContainerFactoryPluginInterface|static {
     $instance = new static($configuration, $plugin_id, $plugin_definition);
     $instance->entityTypeManager = $container->get('entity_type.manager');
     $instance->currentUser = $container->get('current_user');
@@ -53,24 +56,28 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
     return $instance;
   }
 
-  private function getLinkFromRoute($label, $route, $classes = []) {
+  private function getLinkFromRoute($label, $route, $classes = []): array {
     $url = Url::fromRoute($route);
+
     if (!empty($classes)) {
       $options = [
         'attributes' => [
           'class' => $classes
         ],
       ];
+
+      $url->setOptions($options);
     }
-    $url->setOptions($options);
+
     return Link::fromTextAndUrl($label, $url)->toRenderable();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function build() {
+  public function build(): array {
     $build = [];
+
     if ($this->currentUser->isAuthenticated()) {
       $build = [
         '#theme' => 'add_content',
@@ -103,6 +110,7 @@ class AddContentBlock extends BlockBase implements ContainerFactoryPluginInterfa
         ]
       ];
     }
+
     return $build;
   }
 

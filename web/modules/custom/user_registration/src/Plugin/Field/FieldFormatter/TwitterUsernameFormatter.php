@@ -2,11 +2,10 @@
 
 namespace Drupal\user_registration\Plugin\Field\FieldFormatter;
 
+use Drupal\Core\Field\Annotation\FieldFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
-use Drupal\Core\Link;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\Url;
 
 /**
  * Plugin implementation of the 'Twitter username' formatter.
@@ -27,7 +26,7 @@ class TwitterUsernameFormatter extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
     $element = [];
     foreach ($items as $delta => $item) {
       $linkPath = 'https://twitter.com/' . $item->value;
@@ -40,6 +39,7 @@ class TwitterUsernameFormatter extends FormatterBase {
 
       $element[$delta] = $this->getIconLink($imagePath, $imageAlt, '25', $linkPath)->toRenderable();
     }
+
     return $element;
   }
 

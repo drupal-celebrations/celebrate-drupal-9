@@ -1,11 +1,6 @@
 <?php
 
 /**
- * @file
- * Contains content_submission.module.
- */
-
-/**
  * Implements hook_theme().
  */
 function content_submission_theme() {

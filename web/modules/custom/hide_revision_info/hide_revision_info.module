@@ -6,7 +6,7 @@ use \Drupal\user\Entity\User;
  * Implements hook_form_alter().
  */
 function hide_revision_info_form_alter(&$form, &$form_state, $form_id) {
-  if (strpos($form_id, 'node_', 0) !== 0) {
+  if (!str_starts_with($form_id, 'node_')) {
     return;
   }
 

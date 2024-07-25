@@ -7,9 +7,9 @@ namespace Drupal\color_map;
  */
 class ColorMap {
 
-  private static $fallbackColor = 'blue-600';
+  private static string $fallbackColor = 'blue-600';
 
-  private static $colorMap = [
+  private static array $colorMap = [
     '#AC725E' => 'red-800',
     '#D06B64' => 'red-500',
     '#F83A22' => 'red-600',
@@ -38,17 +38,17 @@ class ColorMap {
   /**
    * Returns a Tailwind class from a color.
    *
-   * @todo improve this mapping, perhaps set a map definition
-   *   that can be used by color field to resolve this.
-   * @see https://tailwindcss.com/docs/customizing-colors/#default-color-palette
-   *
    * @param string $color
    *   Hexadecimal color value.
    *
    * @return string
    *   Tailwind class.
+   *@see https://tailwindcss.com/docs/customizing-colors/#default-color-palette
+   *
+   * @todo improve this mapping, perhaps set a map definition
+   *   that can be used by color field to resolve this.
    */
-  public function getTailwindClass($color) {
+  public function getTailwindClass(string $color): string {
     if (!empty($color) && array_key_exists($color, static::$colorMap)) {
       return static::$colorMap[$color];
     }
@@ -66,7 +66,7 @@ class ColorMap {
    * @return string
    *   Tailwind class.
    */
-  public function getTailwindContrastClass($color) {
+  public function getTailwindContrastClass(string $color): string {
     // @todo
     return 'white';
   }

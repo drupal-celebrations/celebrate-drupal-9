@@ -16,7 +16,7 @@ class EntityRedirectSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  public static function getSubscribedEvents() {
+  public static function getSubscribedEvents(): array {
     $events[KernelEvents::REQUEST] = ['redirect'];
     return $events;
   }
@@ -27,7 +27,7 @@ class EntityRedirectSubscriber implements EventSubscriberInterface {
    * @param \Symfony\Component\HttpKernel\Event\RequestEvent $event
    *   The dispatched event.
    */
-  public function redirect(RequestEvent $event) {
+  public function redirect(RequestEvent $event): void {
     $request = $event->getRequest();
     $routeName = $request->get('_route');
     if ($routeName === 'entity.node.canonical') {

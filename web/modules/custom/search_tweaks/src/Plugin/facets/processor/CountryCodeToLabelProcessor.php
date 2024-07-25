@@ -4,6 +4,7 @@ namespace Drupal\search_tweaks\Plugin\facets\processor;
 
 use CommerceGuys\Addressing\Country\CountryRepositoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\facets\Annotation\FacetsProcessor;
 use Drupal\facets\FacetInterface;
 use Drupal\facets\Processor\BuildProcessorInterface;
 use Drupal\facets\Processor\ProcessorPluginBase;
@@ -28,7 +29,7 @@ class CountryCodeToLabelProcessor extends ProcessorPluginBase implements BuildPr
    *
    * @var \CommerceGuys\Addressing\Country\CountryRepositoryInterface
    */
-  private $countryRepository;
+  private CountryRepositoryInterface $countryRepository;
 
   /**
    * Constructs a Drupal\Component\Plugin\PluginBase object.
@@ -50,7 +51,7 @@ class CountryCodeToLabelProcessor extends ProcessorPluginBase implements BuildPr
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): CountryCodeToLabelProcessor|ContainerFactoryPluginInterface|static {
     return new static(
       $configuration,
       $plugin_id,
@@ -62,7 +63,7 @@ class CountryCodeToLabelProcessor extends ProcessorPluginBase implements BuildPr
   /**
    * {@inheritdoc}
    */
-  public function build(FacetInterface $facet, array $results) {
+  public function build(FacetInterface $facet, array $results): array {
     $countries = $this->countryRepository->getAll();
     foreach ($results as &$result) {
       $countryCode = strtoupper($result->getRawValue());

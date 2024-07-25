@@ -17,7 +17,7 @@ trait UserFormatterTrait {
    *
    * @return Link
    */
-  protected function getIconLink($image_path, $image_alt, $image_size, $link_path) {
+  protected function getIconLink(string $image_path, string $image_alt, string $image_size, string $link_path): Link {
     $image = [
       '#type' => 'inline_template',
       '#template' => '<img src="{{ image_path }}" width="{{ image_size }}" height="{{ image_size }}" title="{{ image_alt }}" alt="{{ image_alt }}" class="user-link" />',
@@ -28,7 +28,8 @@ trait UserFormatterTrait {
       ],
     ];
     $renderedImage = \Drupal::service('renderer')->render($image);
-    $result = Link::fromTextAndUrl(
+
+    return Link::fromTextAndUrl(
       $renderedImage,
       Url::fromUri($link_path, [
         'attributes' => [
@@ -36,7 +37,6 @@ trait UserFormatterTrait {
         ],
       ])
     );
-    return $result;
   }
 
 }

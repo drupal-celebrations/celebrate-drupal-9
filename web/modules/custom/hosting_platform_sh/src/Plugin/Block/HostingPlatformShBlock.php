@@ -2,6 +2,7 @@
 
 namespace Drupal\hosting_platform_sh\Plugin\Block;
 
+use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Block\BlockBase;
 
 /**
@@ -17,14 +18,14 @@ class HostingPlatformShBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function defaultConfiguration() {
+  public function defaultConfiguration(): array {
     return ['label_display' => FALSE];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function build() {
+  public function build(): array {
     return ['#markup' => '<span>' . $this->t('Hosting by <a href=":hosting">Platform.sh</a>', [':hosting' => 'https://www.platform.sh?medium=referral&utm_campaign=sponsored_sites&utm_source=celebratedrupal']) . '</span>'];
   }
 
